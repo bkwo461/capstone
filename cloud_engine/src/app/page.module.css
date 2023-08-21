@@ -227,3 +227,44 @@
     transform: rotate(0deg);
   }
 }
+
+
+/* Top Nav Bar */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 8.5vh;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.navigation li {
+  font-size: 16px;
+  margin-top: 09px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation a:hover {
+  color: #1c7700;
+}
