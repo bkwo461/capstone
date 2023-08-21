@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^4.3.3",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "firebase": "^10.2.0",
