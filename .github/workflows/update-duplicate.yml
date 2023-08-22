@@ -1,0 +1,22 @@
+name: Update Duplicate Repository
+
+on:
+  push:
+    branches:
+      - main  # or the appropriate branch name
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Update Duplicated Repository
+        run: |
+          git clone https://github.com/uoa-compsci399-s2-2023/capstone-project-team-16.git
+          cd original-repo
+          git pull
+          git remote add duplicated https://github.com/521minsu/cloud-engine.git
+          git push duplicated main  # or the appropriate branch name
