@@ -19,4 +19,8 @@ jobs:
           cd original-repo
           git pull
           git remote add duplicated https://github.com/521minsu/cloud-engine.git
+          git config --global user.email "mkim844@aucklanduni.ac.nz"
+          git config --global user.name "Mince Pie"
           git push duplicated main  # or the appropriate branch name
+        env:
+          GITHUB_TOKEN: ${{ secrets.MIRROR_TOKEN }}
