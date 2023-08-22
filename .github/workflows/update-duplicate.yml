@@ -26,6 +26,6 @@ jobs:
           DEST_REPO_TOKEN=$GITHUB_TOKEN  
 
           git remote add destination $DEST_REPO_URL
-          git destination push
+          git push destination
         env:
           GITHUB_TOKEN: ${{ secrets.MIRROR_TOKEN }}
