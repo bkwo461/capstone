@@ -21,13 +21,13 @@ jobs:
           DEST_REPO_URL=https://github.com/521minsu/cloud-engine.git  
           DEST_REPO_TOKEN=$GITHUB_TOKEN  
 
-          # Clone destination repo
-          git clone $DEST_REPO_URL destination-repo
-          cd destination-repo
-
           # Configure user
           git config user.email "mkim844@aucklanduni.ac.nz"
           git config user.name "521minsu"
+          
+          # Clone destination repo
+          git clone $DEST_REPO_URL destination-repo
+          cd destination-repo
 
           # Copy source files to destination repo
           cp -R $SOURCE_DIR/* .
