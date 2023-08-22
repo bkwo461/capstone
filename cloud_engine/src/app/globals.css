@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Han+Sans+CN:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -118,7 +119,6 @@ a {
   }
 }
 
-
 body {
   margin: 0;
   line-height: normal;
@@ -134,23 +134,28 @@ body {
   --paragraphe-size: 16px;
   --paragraph-size: 14px;
   --h4-size: 20px;
-  --h2-size: 40px;
   --font-size-lg: 18px;
+  --font-size-xs: 12px;
+  --h2-size: 40px;
   --font-size-3xl: 22px;
   --font-size-9xl: 28px;
 
   /* Colors */
   --text: #252b42;
   --primary-color: #f79901;
+  --color-gray-300: #808080;
   --color-gray-100: #232120;
   --color-gray-200: rgba(255, 255, 255, 0.5);
   --light-text-color: #fff;
+  --color-black: #000;
+  --color-darkslateblue: #1e337c;
+  --color-dodgerblue: #0072dd;
+  --color-silver: #b9b9b9;
   --second-text-color: #4d4d4d;
   --color-royalblue-100: #1060e1;
   --color-royalblue-200: #1056c6;
   --color-whitesmoke-100: #f5f4f4;
   --color-whitesmoke-200: #efefef;
-  --color-black: #000;
   --color-midnightblue: #201373;
   --color-gold: #ffc522;
 
@@ -174,8 +179,8 @@ body {
   --br-9xs: 4px;
   --br-xl: 20px;
   --br-8xs: 5px;
-  --br-5xl: 24px;
   --br-base: 16px;
+  --br-5xl: 24px;
   --br-mini: 15px;
 
   /* Effects */
