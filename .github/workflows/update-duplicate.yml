@@ -21,7 +21,7 @@ jobs:
           git config user.name "521minsu"
 
           # Set variables
-          SOURCE_DIR=$PWD  # Current working directory
+          SOURCE_DIR=$(PWD)  # Current working directory
           DEST_REPO_URL=https://$GITHUB_TOKEN@github.com/521minsu/cloud-engine.git  
           DEST_REPO_TOKEN=$GITHUB_TOKEN  
 
