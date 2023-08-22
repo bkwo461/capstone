@@ -25,18 +25,7 @@ jobs:
           DEST_REPO_URL=https://$GITHUB_TOKEN@github.com/521minsu/cloud-engine.git  
           DEST_REPO_TOKEN=$GITHUB_TOKEN  
 
-
-          # Clone destination repo
-          cd ..
-          git clone $DEST_REPO_URL destination-repo
-          cd destination-repo
-
-          # Copy source files to destination repo
-          cp -R ../capstone-project-team-16 .
-
-          # Commit and push
-          git add -A
-          git commit -m "Automated commit from source repo"
-          git push origin main  
+          git remote add destination $DEST_REPO_URL
+          git destination push
         env:
           GITHUB_TOKEN: ${{ secrets.MIRROR_TOKEN }}
