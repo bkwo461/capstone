@@ -17,15 +17,15 @@ jobs:
       - name: Update Duplicated Repository
         run: |
           # Configure user
-          git config user.email "mkim844@aucklanduni.ac.nz"
-          git config user.name "521minsu"
+          # git config user.email "mkim844@aucklanduni.ac.nz"
+          # git config user.name "521minsu"
 
           # Set variables
           # SOURCE_DIR=$(PWD)  # Current working directory
-          DEST_REPO_URL=https://$GITHUB_TOKEN@github.com/521minsu/cloud-engine.git  
-          DEST_REPO_TOKEN=$GITHUB_TOKEN  
+          # DEST_REPO_URL=https://$GITHUB_TOKEN@github.com/521minsu/cloud-engine.git  
+          # DEST_REPO_TOKEN=$GITHUB_TOKEN  
 
-          git remote add destination $DEST_REPO_URL
-          git push destination main
+          # git remote add destination $DEST_REPO_URL
+          # git push destination main
         env:
           GITHUB_TOKEN: ${{ secrets.MIRROR_TOKEN }}
