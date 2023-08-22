@@ -325,7 +325,9 @@
   left: calc(50% - 31.43px);
 }
 .menuBar,
-.topNavBar {
+
+/* AboutUs nav */
+.topNavBarAboutUs {
   position: absolute;
   top: calc(50% - 87.5px);
   left: calc(50% - 339.64px);
@@ -333,7 +335,7 @@
   height: 44.52px;
   font-size: var(--paragraphe-size);
 }
-.topNavBar {
+.topNavBarAboutUs {
   top: calc(50% - 2909.5px);
   left: calc(50% - 762.5px);
   width: 1525.27px;
@@ -341,5 +343,24 @@
   text-align: left;
   font-size: var(--font-size-xs);
   color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+
+/* Home nav */
+.topNavBarHome {
+  position: absolute;
+  top: calc(7%);
+  left: calc(7% );
+  width: 687.29px;
+  height: 44.52px;
+  font-size: var(--paragraphe-size);
+}
+.topNavBarHome {
+  width: 1525.27px;
+  height: 189px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
   font-family: var(--font-inter);
 }

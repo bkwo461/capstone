@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import styles from './page.module.css'
-import TopNav from './topNav';
+import TopNav from './NavBar';
 
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <div className={`${styles.top_menu_bar} px-2 py-3`}>
         <h1 className="d-inline-block bold">Cloud Engine</h1>
       </div>
-      <TopNav />
+      <TopNav/>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Profiles from "./Profiles";
 import AboutUsContainer1 from "./AboutUsContainer1";
 import ContainerAboutUs3 from "./ContainerAboutUs3";
 import AboutUsContainer from "./AboutUsContainer";
-import NavBar from "../NavBar";
+import TopNav from "./NavBarAboutUs";
 import styles from "./index.module.css";
 const AboutUs = () => {
   return (
@@ -35,7 +35,7 @@ const AboutUs = () => {
           src="/header-image@2x.png"
         />
       </div>
-      <NavBar />
+      <TopNav />
     </div>
   );
 };

@@ -42,7 +42,7 @@ const NavBar = () => {
     };
     
   return (
-    <div className={styles.topNavBar}>
+    <div className={styles.topNavBarHome}>
       <b className={styles.servicesInstanceContainer}>
         <span>{`Services   `}</span>
         <span className={styles.span}>{`»   `}</span>
