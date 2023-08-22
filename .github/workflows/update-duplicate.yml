@@ -16,15 +16,16 @@ jobs:
 
       - name: Update Duplicated Repository
         run: |
-          # Set variables
-          SOURCE_DIR=$PWD  # Current working directory
-          DEST_REPO_URL=https://github.com/521minsu/cloud-engine.git  
-          DEST_REPO_TOKEN=$GITHUB_TOKEN  
-
           # Configure user
           git config user.email "mkim844@aucklanduni.ac.nz"
           git config user.name "521minsu"
-          
+
+          # Set variables
+          SOURCE_DIR=$PWD  # Current working directory
+          DEST_REPO_URL=https://$GITHUB_TOKEN@github.com/521minsu/cloud-engine.git  
+          DEST_REPO_TOKEN=$GITHUB_TOKEN  
+
+
           # Clone destination repo
           git clone $DEST_REPO_URL destination-repo
           cd destination-repo
