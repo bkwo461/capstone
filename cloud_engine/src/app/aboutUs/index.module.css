@@ -1,6 +1,6 @@
 .aboutUsChild {
   position: absolute;
-  top: 3901px;
+  top: 4023px;
   left: calc(50% - 892.5px);
   background: linear-gradient(
     180deg,
@@ -16,8 +16,8 @@
 }
 .meetOurTeamContainer {
   position: absolute;
-  top: calc(50% + 1047.5px);
-  left: calc(50% - 130.5px);
+  top: calc(50% + 696.5px);
+  left: calc(50% + 459.5px);
   letter-spacing: 0.46px;
   display: inline-block;
   width: 396.46px;
@@ -71,7 +71,7 @@
 }
 .aboutUs1 {
   position: absolute;
-  top: 129px;
+  top: 251px;
   left: calc(50% - 892.5px);
   background: linear-gradient(
     169.01deg,
@@ -89,7 +89,7 @@
   position: relative;
   background-color: var(--light-text-color);
   width: 100%;
-  height: 5795px;
+  height: 5907px;
   overflow: hidden;
   text-align: left;
   font-size: 50px;
