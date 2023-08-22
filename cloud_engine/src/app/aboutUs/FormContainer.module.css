@@ -1,0 +1,38 @@
+.icnSettingsIcnLg {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.h5 {
+  position: relative;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.cardItem,
+.colMd3 {
+  background-color: var(--light-text-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cardItem {
+  width: 230px;
+  padding: var(--padding-11xl) var(--padding-21xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+}
+.colMd3 {
+  border-radius: var(--br-xl);
+  width: 240px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: var(--h4-size);
+  color: var(--second-text-color);
+  font-family: var(--paragraph);
+}

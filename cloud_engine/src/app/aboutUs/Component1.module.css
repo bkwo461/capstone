@@ -1,0 +1,70 @@
+.div,
+.iconChild {
+  position: absolute;
+}
+.iconChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-8xs);
+  background-color: var(--light-text-color);
+  width: 32px;
+  height: 32px;
+}
+.div {
+  top: 4px;
+  left: 11px;
+  letter-spacing: 0.1px;
+  line-height: 23px;
+  font-weight: 500;
+}
+.h5,
+.icon {
+  position: relative;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+}
+.h5 {
+  font-size: var(--h4-size);
+  letter-spacing: 0.2px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: var(--paragraph);
+  display: inline-block;
+  width: 241px;
+  flex-shrink: 0;
+}
+.iconParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.h51 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--paragraph-size);
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  font-family: var(--paragraph);
+}
+.component1 {
+  position: relative;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-gray-200);
+  width: 564px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--paragraphe-size);
+  color: var(--text);
+  font-family: var(--font-source-han-sans-cn);
+}

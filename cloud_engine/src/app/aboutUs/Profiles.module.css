@@ -1,0 +1,322 @@
+.profilesChild {
+  position: absolute;
+  top: 0;
+  left: 829px;
+  border-radius: var(--br-mini);
+  background-color: var(--light-text-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 4px solid var(--color-midnightblue);
+  box-sizing: border-box;
+  width: 288px;
+  height: 463px;
+}
+.glyphLogoMay20161Icon,
+.snskakaotalkIcon {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 36.36%;
+  right: 9.71%;
+  bottom: 61.4%;
+  left: 88.19%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.glyphLogoMay20161Icon {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+}
+.snsfacebook,
+.snsinstagram {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 36.36%;
+  right: 18.13%;
+  bottom: 61.4%;
+  left: 79.77%;
+}
+.snsfacebook {
+  right: 13.92%;
+  left: 83.98%;
+}
+.profilesItem {
+  position: absolute;
+  top: 0;
+  left: 410px;
+  border-radius: var(--br-mini);
+  background-color: var(--light-text-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 4px solid var(--color-midnightblue);
+  box-sizing: border-box;
+  width: 288px;
+  height: 463px;
+}
+.snsfacebook1,
+.snsinstagram1 {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 36.36%;
+  right: 55.91%;
+  bottom: 61.4%;
+  left: 41.99%;
+}
+.snsfacebook1 {
+  right: 51.7%;
+  left: 46.2%;
+}
+.profilesChild1,
+.profilesInner,
+.rectangleDiv {
+  position: absolute;
+  top: 651px;
+  left: 410px;
+  border-radius: var(--br-mini);
+  background-color: var(--light-text-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 4px solid var(--color-midnightblue);
+  box-sizing: border-box;
+  width: 288px;
+  height: 463px;
+}
+.profilesChild1,
+.rectangleDiv {
+  left: 829px;
+  background-color: var(--color-whitesmoke-100);
+  border: 5px solid var(--color-gold);
+}
+.profilesChild1 {
+  top: 0;
+  left: 2px;
+  background-color: var(--light-text-color);
+  border: 4px solid var(--color-midnightblue);
+}
+.snskakaotalkIcon1 {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 36.36%;
+  right: 83.92%;
+  bottom: 61.4%;
+  left: 13.97%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.rectangleIcon {
+  position: absolute;
+  top: 651px;
+  left: -4px;
+  border-radius: var(--br-mini);
+  width: 296px;
+  height: 471px;
+}
+.screenshot20230815At813,
+.screenshot20230815At814 {
+  position: absolute;
+  top: 30px;
+  left: 66px;
+  width: 163px;
+  height: 201px;
+  object-fit: cover;
+}
+.screenshot20230815At813 {
+  top: 29px;
+  left: 891px;
+  height: 202px;
+}
+.screenshot20230815At8141,
+.screenshot20230815At815,
+.screenshot20230815At816 {
+  position: absolute;
+  top: 30px;
+  left: 475px;
+  width: 163px;
+  height: 201px;
+  object-fit: cover;
+}
+.screenshot20230815At815,
+.screenshot20230815At816 {
+  top: 681px;
+  left: 469px;
+}
+.screenshot20230815At815 {
+  left: 62px;
+}
+.minsuKim {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+}
+.blankLine {
+  margin: 0;
+}
+.leadBackendDeveloper {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+.minsuKimLeadContainer {
+  position: absolute;
+  top: 908px;
+  left: 42px;
+  letter-spacing: 0.46px;
+  display: inline-block;
+  width: 211px;
+  height: 104px;
+}
+.interestedInWorking {
+  margin: 0;
+  font-weight: 600;
+}
+.blankLine2 {
+  margin: 0;
+  font-size: var(--h4-size);
+  font-weight: 800;
+}
+.interestedInWorkingContainer {
+  position: absolute;
+  top: 941px;
+  left: 849px;
+  letter-spacing: 0.46px;
+  text-align: left;
+  display: inline-block;
+  width: 248px;
+  height: 37px;
+  font-size: var(--paragraphe-size);
+}
+.snsfacebook2,
+.snsinstagram2 {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 36.36%;
+  right: 92.34%;
+  bottom: 61.4%;
+  left: 5.55%;
+}
+.snsfacebook2 {
+  right: 88.13%;
+  left: 9.76%;
+}
+.snsinstagram3,
+.snskakaotalkIcon2 {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 94.7%;
+  bottom: 3.05%;
+}
+.snskakaotalkIcon2 {
+  right: 47.49%;
+  left: 50.41%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.snsinstagram3 {
+  right: 55.91%;
+  left: 41.99%;
+}
+.snsfacebook3 {
+  right: 51.7%;
+  left: 46.2%;
+}
+.snsfacebook3,
+.snsfacebook4,
+.snsinstagram4,
+.snskakaotalkIcon3 {
+  position: absolute;
+  height: 2.24%;
+  width: 2.11%;
+  top: 94.7%;
+  bottom: 3.05%;
+}
+.snskakaotalkIcon3 {
+  right: 83.56%;
+  left: 14.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.snsfacebook4,
+.snsinstagram4 {
+  right: 91.99%;
+  left: 5.91%;
+}
+.snsfacebook4 {
+  right: 87.78%;
+  left: 10.12%;
+}
+.applyNow {
+  position: absolute;
+  top: 1003px;
+  left: 863px;
+  letter-spacing: 0.46px;
+  font-weight: 800;
+  color: var(--color-royalblue-100);
+  display: inline-block;
+  width: 220px;
+  height: 28px;
+}
+.noProfilePictureIcon181 {
+  position: absolute;
+  top: 681px;
+  left: 891px;
+  width: 163px;
+  height: 201px;
+  object-fit: cover;
+}
+.shinbeomKwonFrontendContainer {
+  position: absolute;
+  top: 259px;
+  left: 29px;
+  letter-spacing: 0.46px;
+  display: inline-block;
+  width: 250px;
+  height: 127px;
+}
+.blankLine8 {
+  margin: 0;
+  font-size: var(--font-size-9xl);
+}
+.junheeHanBackendContainer,
+.sangjunMinLeadContainer,
+.tanviKherFullContainer {
+  position: absolute;
+  top: 261px;
+  left: 867px;
+  letter-spacing: 0.46px;
+  display: inline-block;
+  width: 220px;
+  height: 109px;
+}
+.junheeHanBackendContainer,
+.tanviKherFullContainer {
+  top: 909px;
+  left: 449px;
+  width: 208px;
+  height: 126px;
+}
+.tanviKherFullContainer {
+  top: 261px;
+  left: 453px;
+  width: 207px;
+  height: 128px;
+}
+.profiles {
+  position: absolute;
+  top: 4122px;
+  left: 401px;
+  width: 1117px;
+  height: 1114px;
+  text-align: center;
+  font-size: var(--h4-size);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
