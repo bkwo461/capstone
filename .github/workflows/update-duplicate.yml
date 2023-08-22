@@ -27,11 +27,12 @@ jobs:
 
 
           # Clone destination repo
+          cd ..
           git clone $DEST_REPO_URL destination-repo
           cd destination-repo
 
           # Copy source files to destination repo
-          cp -R ../* .
+          cp -R ../capstone-project-team-16 .
 
           # Commit and push
           git add -A
