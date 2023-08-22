@@ -4,11 +4,11 @@
   left: calc(50% - 892.5px);
   background: linear-gradient(
     180deg,
-    rgba(253, 254, 255, 0.7),
+    rgba(253, 254, 255, 0.3),
     rgba(203, 226, 255, 0.6) 50.52%,
     rgba(253, 171, 1, 0.6) 96.35%
   );
-  width: 1920px;
+  width: 1785px;
   height: 1557px;
 }
 .team {
@@ -16,8 +16,8 @@
 }
 .meetOurTeamContainer {
   position: absolute;
-  top: 3945px;
-  left: 762px;
+  top: calc(50% + 1047.5px);
+  left: calc(50% - 130.5px);
   letter-spacing: 0.46px;
   display: inline-block;
   width: 396.46px;
@@ -27,14 +27,14 @@
 .maskGroupIcon {
   position: absolute;
   top: 144px;
-  left: calc(50% - 809px);
+  left: calc(50% - 747.5px);
   width: 298.84px;
   height: 309.85px;
 }
 .bg {
   position: absolute;
   top: 0;
-  left: 1214px;
+  left: 1124px;
   border-radius: 8px;
   background: radial-gradient(
       50% 50%at 50% 50%,
@@ -63,7 +63,7 @@
 .headerImageIcon {
   position: absolute;
   top: 53.7px;
-  left: 789px;
+  left: 733px;
   border-radius: 64px;
   width: 763px;
   height: 619.3px;
@@ -78,7 +78,7 @@
     rgba(255, 154, 34, 0.43),
     rgba(251, 220, 183, 0.08)
   );
-  width: 1920px;
+  width: 1785px;
   height: 673px;
   overflow: hidden;
   font-size: var(--h2-size);

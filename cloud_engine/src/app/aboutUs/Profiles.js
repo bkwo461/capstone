@@ -1,6 +1,4 @@
 import styles from "./Profiles.module.css";
-
-
 const Profiles = () => {
   return (
     <div className={styles.profiles}>
@@ -32,7 +30,7 @@ const Profiles = () => {
         <img
           className={styles.glyphLogoMay20161Icon}
           alt=""
-          src="/f-logo-rgbblack-114-11@2x.png"
+          src="/f-logo-rgbblack-114-1@2x.png"
         />
       </div>
       <div className={styles.profilesInner} />
@@ -102,7 +100,7 @@ const Profiles = () => {
         <img
           className={styles.glyphLogoMay20161Icon}
           alt=""
-          src="/f-logo-rgbblack-114-11@2x.png"
+          src="/f-logo-rgbblack-114-1@2x.png"
         />
       </div>
       <img
@@ -121,7 +119,7 @@ const Profiles = () => {
         <img
           className={styles.glyphLogoMay20161Icon}
           alt=""
-          src="/f-logo-rgbblack-114-11@2x.png"
+          src="/f-logo-rgbblack-114-1@2x.png"
         />
       </div>
       <img
@@ -140,7 +138,7 @@ const Profiles = () => {
         <img
           className={styles.glyphLogoMay20161Icon}
           alt=""
-          src="/f-logo-rgbblack-114-11@2x.png"
+          src="/f-logo-rgbblack-114-1@2x.png"
         />
       </div>
       <div className={styles.applyNow}>Apply Now</div>

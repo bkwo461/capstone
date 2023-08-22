@@ -46,7 +46,7 @@
 .container {
   position: absolute;
   top: 64px;
-  left: calc(50% - 525px);
+  left: calc(50% - 524.5px);
   width: 1050px;
   padding: var(--padding-61xl) 0;
   box-sizing: border-box;
@@ -56,9 +56,9 @@
 .aboutUs2 {
   position: absolute;
   top: 802px;
-  left: calc(50% - 959.5px);
+  left: calc(50% - 892.5px);
   background-color: var(--light-text-color);
-  width: 1920px;
+  width: 1785px;
   height: 673px;
   text-align: center;
   font-size: var(--h2-size);

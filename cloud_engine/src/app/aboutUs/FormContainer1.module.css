@@ -2,11 +2,11 @@
   position: absolute;
   width: calc(100% - 441px);
   right: 331px;
-  bottom: 37.08px;
+  bottom: 37.11px;
   left: 110px;
   max-width: 100%;
   overflow: hidden;
-  height: 3.92px;
+  height: 3.89px;
   opacity: 0.6;
 }
 .copyright2020 {
@@ -107,7 +107,7 @@
   top: 5459px;
   left: calc(50% - 892.5px);
   background-color: var(--color-gray-100);
-  width: 1796px;
+  width: 1785px;
   height: 326px;
   overflow: hidden;
   text-align: left;
