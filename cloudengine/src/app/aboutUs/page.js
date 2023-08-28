@@ -14,7 +14,7 @@ const AboutUs = () => {
       <ContainerCardFormFilter dimensionCode="/mask-group.svg" />
       <ContactInfoCard
         aboutUsFooterTop="calc(50% + 2591.5px)"
-        aboutUsFooterLeft="calc(50% - 963px)"
+        aboutUsFooterLeft="calc(50% - 960px)"
       />
       <div className={styles.aboutUs2}>
         <div className={styles.container}>
