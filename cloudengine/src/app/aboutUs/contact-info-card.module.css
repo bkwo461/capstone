@@ -52,7 +52,7 @@
 }
 .termOfUseParent {
   top: 270px;
-  right: 80.76px;
+  right: 40px;
   width: 364.24px;
   height: 22.05px;
   gap: var(--gap-21xl);
@@ -86,8 +86,9 @@
   font-size: var(--h4-size);
 }
 .learnMoreParent {
-  left: 1305px;
-  width: 98.65px;
+  left: 1282px;
+  width: 155px;
+  height: 209px;
 }
 .logoIcon {
   position: absolute;

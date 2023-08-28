@@ -5,8 +5,6 @@ import AboutUsCardForm from "./about-us-card-form";
 import AboutUsContainer1 from "./about-us-container1";
 import RegisterForm from "./register-form";
 import styles from "./index.module.css";
-
-
 const AboutUs = () => {
   return (
     <div className={styles.aboutUs}>
