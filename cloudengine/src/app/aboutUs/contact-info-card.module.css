@@ -1,0 +1,120 @@
+.footerChild {
+  position: absolute;
+  width: calc(100% + 1px);
+  right: -0.5px;
+  bottom: 34.55px;
+  left: -0.5px;
+  border-top: 1px solid var(--light-text-color);
+  box-sizing: border-box;
+  height: 1px;
+  opacity: 0.6;
+}
+.copyright2020 {
+  position: absolute;
+  bottom: 0.05px;
+  left: 45px;
+  line-height: 24px;
+  display: inline-block;
+  width: 349px;
+  height: 24px;
+  opacity: 0.8;
+}
+.div,
+.theUniversityOf {
+  position: relative;
+  line-height: 24px;
+}
+.theUniversityOf {
+  letter-spacing: 0.1px;
+}
+.footerInner,
+.parent,
+.termOfUseParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.parent {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.footerInner,
+.termOfUseParent {
+  position: absolute;
+  flex-direction: row;
+}
+.footerInner {
+  top: 89.11px;
+  left: 45.28px;
+  width: 225.75px;
+  height: 73.49px;
+  font-size: var(--paragraphe-size);
+}
+.termOfUseParent {
+  top: 270px;
+  right: 80.76px;
+  width: 364.24px;
+  height: 22.05px;
+  gap: var(--gap-21xl);
+  opacity: 0.8;
+}
+.social {
+  position: relative;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.facebookParent,
+.learnMoreParent,
+.socialParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  font-size: var(--paragraph-size);
+}
+.learnMoreParent,
+.socialParent {
+  position: absolute;
+  top: 0;
+  left: 1528px;
+  width: 60.71px;
+  height: 209.46px;
+  gap: var(--gap-11xl);
+  font-size: var(--h4-size);
+}
+.learnMoreParent {
+  left: 1305px;
+  width: 98.65px;
+}
+.logoIcon {
+  position: absolute;
+  top: 6.43px;
+  left: 45.28px;
+  width: 174.53px;
+  height: 45.02px;
+  object-fit: cover;
+}
+.footer {
+  position: absolute;
+  width: calc(100% - 231px);
+  right: 117px;
+  bottom: 37.95px;
+  left: 114px;
+  height: 292.05px;
+}
+.aboutUsFooter {
+  position: absolute;
+  top: 5543px;
+  left: 0;
+  background-color: var(--color-gray-100);
+  width: 1920px;
+  height: 362px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--paragraph-size);
+  color: var(--light-text-color);
+  font-family: var(--paragraph);
+}
