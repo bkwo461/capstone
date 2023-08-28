@@ -1,7 +1,15 @@
+import { useMemo } from "react";
 import styles from "./contact-info-card.module.css";
-const ContactInfoCard = () => {
+const ContactInfoCard = ({ aboutUsFooterTop, aboutUsFooterLeft }) => {
+  const aboutUsFooterStyle = useMemo(() => {
+    return {
+      top: aboutUsFooterTop,
+      left: aboutUsFooterLeft,
+    };
+  }, [aboutUsFooterTop, aboutUsFooterLeft]);
+
   return (
-    <div className={styles.aboutUsFooter}>
+    <div className={styles.aboutUsFooter} style={aboutUsFooterStyle}>
       <div className={styles.footer}>
         <div className={styles.footerChild} />
         <div className={styles.copyright2020}>

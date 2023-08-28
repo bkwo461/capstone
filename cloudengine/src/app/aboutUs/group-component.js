@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import styles from "./group-component.module.css";
 const GroupComponent = ({
+  group,
   imageDescription,
   imageDimensions,
   groupDivPosition,
@@ -35,7 +36,7 @@ const GroupComponent = ({
         </div>
         <div className={styles.icon}>
           <div className={styles.iconChild} style={rectangleDivStyle} />
-          <img className={styles.groupIcon} alt="" src="/group.svg" />
+          <img className={styles.groupIcon} alt="" src={group} />
         </div>
         <img className={styles.icon1} alt="" src={imageDescription} />
         <img className={styles.icon1} alt="" src={imageDimensions} />

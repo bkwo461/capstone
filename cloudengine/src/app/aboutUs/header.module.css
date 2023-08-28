@@ -84,9 +84,35 @@
   object-fit: cover;
 }
 .topNavBar {
-  top: 31px;
-  left: 78px;
+  top: 34px;
+  left: 100px;
   width: 1763px;
+}
+.span {
+  color: var(--color-silver);
+}
+.aboutUs1 {
+  color: var(--color-royalblue-200);
+}
+.homeAboutContainer {
+  position: absolute;
+  top: calc(50% + 78px);
+  left: calc(50% - 776px);
+  font-size: var(--font-size-xs);
+  display: inline-block;
+  font-family: var(--font-inter);
+  text-align: left;
+  width: 525px;
+  height: 21px;
+  color: var(--color-black);
+}
+.topNavBarParent {
+  position: absolute;
+  top: calc(50% - 2953.5px);
+  left: calc(50% - 960px);
+  width: 1920px;
+  height: 250px;
+  overflow: hidden;
   text-align: center;
   font-size: var(--paragraph-size);
   color: var(--light-text-color);

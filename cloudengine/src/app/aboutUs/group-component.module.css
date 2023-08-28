@@ -82,6 +82,6 @@
   gap: var(--gap-11xs);
   text-align: left;
   font-size: var(--paragraphe-size);
-  color: var(--text);
+  color: var(--text-color);
   font-family: var(--paragraphe);
 }

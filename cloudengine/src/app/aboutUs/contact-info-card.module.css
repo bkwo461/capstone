@@ -44,15 +44,15 @@
   flex-direction: row;
 }
 .footerInner {
-  top: 89.11px;
+  top: 94.11px;
   left: 45.28px;
   width: 225.75px;
   height: 73.49px;
   font-size: var(--paragraphe-size);
 }
 .termOfUseParent {
-  top: 270px;
-  right: 40px;
+  top: 275px;
+  right: 80.76px;
   width: 364.24px;
   height: 22.05px;
   gap: var(--gap-21xl);
@@ -79,20 +79,20 @@
 .socialParent {
   position: absolute;
   top: 0;
-  left: 1528px;
+  left: 1497px;
   width: 60.71px;
   height: 209.46px;
   gap: var(--gap-11xl);
   font-size: var(--h4-size);
 }
 .learnMoreParent {
-  left: 1282px;
+  left: 1231px;
   width: 155px;
   height: 209px;
 }
 .logoIcon {
   position: absolute;
-  top: 6.43px;
+  top: 11.43px;
   left: 45.28px;
   width: 174.53px;
   height: 45.02px;
@@ -104,7 +104,7 @@
   right: 117px;
   bottom: 37.95px;
   left: 114px;
-  height: 292.05px;
+  height: 297.05px;
 }
 .aboutUsFooter {
   position: absolute;

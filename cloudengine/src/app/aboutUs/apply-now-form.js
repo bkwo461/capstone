@@ -1,15 +1,24 @@
+import { useMemo } from "react";
 import styles from "./apply-now-form.module.css";
-const ApplyNowForm = () => {
+const ApplyNowForm = ({
+  sNSkakaotalk,
+  sNSkakaotalk1,
+  sNSkakaotalk2,
+  sNSkakaotalk3,
+  aboutUs5Top,
+}) => {
+  const aboutUs5Style = useMemo(() => {
+    return {
+      top: aboutUs5Top,
+    };
+  }, [aboutUs5Top]);
+
   return (
-    <div className={styles.aboutUs5}>
+    <div className={styles.aboutUs5} style={aboutUs5Style}>
       <div className={styles.aboutUs5Child} />
       <div className={styles.profiles}>
         <div className={styles.profilesChild} />
-        <img
-          className={styles.snskakaotalkIcon}
-          alt=""
-          src="/snskakaotalk.svg"
-        />
+        <img className={styles.snskakaotalkIcon} alt="" src={sNSkakaotalk} />
         <div className={styles.snsinstagram}>
           <img
             className={styles.glyphLogoMay20161Icon}
@@ -42,11 +51,7 @@ const ApplyNowForm = () => {
         <div className={styles.profilesInner} />
         <div className={styles.rectangleDiv} />
         <div className={styles.profilesChild1} />
-        <img
-          className={styles.snskakaotalkIcon1}
-          alt=""
-          src="/snskakaotalk1.svg"
-        />
+        <img className={styles.snskakaotalkIcon1} alt="" src={sNSkakaotalk1} />
         <img className={styles.rectangleIcon} alt="" src="/rectangle-216.svg" />
         <img
           className={styles.screenshot20230815At814}
@@ -109,11 +114,7 @@ const ApplyNowForm = () => {
             src="/f-logo-rgbblack-114-12@2x.png"
           />
         </div>
-        <img
-          className={styles.snskakaotalkIcon2}
-          alt=""
-          src="/snskakaotalk2.svg"
-        />
+        <img className={styles.snskakaotalkIcon2} alt="" src={sNSkakaotalk2} />
         <div className={styles.snsinstagram3}>
           <img
             className={styles.glyphLogoMay20161Icon}
@@ -128,11 +129,7 @@ const ApplyNowForm = () => {
             src="/f-logo-rgbblack-114-13@2x.png"
           />
         </div>
-        <img
-          className={styles.snskakaotalkIcon3}
-          alt=""
-          src="/snskakaotalk3.svg"
-        />
+        <img className={styles.snskakaotalkIcon3} alt="" src={sNSkakaotalk3} />
         <div className={styles.snsinstagram4}>
           <img
             className={styles.glyphLogoMay20161Icon}

@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import styles from './page.module.css';
+import styles from './index.module.css';
 import { useRouter } from 'next/navigation';
-import AboutUs from './aboutUs/page';
+
 
 export default function Nav() {
     const router = useRouter();
@@ -15,19 +15,31 @@ export default function Nav() {
     };
 
     return (
-        <nav className={styles.navigation}>
-            <ul>
-                <li>
-                    <div className={styles.logo} onClick={HomePage}>
-                        <p>Home</p>
-                    </div>
-                </li>
-                <li>
-                    <div className={styles.logo} onClick={AboutUs}>
-                        <p>About Us</p>
-                    </div>
-                </li>
-            </ul>
+        <nav className={styles.topNavBar}>
+            <div className={styles.topNavMenu}>
+                <div className={styles.home} onClick={HomePage}>
+                    <p>Home</p>
+                </div>
+                <div className={styles.aboutUs} onClick={AboutUs}>
+                    <p>About Us</p>
+                </div>
+                <div className={styles.myAccount} onClick={AboutUs}>
+                    <p>My Account</p>
+                </div>
+                <div className={styles.services} onClick={AboutUs}>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div className={styles.loginButton}>
+                <div className={styles.text1}>Log in</div>
+                <img className={styles.iconWrapper} alt="" src="/iconwrapper.svg" />
+            </div>
+            <div className={styles.registerBtn}>
+                <div className={styles.text1}>Register</div>
+                <img className={styles.iconWrapper} alt="" src="/iconwrapper.svg" />
+            </div>
+            <img className={styles.logoIcon} alt="" src="/logo1@2x.png" />
+
         </nav>
     );
 }

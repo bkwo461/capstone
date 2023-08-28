@@ -65,6 +65,6 @@
   gap: var(--gap-xs);
   text-align: left;
   font-size: var(--paragraphe-size);
-  color: var(--text);
+  color: var(--text-color);
   font-family: var(--font-source-han-sans-cn);
 }
