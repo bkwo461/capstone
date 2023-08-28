@@ -193,6 +193,7 @@ body {
   --drop-shadow-button-primary: 0px 2px 0px rgba(0, 0, 0, 0.04);
 }
 
+
 /*(modify) adjust web page size*/
 @media screen and (max-width: 768px) {
   :root {
