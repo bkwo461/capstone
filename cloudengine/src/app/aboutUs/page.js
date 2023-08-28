@@ -5,7 +5,6 @@ import GroupComponent from "./group-component";
 import Component1 from "./component1";
 import ApplyNowForm from "./apply-now-form";
 import styles from "./index.module.css";
-import Nav from './nav';
 
 
 const AboutUs = () => {

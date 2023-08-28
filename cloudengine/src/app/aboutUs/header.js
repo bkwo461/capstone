@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 const Header = () => {
 
   const router = useRouter();
+
     const HomePage = () => {
         router.push('/');
     };
