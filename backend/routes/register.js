@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { User } = require('../models/accout');
+const { User } = require('../models/Account');
 
 router.post("/", async (req, res) => {
   const user = new User(req.body);
