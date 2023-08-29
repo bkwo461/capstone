@@ -2,18 +2,40 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import styles from "./index.module.css";
-import Form from './form'
-
+import style from "./form.module.css";
 
 const Register = () => {
 
   const router = useRouter();
 
-  const EmailVerification = () => {
-    router.push('/emailVerification');
-  };
   const Home = () => {
     router.push('/');
+  };
+
+  const EmailVerification = () => {
+    const queryParams = {
+      firstName,
+      lastName,
+      email,
+    };
+    const queryString = new URLSearchParams(queryParams).toString();
+    router.push(`/emailVerification?${queryString}`);
+  };
+
+  const [firstName, setFirstName] = React.useState("");
+  const [lastName, setLastName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+
+  const handleFirstNameChange = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastNameChange = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
   return (
@@ -43,7 +65,62 @@ const Register = () => {
         </div>
       </div>
       <div className={styles.groupParent}>
-        <Form />
+
+        <div className={style.groupParent}>
+          <div className={style.rectangleParent}>
+            <div className={style.groupChild} />
+            <div className={style.reEnterPasswordWrapper}>
+              <input
+                type="text"
+                className={style.reEnterPassword} // You might need to adjust the styles
+                placeholder="Email"
+                value={email}
+                onChange={handleEmailChange}
+              />
+            </div>
+            <img
+              className={style.iconfeatherIcon}
+              alt=""
+              src="/iconfeather-icon1.svg"
+            />
+          </div>
+          <div className={style.rectangleGroup}>
+            <div className={style.groupItem} />
+            <div className={style.iconlyboldprofile} />
+            <div className={style.idWrapper}>
+              <input
+                type="text"
+                className={style.id} // You might need to adjust the styles
+                placeholder="First Name"
+                value={firstName}
+                onChange={handleFirstNameChange}
+              />
+            </div>
+            <img
+              className={style.iconfeatherIcon1}
+              alt=""
+              src="/iconfeather-icon.svg"
+            />
+          </div>
+          <div className={style.rectangleContainer}>
+            <div className={style.groupChild} />
+            <div className={style.passwordWrapper}>
+              <input
+                type="email"
+                className={style.password} // You might need to adjust the styles
+                placeholder="Last Name"
+                value={lastName}
+                onChange={handleLastNameChange}
+              />
+            </div>
+            <img
+              className={style.interfaceEssentialkeyIcon}
+              alt=""
+              src="/iconfeather-icon.svg"
+            />
+          </div>
+        </div>
+
         <div className={styles.pleaseFillYour}>
           Please fill your information below
         </div>

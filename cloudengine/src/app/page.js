@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Nav from './nav';
 
 const Homepage = () => {
+  
   return (
     <div className={styles.homepage}>
       <div className={styles.maskGroupParent}>

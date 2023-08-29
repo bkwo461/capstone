@@ -8,11 +8,18 @@ const EmailVerification = () => {
 
   const router = useRouter();
 
-    const SetIDPW = () => {
-        router.push('/setIdPw');
+  const SetIDPW = () => {
+    const queryParams = {
+      firstName,
+      lastName,
+      email,
     };
-    const Home = () => {
-      router.push('/');
+    const queryString = new URLSearchParams(queryParams).toString();
+    router.push(`/setIdPw?${queryString}`);
+  };
+
+  const Home = () => {
+    router.push('/');
   };
 
   return (
@@ -23,10 +30,10 @@ const EmailVerification = () => {
         <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
       </div>
       <div className={styles.maskGroupParent}>
-      <img className={styles.maskGroupIcon} alt="" src="/mask-group.svg" />
-      <img className={styles.maskGroupIcon1} alt="" src="/mask-group1.svg" />
-      <div className={styles.signUp}>Sign Up</div>
-    </div>
+        <img className={styles.maskGroupIcon} alt="" src="/mask-group.svg" />
+        <img className={styles.maskGroupIcon1} alt="" src="/mask-group1.svg" />
+        <div className={styles.signUp}>Sign Up</div>
+      </div>
       <div className={styles.nextBtn}>
         <div className={styles.nextIcon}>
           <div className={styles.next} onClick={SetIDPW}>Next</div>
@@ -54,12 +61,12 @@ const EmailVerification = () => {
         />
       </div>
       <div>
-      <img
-        className={styles.xnixlinecrossIcon}
-        onClick={Home}
-        alt=""
-        src="/xnixlinecross.svg"
-      />
+        <img
+          className={styles.xnixlinecrossIcon}
+          onClick={Home}
+          alt=""
+          src="/xnixlinecross.svg"
+        />
       </div>
     </div>
   );
