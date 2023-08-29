@@ -13,6 +13,9 @@ export default function Nav() {
     const AboutUs = () => {
         router.push('/aboutUs');
     };
+    const Registration = () => {
+        router.push('/registration');
+    }
 
     return (
         <nav className={styles.topNavBar}>
@@ -35,7 +38,7 @@ export default function Nav() {
                 <img className={styles.iconWrapper} alt="" src="/iconwrapper.svg" />
             </div>
             <div className={styles.registerBtn}>
-                <div className={styles.text1}>Register</div>
+                <div className={styles.text1} onClick={Registration}>Register</div>
                 <img className={styles.iconWrapper} alt="" src="/iconwrapper.svg" />
             </div>
             <img className={styles.logoIcon} alt="" src="/logo1@2x.png" />
