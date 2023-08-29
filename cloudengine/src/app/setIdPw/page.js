@@ -1,9 +1,21 @@
-import SignUpContainer from "./sign-up-container";
-import Form from "./form";
+'use client';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import styles from "./index.module.css";
+import Form from './form'
 
 
 const RegisterIDPW = () => {
+
+  const router = useRouter();
+
+  const RegisterSuccess = () => {
+    router.push('/registerSuccess');
+  };
+  const Home = () => {
+    router.push('/');
+};
+
   return (
     <div className={styles.registerIdPw}>
       <div className={styles.bgParent}>
@@ -11,11 +23,15 @@ const RegisterIDPW = () => {
         <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
         <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
       </div>
-      <SignUpContainer />
+      <div className={styles.maskGroupParent}>
+        <img className={styles.maskGroupIcon} alt="" src="/mask-group.svg" />
+        <img className={styles.maskGroupIcon1} alt="" src="/mask-group1.svg" />
+        <div className={styles.signUp}>Sign Up</div>
+      </div>
       <div className={styles.nextBtn}>
         <div className={styles.nextIcon}>
           <div className={styles.next}>
-            <div className={styles.next1}>Next</div>
+            <div className={styles.next1} onClick={RegisterSuccess}>Next</div>
           </div>
         </div>
       </div>
@@ -34,6 +50,7 @@ const RegisterIDPW = () => {
       </div>
       <img
         className={styles.xnixlinecrossIcon}
+        onClick={Home}
         alt=""
         src="/xnixlinecross.svg"
       />

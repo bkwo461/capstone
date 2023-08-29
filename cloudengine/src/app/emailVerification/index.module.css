@@ -60,9 +60,10 @@
   top: 1258px;
   left: 1537px;
   border-radius: var(--br-mini);
-  background-color: var(--color-orange-100);
+  background-color: #fdab01;;
   width: 176px;
   height: 70px;
+  font-size: var(--font-size-3xl);
 }
 .groupChild {
   position: absolute;
@@ -91,7 +92,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  color: var(--color-mediumslateblue);
+  color: #2e58f5;
 }
 .lineParent {
   position: absolute;
@@ -99,15 +100,29 @@
   left: 1242px;
   width: 443px;
   height: 48px;
-  font-size: var(--paragraphe-size);
-  color: var(--color-darkslateblue-200);
+  font-size: var(--h5-size);
+  color: #393d6e;
+}
+.pleaseFillThe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+.pleaseFillTheVerificationCWrapper {
+  position: absolute;
+  top: 776px;
+  left: 1168px;
+  width: 597px;
+  height: 36px;
+  color: darkslateblue;
 }
 .groupItem {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: var(--br-3xs);
-  background-color: var(--color-whitesmoke-300);
+  border-radius: 10px;
+  background-color: rgb(239, 238, 238);
   width: 507px;
   height: 99px;
 }
@@ -120,6 +135,7 @@
   align-items: center;
   width: 393px;
   height: 60px;
+  color: grey;
 }
 .interfaceEssentialemai1Icon,
 .rectangleParent {
@@ -130,25 +146,10 @@
   height: 30px;
 }
 .rectangleParent {
-  top: 83px;
-  left: 42px;
+  top: 859px;
+  left: 1210px;
   width: 507px;
   height: 99px;
-}
-.pleaseFillThe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-weight: 600;
-  color: var(--color-darkslateblue-300);
-}
-.groupParent {
-  position: absolute;
-  top: 776px;
-  left: 1168px;
-  width: 597px;
-  height: 182px;
-  font-size: var(--h3-size);
   color: var(--color-lightslategray);
 }
 .xnixlinecrossIcon {
@@ -157,6 +158,7 @@
   left: 1850px;
   width: 70px;
   height: 70px;
+  color: black;
 }
 .emailVerification {
   position: relative;
@@ -165,7 +167,48 @@
   height: 1689px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-3xl);
+  font-size: var(--h3-size);
   color: var(--light-text-color);
   font-family: var(--font-poppins);
+}
+.signUp {
+  position: absolute;
+  top: 229px;
+  left: 117px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 211px;
+  height: 110px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.maskGroupIcon,
+.maskGroupIcon1 {
+  position: absolute;
+  top: calc(50% - 147.21px);
+  left: calc(50% - 278.97px);
+  width: 396.93px;
+  height: 401.41px;
+}
+.maskGroupIcon1 {
+  top: calc(50% - 254.21px);
+  left: calc(50% - 117.97px);
+}
+.maskGroupParent {
+  position: absolute;
+  top: calc(50% - 744.5px);
+  left: calc(50% + 175px);
+  width: 557.93px;
+  height: 508.41px;
+  font-size: 48px;
+  color: #6469b2;
+}
+.xnixlinecrossIcon {
+  position: absolute;
+  height: 70px;
+}
+.xnixlinecrossIcon {
+  top: 0;
+  left: 1850px;
+  width: 70px;
 }

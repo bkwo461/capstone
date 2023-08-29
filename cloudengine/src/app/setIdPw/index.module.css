@@ -69,8 +69,8 @@
 .nextBtn {
   top: 1258px;
   left: 1537px;
-  border-radius: var(--br-mini);
-  background-color: var(--color-orange-100);
+  border-radius: 10px;
+  background-color: #fdab01;
   width: 176px;
   height: 70px;
 }
@@ -101,7 +101,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  color: var(--color-mediumslateblue);
+  color: #2e58f5;
 }
 .lineParent {
   position: absolute;
@@ -110,7 +110,7 @@
   width: 443px;
   height: 48px;
   font-size: var(--paragraphe-size);
-  color: var(--color-darkslateblue-200);
+  color: #393d6e;
 }
 .pleaseFillYour {
   position: absolute;
@@ -144,4 +144,39 @@
   font-size: var(--font-size-3xl);
   color: var(--light-text-color);
   font-family: var(--font-poppins);
+}
+
+.maskGroupIcon,
+.maskGroupIcon1 {
+  position: absolute;
+  top: calc(50% - 147.21px);
+  left: calc(50% - 278.97px);
+  width: 396.93px;
+  height: 401.41px;
+}
+.maskGroupIcon1 {
+  top: calc(50% - 254.21px);
+  left: calc(50% - 117.97px);
+}
+
+.signUp {
+  position: absolute;
+  top: 229px;
+  left: 117px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 211px;
+  height: 110px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.maskGroupParent {
+  position: absolute;
+  top: calc(50% - 744.5px);
+  left: calc(50% + 175px);
+  width: 557.93px;
+  height: 508.41px;
+  font-size: 48px;
+  color: #6469b2;
 }

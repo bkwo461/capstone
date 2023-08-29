@@ -2,22 +2,18 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import styles from "./index.module.css";
-import Form from './form'
 
 
-const Register = () => {
+const WelcomeMsg = () => {
 
   const router = useRouter();
 
-  const EmailVerification = () => {
-    router.push('/emailVerification');
-  };
   const Home = () => {
     router.push('/');
   };
 
   return (
-    <div className={styles.registerIdPw}>
+    <div className={styles.welcomeMsg}>
       <div className={styles.bgParent}>
         <div className={styles.bg} />
         <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
@@ -31,31 +27,19 @@ const Register = () => {
       <div className={styles.nextBtn}>
         <div className={styles.nextIcon}>
           <div className={styles.next}>
-            <div className={styles.next1} onClick={EmailVerification}>Next</div>
+            <div className={styles.complete} onClick={Home}>Complete</div>
           </div>
         </div>
       </div>
-      <div className={styles.lineParent}>
-        <div className={styles.groupChild} />
-        <div className={styles.alreadyHaveAn}>Already have an account?</div>
-        <div className={styles.loginToYourAccountWrapper}>
-          <div className={styles.loginToYour}>Login to your account</div>
-        </div>
-      </div>
-      <div className={styles.groupParent}>
-        <Form />
-        <div className={styles.pleaseFillYour}>
-          Please fill your information below
-        </div>
-      </div>
       <img
-        className={styles.xnixlinecrossIcon}
-        onClick={Home}
+        className={styles.welcomeMsgChild}
         alt=""
-        src="/xnixlinecross.svg"
+        src="/group-1000002573.svg"
       />
+      <div className={styles.welcomeToCloud}>Welcome to Cloud Engine.</div>
+      <div className={styles.thankYouFor}>Thank you for joining us.</div>
     </div>
   );
 };
 
-export default Register;
+export default WelcomeMsg;
