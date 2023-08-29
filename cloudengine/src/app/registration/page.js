@@ -1,7 +1,6 @@
 import AddressContainer from "./address-container";
 import styles from "./index.module.css";
 
-
 const Register = () => {
   return (
     <div className={styles.register}>
@@ -67,6 +66,11 @@ const Register = () => {
           <div className={styles.next}>Next</div>
         </div>
       </div>
+      <img
+        className={styles.xnixlinecrossIcon}
+        alt=""
+        src="/xnixlinecross.svg"
+      />
     </div>
   );
 };

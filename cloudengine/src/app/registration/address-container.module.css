@@ -14,7 +14,6 @@
   align-items: center;
   width: 403px;
   flex-shrink: 0;
-  color: grey;
 }
 .adressWrapper {
   position: absolute;
@@ -26,6 +25,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  color: grey;
 }
 .interfaceEssentiallocationIcon,
 .rectangleParent {
@@ -42,6 +42,6 @@
   height: 99px;
   text-align: left;
   font-size: var(--h3-size);
-  color: grey;
+  color: var(--color-lightslategray);
   font-family: var(--font-poppins);
 }
