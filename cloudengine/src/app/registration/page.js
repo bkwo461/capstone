@@ -1,7 +1,18 @@
+'use client';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import AddressContainer from "./address-container";
 import styles from "./index.module.css";
 
 const Register = () => {
+
+  const router = useRouter();
+
+    const EmailVerification = () => {
+        router.push('/emailVerification');
+    };
+
+
   return (
     <div className={styles.register}>
       <div className={styles.groupParent}>
@@ -63,7 +74,7 @@ const Register = () => {
       </div>
       <div className={styles.nextBtn}>
         <div className={styles.nextIcon}>
-          <div className={styles.next}>Next</div>
+          <div className={styles.next} onClick={EmailVerification}>Next</div>
         </div>
       </div>
       <img
