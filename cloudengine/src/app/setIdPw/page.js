@@ -1,20 +1,11 @@
-'use client';
-import React from 'react';
-import { useRouter } from 'next/navigation';
 import SignUpContainer from "./sign-up-container";
+import Form from "./form";
 import styles from "./index.module.css";
 
 
-const EmailVerification = () => {
-
-  const router = useRouter();
-
-    const SetIDPW = () => {
-        router.push('/setIdPw');
-    };
-
+const RegisterIDPW = () => {
   return (
-    <div className={styles.emailVerification}>
+    <div className={styles.registerIdPw}>
       <div className={styles.bgParent}>
         <div className={styles.bg} />
         <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
@@ -23,7 +14,9 @@ const EmailVerification = () => {
       <SignUpContainer />
       <div className={styles.nextBtn}>
         <div className={styles.nextIcon}>
-          <div className={styles.next} onClick={SetIDPW}>Next</div>
+          <div className={styles.next}>
+            <div className={styles.next1}>Next</div>
+          </div>
         </div>
       </div>
       <div className={styles.lineParent}>
@@ -34,17 +27,9 @@ const EmailVerification = () => {
         </div>
       </div>
       <div className={styles.groupParent}>
-        <div className={styles.rectangleParent}>
-          <div className={styles.groupItem} />
-          <div className={styles.verificationCode}>Verification Code</div>
-          <img
-            className={styles.interfaceEssentialemai1Icon}
-            alt=""
-            src="/interface-essentialemai1.svg"
-          />
-        </div>
-        <div className={styles.pleaseFillThe}>
-          Please fill the verification code sent to your email
+        <Form />
+        <div className={styles.pleaseFillYour}>
+          Please fill your information below
         </div>
       </div>
       <img
@@ -56,4 +41,4 @@ const EmailVerification = () => {
   );
 };
 
-export default EmailVerification;
+export default RegisterIDPW;

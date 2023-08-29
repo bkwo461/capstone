@@ -1,0 +1,130 @@
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-whitesmoke-300);
+  width: 507px;
+  height: 99px;
+}
+.reEnterPassword {
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 402px;
+  flex-shrink: 0;
+}
+.reEnterPasswordWrapper {
+  position: absolute;
+  top: 31px;
+  left: 78px;
+  width: 69px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.iconfeatherIcon {
+  position: absolute;
+  top: 33px;
+  left: 22px;
+  width: 34px;
+  height: 32px;
+  overflow: hidden;
+}
+.groupItem,
+.rectangleParent {
+  position: absolute;
+  top: 398.43px;
+  left: 0;
+  width: 507px;
+  height: 99px;
+}
+.groupItem {
+  top: 106.43px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-whitesmoke-300);
+}
+.iconlyboldprofile {
+  position: absolute;
+  height: 13.19%;
+  width: 6.71%;
+  top: 0;
+  right: 89.55%;
+  bottom: 86.81%;
+  left: 3.75%;
+}
+.id {
+  position: relative;
+  font-weight: 500;
+}
+.idWrapper {
+  position: absolute;
+  top: 137px;
+  left: 78px;
+  width: 397px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.iconfeatherIcon1 {
+  position: absolute;
+  top: 140.43px;
+  left: 27px;
+  width: 28px;
+  height: 30px;
+  overflow: hidden;
+}
+.rectangleGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 507px;
+  height: 205.43px;
+}
+.password {
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 394px;
+  flex-shrink: 0;
+}
+.passwordWrapper {
+  position: absolute;
+  top: 30.57px;
+  left: 78px;
+  width: 394px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.interfaceEssentialkeyIcon {
+  position: absolute;
+  top: 35px;
+  left: 26px;
+  width: 30px;
+  height: 30px;
+}
+.groupParent,
+.rectangleContainer {
+  position: absolute;
+  top: 252.43px;
+  left: 0;
+  width: 507px;
+  height: 99px;
+}
+.groupParent {
+  top: 0;
+  height: 497.43px;
+  text-align: left;
+  font-size: var(--h3-size);
+  color: var(--color-lightslategray);
+  font-family: var(--font-poppins);
+}
