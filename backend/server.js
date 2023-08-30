@@ -31,7 +31,7 @@ const swaggerOptions = {
           description: 'Welcome to Cloud Engine Backend API',
       }
   },
-  apis: ['./server.js', './routes/*.js', './routes/AWS/*.js']
+  apis: ['./server.js', './routes/AWS/*.js', './routes/Auth/*.js']
 };
 
 swaggerDocs = swaggerJsDoc(swaggerOptions);
@@ -54,7 +54,7 @@ app.get('/swagger.json', (req, res) => {
 *
 */
 app.get('/', (req, res) => {
-    console.log('Hello World');
+    // console.log('Hello World');
     res.status(200).send('Hello World');
     // res.status(200).json({"message": "Hello World"}); // Send in JSON format
 });
@@ -64,10 +64,10 @@ connectMongoDB();
 
 // Link Routes
 const cdkRoutes = require('./routes/AWS/cdk');
-const registerRoutes = require('./routes/register');
-const loginRoutes = require('./routes/login');
-const authRoutes = require('./routes/auth');
-const logoutRoutes = require('./routes/logout');
+const registerRoutes = require('./routes/Auth/register');
+const loginRoutes = require('./routes/Auth/login');
+const authRoutes = require('./routes/Auth/auth.js');
+const logoutRoutes = require('./routes/Auth/logout');
 
 // Route Definitions
 app.use('/api/cdk', cdkRoutes);

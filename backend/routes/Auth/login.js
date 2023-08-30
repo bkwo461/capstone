@@ -1,8 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const { User } = require('../models/Account');
+const { User } = require('../../models/Account');
 
+
+/**
+ * @swagger
+ * /api/login:
+ *  post:
+ *    description: Login user.
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ *      '500':
+ *        description: Server Error
+ */
 router.post("/", async (req, res) => {
     try {
       const user = await User.findOne({ email: req.body.email });
