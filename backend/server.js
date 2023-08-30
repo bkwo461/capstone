@@ -1,5 +1,5 @@
 const express = require('express');
-const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerFile = require('./middleware/swagger-output.json');
 const swaggerUi = require('swagger-ui-express');
 
 const app = express();
@@ -22,42 +22,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 
-// Swagger Initialization
-const swaggerOptions = {
-  swaggerDefinition: {
-      info: {
-          title: 'Cloud Engine API',
-          version: '0.0.1',
-          description: 'Welcome to Cloud Engine Backend API',
-      }
-  },
-  apis: ['./server.js', './routes/AWS/*.js', './routes/Auth/*.js']
-};
-
-swaggerDocs = swaggerJsDoc(swaggerOptions);
-
-// Swagger Routes
-app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-app.get('/swagger.json', (req, res) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.send(swaggerDocs);
-});
-
-/**
-* @swagger
-* /:
-*  get:
-*    description: Sample endpoint to test if the server is running
-*    responses:
-*      '200':
-*        description: A successful response
-*
-*/
-app.get('/', (req, res) => {
-    // console.log('Hello World');
-    res.status(200).send('Hello World');
-    // res.status(200).json({"message": "Hello World"}); // Send in JSON format
-});
+//Swagger
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile, { explorer: true }));
 
 // Connect to MongoDB
 connectMongoDB();

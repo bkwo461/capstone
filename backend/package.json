@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "start": "node ./middleware/swagger.js & nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongodb": "^6.0.0",
-    "mongoose": "^7.4.5"
+    "mongoose": "^7.4.5",
+    "swagger-autogen": "^2.23.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",

@@ -13,7 +13,7 @@ const router = express.Router();
 */
 
 router.get('/', (req, res) => {
-    res.send('Hello World (CDK)');
+    res.status(200).send('Hello World (CDK)');
 });
 
 
