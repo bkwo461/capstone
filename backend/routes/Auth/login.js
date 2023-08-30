@@ -5,6 +5,7 @@ const { User } = require('../../models/Account');
 
 
 router.post("/", async (req, res) => {
+  // #swagger.tags = ['Authentication']
     try {
       const user = await User.findOne({ email: req.body.email });
   

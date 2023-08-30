@@ -4,6 +4,7 @@ const router = express.Router();
 const { User } = require('../../models/Account');
 
 router.post("/", async (req, res) => {
+  // #swagger.tags = ['Authentication']
   const user = new User(req.body);
 
   try {

@@ -5,6 +5,7 @@ const { User } = require('../../models/Account');
 
 
 router.get('/', auth, async (req, res) => {
+    // #swagger.tags = ['Authentication']
     try {
         const user = await User.findOneAndUpdate({ _id: req.user._id }, { token: "" });
         res.status(200).send({ success: true, message: "Logout success" });
