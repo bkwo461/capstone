@@ -29,7 +29,7 @@ $ npm run start
 - routes⠀⠀⠀ ⠀⠀#⠀API Endpoint Definition
 - .env ⠀⠀⠀⠀⠀⠀⠀#⠀Environment Variable used for dev (MONGODB_URI=\<LINK TO MONGO DB\>)
 - server.js⠀⠀⠀⠀⠀#⠀Server config file
-- 
+
 <br><br>
 * This project uses swagger-autogen to autogenerate Swagger API documentation. <br>
   Refer https://github.com/swagger-autogen/swagger-autogen
