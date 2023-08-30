@@ -26,6 +26,7 @@ const options = {
     },
   ],
   definitions: {
+    // These are sample model definitions.
     Parents: {
         father: "Simon Doe",
         mother: "Marie Doe"
