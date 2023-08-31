@@ -1,21 +1,44 @@
-# capstone-project-team-16
+# Cloud Engine
+University of Auckland 2023 Semester 2 (CompSci 399) <br>
 Cloud Engine (Team 16) with Project 7
 
-## Frontend (Next.js)
+
+## Frontend
+...
 
 
+## Backend
 
+Install the dependencies:
 
-## Backend (Express.js)
-- Run using ``npm start devStart`` to test on the go without having to restart server every time you change something
-- Basic Route system has been implemented
-- In the future: implement better design, such as repository pattern
+```bash
+$ npm install
+```
 
+Use this command to autogenerate swagger UI endpoint documentations and run server using nodemon for easier debugging.
+
+```bash
+$ npm run dev
+```
+
+Use this command to run backend server without swagger autogen nor nodemon.
+
+```bash
+$ npm run start
+```
+<br><br>
 ### Backend repository convention
-- api # only add index.js which will replace server.js before deployement
-- config # system and environment configuration
-- middleware # middleware, and sub layer functions
-- models # mongo db schemas and models
-- routes # api end point routers 
-- .env  # environement variable not for commit 
-- server.js # initial server starter
+| Component  | Component Description                                                       |
+|------------|-----------------------------------------------------------------------------|
+| config     | System & Env. Config                                                        |
+| middleware | Middleware/sub-layer Functions                                              |
+| models     | Mongo DB Schemas and Models                                                 |
+| routes     | API Endpoint Definition                                                     |
+| .env       | Environment Variable used for development (MONGODB_URI=\<LINK TO MONGO DB\> |
+| server.js  | Server init file                                                            |
+
+<br><br>
+* This project uses swagger-autogen to autogenerate Swagger API documentation. <br>
+  Refer https://github.com/swagger-autogen/swagger-autogen
+* To request for more endpoints, please add on Google Docs ([LINK](https://docs.google.com/document/d/17WN8Kc6bYWCzGtmIO2jYf97FsPnhibPQsApwhysLr5o/edit)), following the template convention on the top of the document. <br>
+  Note: Only members of Team 16 may access this document via university ID. 
