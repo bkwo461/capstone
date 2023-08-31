@@ -1,7 +1,7 @@
 const otpGenerator = require('otp-generator');
-const { OTP } = require('../models/otp');
+const { OTP } = require('../models/otpModel');
 const mailer = require('./mailer');
-const { User } = require('../models/user');
+const { User } = require('../models/Account');
 
 exports.sendOtp = async (req, res) => {
     try {

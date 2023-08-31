@@ -69,6 +69,7 @@ const loginRoutes = require('./routes/login');
 const authRoutes = require('./routes/auth');
 const logoutRoutes = require('./routes/logout');
 const otpRoutes = require('./routes/otp');
+const validatedOtpRoutes = require('./routes/validate_otp');
 
 // Route Definitions
 app.use('/api/cdk', cdkRoutes);
@@ -77,6 +78,7 @@ app.use('/api/login', loginRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/logout', logoutRoutes);
 app.use('/api/otp', otpRoutes);
+app.use('/api/validate_otp', validatedOtpRoutes);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
