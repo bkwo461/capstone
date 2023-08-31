@@ -5,7 +5,7 @@
     <!-- Website title -->
     <title>Empowering Your Visions: Cloud Engine</title>
 
-    <!-- Import CSS -->
+    <!-- W3 CSS -->
     <link rel="stylesheet" href="../w3.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="./styles/main.css" rel="stylesheet" />
@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Inline CSS -->
-    <style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    </style>
+    <title>Responsive Title Text</title>
 </head>
 
 
@@ -39,36 +39,72 @@
 
         <!-- Top Navigation Bar -->
         <div class="topnav">
-            <a href="#home">Home</a>
-            <a
-                style="color:rgb(147, 147, 147)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-            <a href="#news">Services</a>
-            <a
-                style="color:rgb(147, 147, 147)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-            <a href="#contact">My Accout</a>
-            <a
-                style="color:rgb(147, 147, 147)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-            <a href="#about">About Us</a>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        
+                      </li>
+                    </ul>
+                    
+                    
+                  </div>
+                  <div class="d-flex flex-row-reverse">
+                    <!-- Log in -->
+                    <!-- <button class="w3-button login-button">Log in</button> -->
+                    <button class="btn btn-primary btn-lg d-none d-lg-block">Log in</button>
+                    <!-- Register -->
+                    <!-- <button class="w3-button register-button">Register</button> -->
+                    <button class="btn btn-primary btn-lg d-none d-lg-block">Register</button>
+                    
+                </div>
+                </div>
+            </nav>    
         </div>
 
-        <!-- Log in -->
-        <button class="w3-button login-button">
-            Log in
-        </button>
 
-        <!-- Register -->
-        <button class="w3-button register-button">
-            Register
-        </button>
+        
 
         <!-- Frame 1 -->
+        
         <div class="w3-top" style="margin-top: 20%;">
-            <a style="font-weight: bolder; font-size: 50px; margin-left: 20%;">Empowering Visions in the Cloud</a>
-            <a style="font-weight: bolder; font-size: 50px; margin-left: 40%;">Backed by Impeccable Execution</a>
+            <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 50px; margin-left: 20%;">Empowering Visions in the Cloud (Large)</h1>
+            <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 50px; margin-left: 40%;">Backed by Impeccable Execution (Large)</h1>
+
+            <h1 class="display-2 d-none d-md-block d-lg-none" style="font-weight: bolder; font-size: 50px; margin-left: 20%;">Empowering Visions in the Cloud (Medium)</h1>
+            <h1 class="display-2 d-none d-md-block d-lg-none" style="font-weight: bolder; font-size: 50px; margin-left: 40%;">Backed by Impeccable Execution (Medium)</h1>
+
+            <h1 class="display-3 d-none d-sm-block d-md-none" style="font-weight: bolder; font-size: 50px; margin-left: 20%;">Empowering Visions in the Cloud (Small)</h1>
+            <h1 class="display-3 d-none d-sm-block d-md-none" style="font-weight: bolder; font-size: 50px; margin-left: 40%;">Backed by Impeccable Execution (Small)</h1>
+
+            <h1 class="display-4 d-block d-sm-none" style="font-weight: bolder; font-size: 50px; margin-left: 20%;">Empowering Visions in the Cloud (Extra Small)</h1>
+            <h1 class="display-4 d-block d-sm-none" style="font-weight: bolder; font-size: 50px; margin-left: 40%;">Backed by Impeccable Execution (Extra Small)</h1>
         </div>
 
         <div class="background-image">
-            <img src="images/Frame 1.png" srcset="images/Frame 2@2x.png 2x, images/Frame 3@3x.png 3x" class="Frame-1">
+            <img src="images/Frame 1.png" srcset="images/Frame 1@2x.png 2x, images/Frame 1@3x.png 3x" class="Frame-1">
         </div>
 
         <button class="w3-button areYouNew-button">
@@ -77,14 +113,14 @@
 
         <!-- Frame 2 -->
 
-
     </div>
-
-
-
+    <!-- background image 2 -->
+    <div>
+        <div class="background-image">
+            <img src="images/Frame 2.png" srcset="images/Frame 2@2x.png 2x, images/Frame 2@3x.png 3x" class="Frame-2">
+        </div>
+    </div>
 </body>
-
-
 
 
 <!-- Optional JavaScript -->
