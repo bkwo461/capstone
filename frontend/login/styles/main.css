@@ -1,0 +1,13 @@
+img.login1 {
+    width: 965px;
+    height: 100%;
+    margin: 0 170px 0 0;
+    object-fit: contain;
+  }
+
+img.Frame-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(circle at 50% 50%, #dbdbdb, rgba(219, 219, 219, 0) 34%), radial-gradient(circle at 86% 100%, #fdab01, rgba(253, 171, 1, 0) 83%), radial-gradient(circle at 10% 0%, #dce8ee, rgba(220, 232, 238, 0) 93%), linear-gradient(to bottom, #a3b8f0 100%, rgba(163, 184, 240, 0) 100%), linear-gradient(to bottom, #fff, #fff);
+}
