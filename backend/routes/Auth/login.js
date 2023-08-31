@@ -1,11 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const { body, validationResult } = require('express-validator');
 
-const { User } = require('../../models/Account');
+const { User } = require('../models/Account');
+  
+router.post("/", [body('email').isEmail().withMessage('Must be a valid email address.'),
+                  body('password').isLength({ min: 5 }).withMessage("Password must be at least 5 characters long.")] ,
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      // If there are errors, send them back to the client.
+      return res.status(400).json({ errors: errors.array() });
+    }
 
-
-router.post("/", async (req, res) => {
-  // #swagger.tags = ['Authentication']
     try {
       const user = await User.findOne({ email: req.body.email });
   
