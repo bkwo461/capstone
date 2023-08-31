@@ -1,5 +1,5 @@
 const otpGenerator = require('otp-generator');
-const { OTP } = require('../models/otpModel');
+const { OTP } = require('../models/OTPModel');
 const mailer = require('./mailer');
 const { User } = require('../models/Account');
 

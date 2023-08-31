@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { OTP } = require('../models/otpModel'); // import your otp model
+const { OTP } = require('../models/OTPModel'); // import your otp model
 
 router.post("/", async (req, res) => {
     const otpRecord = await OTP.findOne({ email: req.body.email });
