@@ -67,18 +67,19 @@ img.Frame-1 {
   color: white;
   text-align: center;
   font-size: 16px;
-  margin-top: -20%;
+  margin-top: 8%;
   margin-left:46%;
 }
 
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  /* Adjustments for smaller screens */
-
-  /* Responsive image */
-  body {
-    width: 50%
-  }
-
+.sendNow-button {
+  background-color: #F79901;
+  border-radius: 50px;
+  width: 6%;
+  height: 40px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 8%;
+  margin-left:46%;
+  box-shadow: 0 2px 4px #c37800d4;
 }
