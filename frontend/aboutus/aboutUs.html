@@ -288,13 +288,112 @@
           style="font-weight: bolder; font-size: 15px; margin-left: 67.2%; margin-top: -4.4%; ">
           Interested in working with us?
         </h1>
-        <h1 class="display-1 d-none d-lg-block"
+        <h1 class="display-1 d-none d-lg-block" onclick="openRegisterModal()"
           style="font-weight: bold; font-size: 15px; margin-left: 71%; margin-top: 2%; color:blue">
           Apply Now
         </h1>
      </div>
 
+
+     <!-- Modal that pops up when user clicks on 'Apply Now' -->
+     <div id="trigger-modal" class="w3-modal" style="z-index:4">
+        <div class="w3-modal-content w3-animate-zoom"
+            style="margin-top: -4%; background-color: #ffffff; width: 60%; border-radius: 20px 100px 20px 20px;">
+            <div class="w3-container w3-padding">
+                <h2 class="custom-font "
+                    style="font-size: 26px; text-align: center; margin-top: 5%; margin-bottom: 1%; font-weight: bold;">
+                    We Are Hiring! </h2>
+            </div>
+
+            <div>
+                <h2 class="custom-font"
+                    style="font-size:16px; text-align: left; margin-top: 10%; margin-left: 8%; font-weight: bold;">
+                    If you're interested in becoming our member,<br>
+                    please fill the details. We will revert you soon.<br>
+                    <br>
+                    <br>
+                    <br>
+                    Thank you for your interest, and here's hoping<br>
+                    we're creating an excellent future together soon.
+                </h2>
+            </div>
+            
+            <div id="form-ct" class="w3-panel">
+                <form>
+                    <div id="userInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -16%; margin-right: 8%;"">
+                        <div style="margin-left: -85%;">
+                        <label class="custom-font"><a
+                                style="color:rgb(227, 0, 0);">*</a> Details</label></div>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text"
+                            placeholder="First name">
+                        <input class="w3-input w3-border w3-margin-bottom" type="text"
+                            placeholder="Surname">
+                    </div>
+
+                    <div id="addressInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -1%; margin-right: 8%;">
+                        <div style="margin-left: 142%;">
+                        <label class="custom-font" style="margin-left: -520px;"><br><a
+                                style="color:rgb(227, 0, 0)">*</a> Addresses</label> </div>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text"
+                            placeholder="Home Address">
+                        <input class="w3-input w3-border w3-margin-bottom" type="text"
+                            placeholder="Work Address">
+                    </div>
+
+                    <div id="contactInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -1%; margin-right: 8%;">
+                        <div style="margin-left: 144%;">
+                        <label class="custom-font" style="margin-left: -530px;"><br><a
+                                style="color:rgb(227, 0, 0)">*</a> Contacts</label></div>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text"
+                            placeholder="Mobile Number">
+                        <input class="w3-input w3-border w3-margin-bottom" type="email"
+                            placeholder="Email Address">
+                    </div>
+
+                    <br>
+                    <div class="w3-section" style="display: flex; flex-direction: column; align-items: center;">
+                        <button id="custom-gradient-signup" class="w3-button"
+                            style="border-radius: 5px 5px 5px 5px; width: 500px; height:50px; margin-bottom: 10px; font-weight: bold;"
+                            onclick="submitRegisterForm()">SIGN UP</button>
+                        <button class="w3-button w3-light-grey"
+                            style="border-radius: 5px 5px 5px 5px; width: 500px; height:50px; margin-bottom: 70px; font-weight: bold;"
+                            onclick="closeRegisterModal()">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+
+<!-- Registration JS scripts -->
+<script>
+    function openRegisterModal() {
+        var registerModal = document.getElementById("trigger-modal");
+        registerModal.style.display = "block";
+        clearFormInputs();
+    }
+
+    function closeRegisterModal() {
+        var registerModal = document.getElementById("trigger-modal");
+        registerModal.style.display = "none";
+        clearFormInputs();
+    }
+
+    function submitRegisterForm() {
+        var registerModal = document.getElementById("trigger-modal");
+        registerModal.style.display = "none";
+        clearFormInputs();
+    }
+
+    function clearFormInputs() {
+        var inputs = document.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = "";
+        }
+    }
+</script>
 
 
 <!-- Optional JavaScript -->
