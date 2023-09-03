@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { body, validationResult } = require('express-validator');
+const { body, validationResult, check } = require('express-validator');
 
 const { User } = require('../models/account');
 
@@ -21,9 +21,18 @@ router.post("/", [body('surname').trim().notEmpty().withMessage('Surname is requ
       return res.status(400).json({ errors: errors.array() });
     }
     // check if user email already exists in database
-    if (User.find({ email: req.body.email })) {
+    let existingUser;
+    try {
+      existingUser = await User.findOne({ email: req.body.email });
+    } catch (error) {
+      console.error(error);
+      // Handle error appropriately here.
+    }
+
+    if (existingUser) {
       return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
     }
+
 
     const user = new User(req.body);
 
