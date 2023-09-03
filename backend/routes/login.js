@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 
-const { User } = require('../models/Account');
+const { User } = require('../models/account');
   
 router.post("/", [body('email').isEmail().withMessage('Must be a valid email address.'),
                   body('password').isLength({ min: 5 }).withMessage("Password must be at least 5 characters long.")] ,

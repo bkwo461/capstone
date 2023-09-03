@@ -1,4 +1,4 @@
-const { User } = require("../models/Account");
+const { User } = require("../models/account");
 
 let auth = (req, res, next) => {
   // get token from client cookie
