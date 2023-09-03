@@ -33,11 +33,14 @@
             Please Fill In Your Email Address</h1>
         <form>
             <div class="form-group" style="margin-left: 66.5%; margin-top: 3%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="  Your email address" style="width: 350px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
-                <small id="emailHelp" class="form-text text-muted" style="margin-left: 2%;">We'll never share your email with anyone else.</small>
+                <input id="emailInput" type="email" class="form-control" aria-describedby="emailHelp"
+                    placeholder="  Your email address"
+                    style="width: 350px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
+                <small id="emailHelp" class="form-text text-muted" style="margin-left: 2%;">We'll never share your email
+                    with anyone else.</small>
             </div>
-            <button type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 3%;">Verify My Email</button>
+            <button id="route" type="button" class="submitButton" style="margin-left: 71.3%; margin-top: 3%;">Verify My
+                Email</button>
         </form>
         <h1 class="display-1 d-none d-lg-block"
             style="font-size: 13px; font-weight: 300; margin-left: 65%; margin-top: 8.5%;">
@@ -52,6 +55,28 @@
 
 
     <!-- Optional JavaScript -->
+    <!-- Include the Axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        document.getElementById("route").addEventListener("click", function (event) {
+
+            var email = document.getElementById("emailInput").value;
+
+            axios.post('http://localhost:3000/api/otp', { "email": String(email) })
+                .then(function (response) {
+                    var email = document.getElementById("emailInput").value;
+                    var url = 'register2.html?email=' + encodeURIComponent(email);
+                    window.location.href = url;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            event.preventDefault();
+
+        });
+    </script>
+
     <!-- Your script references here -->
 </body>
 

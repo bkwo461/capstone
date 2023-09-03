@@ -29,14 +29,16 @@
 <body>
     <div class="w3-top">
         <h1 class="display-1 d-none d-lg-block"
-        style="font-weight:500; font-size: 22px; margin-left: 65.3%; margin-top: 26%; color: #303468;">
-        We Have Sent You The Verification Code</h1>
+            style="font-weight:500; font-size: 22px; margin-left: 65.3%; margin-top: 26%; color: #303468;">
+            We Have Sent You The Verification Code</h1>
         <form>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 3%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder=" Verification Code" style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
+                <input id="otpInput" type="text" class="form-control""
+                    placeholder=" Verification Code"
+                    style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
-            <button type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 4.2%;">Confirm</button>
+            <button id="route" type="submit" class="submitButton"
+                style="margin-left: 71.3%; margin-top: 4.2%;">Confirm</button>
         </form>
         <h1 class="display-1 d-none d-lg-block"
             style="font-size: 13px; font-weight: 300; margin-left: 65%; margin-top: 8.53%;">
@@ -51,6 +53,29 @@
 
 
     <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+        // Retrieve email from query parameter
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var email = urlParams.get('email');
+
+        document.getElementById("route").addEventListener("click", function (event) {
+
+            var otpCode = document.getElementById("otpInput").value;
+
+            axios.post('http://localhost:3000/api/validate_otp', { "email": String(email), "otp": String(otpCode)})
+                .then(function (response) {
+                    window.location.href = "register3.html";
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            event.preventDefault();
+
+        });
+    </script>
     <!-- Your script references here -->
 </body>
 

@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
+<<<<<<< Updated upstream
 const { OTP } = require('../models/otpModel'); // import your otp model
+=======
+const { OTP } = require('../models/OTPModel');
+>>>>>>> Stashed changes
 
 router.post("/", async (req, res) => {
     const otpRecord = await OTP.findOne({ email: req.body.email });

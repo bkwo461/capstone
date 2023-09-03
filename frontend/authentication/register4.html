@@ -36,12 +36,19 @@
             style="font-weight:600; color: #303468; font-size: 22px; margin-left: 69.5%; margin-top: 2%;">
             Thank you for joining us.</h1>
 
-        <button type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 6.5%;">Complete</button>
+        <button id="route" type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 6.5%;">Complete</button>
     </div>
     <img src="images/register4.png" class="Frame">
 
 
     <!-- Optional JavaScript -->
+    <script>
+        document.getElementById("route").addEventListener("click", function (event) {
+            event.preventDefault();
+            // Route
+            window.location.href = "..//home/Home.html";
+        });
+    </script>
     <!-- Your script references here -->
 </body>
 

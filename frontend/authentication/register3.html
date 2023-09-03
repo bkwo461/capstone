@@ -49,7 +49,7 @@
                     placeholder="  Re-enter Password"
                     style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
-            <button type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 2%;">Create
+            <button id="route" type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 2%;">Create
                 Account</button>
         </form>
         <h1 class="display-1 d-none d-lg-block"
@@ -65,6 +65,13 @@
 
 
     <!-- Optional JavaScript -->
+    <script>
+        document.getElementById("route").addEventListener("click", function (event) {
+            event.preventDefault();
+            // Route
+            window.location.href = "register4.html";
+        });
+    </script>
     <!-- Your script references here -->
 </body>
 
