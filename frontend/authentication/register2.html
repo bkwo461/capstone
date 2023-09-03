@@ -53,29 +53,19 @@
 
 
     <!-- Optional JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
     <script>
-        // Retrieve email from query parameter
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
-        var email = urlParams.get('email');
 
         document.getElementById("route").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent form submission
 
-            var otpCode = document.getElementById("otpInput").value;
-
-            axios.post('http://localhost:3000/api/validate_otp', { "email": String(email), "otp": String(otpCode)})
-                .then(function (response) {
-                    window.location.href = "register3.html";
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-            event.preventDefault();
-
+            // Redirect to the desired route when the button is clicked
+            window.location.href = "register3.html";
         });
+
     </script>
+
     <!-- Your script references here -->
 </body>
 

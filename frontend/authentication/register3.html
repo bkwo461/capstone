@@ -30,22 +30,24 @@
     <div class="w3-top">
         <form>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 24%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input id="firstnameInput" type="text" class="form-control"
                     placeholder="  First Name"
                     style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 1.5%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="  Surname" style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
+                <input id="surnameInput" type="text" class="form-control"
+                    placeholder="  Surname"
+                    style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 1.5%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="  Password" style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
+                <input id="passwordInput" type="password" class="form-control" aria-describedby="emailHelp"
+                    placeholder="  Password"
+                    style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
                 <small id="emailHelp" class="form-text text-muted" style="margin-left: 2%;">Password must contain at
                     least 8 characters.</small>
             </div>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 1%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="password" class="form-control" aria-describedby="emailHelp"
                     placeholder="  Re-enter Password"
                     style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
@@ -65,11 +67,26 @@
 
 
     <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script>
+        var email = Cookies.get('email');
+
         document.getElementById("route").addEventListener("click", function (event) {
+
+            var firstname = document.getElementById("firstnameInput").value;
+            var surname = document.getElementById("surnameInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            axios.post('http://localhost:3000/api/register', { "email": String(email), "surname": String(surname), "lastname": String(firstname), "password": String(password) })
+                .then(function (response) {
+                    window.location.href = "register4.html";
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
             event.preventDefault();
-            // Route
-            window.location.href = "register4.html";
         });
     </script>
     <!-- Your script references here -->

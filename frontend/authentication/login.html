@@ -33,16 +33,16 @@
             Welcome Back!</h1>
         <form>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 3%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input id="emailInput" type="email" class="form-control"
                     placeholder="  Email Address"
                     style="width: 300px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
             </div>
             <div class="form-group" style="margin-left: 67.8%; margin-top: 1.5%;">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input id="passwordInput" type="email" class="form-control"
                     placeholder="  Password"
                     style="width: 300px; border-radius: 8px; height:50px; background: rgb(244, 244, 244);">
             </div>
-            <button type="submit" class="submitButton" style="margin-left: 71.3%; margin-top: 3%;">Login</button>
+            <button id="route" type="button" class="submitButton" style="margin-left: 71.3%; margin-top: 3%;">Login</button>
         </form>
         <h1 class="display-1 d-none d-lg-block"
             style="font-size: 13px; font-weight: 300; margin-left: 65%; margin-top: 7.9%;">
@@ -57,6 +57,24 @@
 
 
     <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+        document.getElementById("route").addEventListener("click", function (event) {
+
+            var email = document.getElementById("emailInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            axios.post('http://localhost:3000/api/login', { "email": String(email), "password": String(password) })
+                .then(function (response) {
+                    window.location.href = "..//home/Home.html";
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            event.preventDefault();
+        });
+    </script>
     <!-- Your script references here -->
 </body>
 
