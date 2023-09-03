@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 
-const { User } = require('../models/Account');
+const { User } = require('../models/account');
 
 router.post("/", [body('surname').trim().notEmpty().withMessage('Surname is required.')
                   .matches(/^[A-Za-z]+$/).withMessage('Surname must contain only alphabets.'),
