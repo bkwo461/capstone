@@ -74,3 +74,29 @@
   margin-left:60%;
   box-shadow: 0 2px 4px #c37800d4;
 }
+
+/* Swiper Cards */
+.swiper-container {
+  margin-top: 5%;
+  position: relative;
+  z-index: 0;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 20vh;
+}
+
+/* Adjust image sizing to fit within swiper container */
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+} 
+
+.swiper-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 22px;
+}

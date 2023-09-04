@@ -1,0 +1,46 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+
+            <img src="images/card1.png" alt="swiper1" />
+
+            <div class="swiper-card-content">
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+
+            <img src="images/card2.jpg" alt="swiper1" />
+
+            <div class="swiper-card-content">
+            </div>
+        </div>
+    </div>
+    <!-- Add pagination and navigation buttons -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
+
+<!-- Home swiper cards JS scripts -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
