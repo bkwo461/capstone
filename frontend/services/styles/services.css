@@ -68,7 +68,7 @@ img.Frame {
 .box2 {
   width: 50%;
   height: 50vh;
-  background: rgba(255, 199, 86, 0.2);
+  background: rgba(255, 199, 86, 0);
   position: absolute;
   top: 65.5vh;
   display: flex;
