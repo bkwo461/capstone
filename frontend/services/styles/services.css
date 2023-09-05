@@ -1,6 +1,6 @@
 .centered1 {
-  position: absolute;
-  top: 34%;
+  position: relative;
+  top: 18vh;
   left: 12%;
   font-size: 60px;
   color: rgba(222, 222, 222, 0.689);
@@ -13,8 +13,8 @@
 }
 
 .centered2 {
-  position: absolute;
-  top: 84%;
+  position: relative;
+  top: 70vh;
   left: 13%;
   font-size: 60px;
   color: rgba(222, 222, 222, 0.689);
@@ -27,9 +27,9 @@
 }
 
 .centered3 {
-  position: absolute;
-  top: 60%;
-  left: 68%;
+  position: relative;
+  top: 46vh;
+  left: 69%;
   font-size: 60px;
   color: rgba(222, 222, 222, 0.689);
   font-weight: 600;
@@ -68,22 +68,27 @@
   transform: scale(0.97);
 }
 
+.imageContainer {
+  position: relative;
+}
+
 .imageContainer:hover .centered1,
 .imageContainer:hover .centered2,
 .imageContainer:hover .centered3 {
-    box-shadow: 50px 50px 200px rgba(0, 0, 0); 
-    transition: color .3s ease-in-out, box-shadow .7s ease-in-out;
+  box-shadow: 50px 50px 200px rgba(0, 0, 0);
+  transition: color .3s ease-in-out, box-shadow .7s ease-in-out;
 }
 
 .imageContainer:hover .centered1 {
-  color: rgb(0, 68, 255); 
+  color: rgb(0, 68, 255);
 }
 
 .imageContainer:hover .centered2 {
-  color: rgb(111, 255, 0); 
+  color: rgb(111, 255, 0);
 }
+
 .imageContainer:hover .centered3 {
-  color: rgb(255, 217, 0); 
+  color: rgb(255, 217, 0);
 }
 
 
@@ -91,28 +96,36 @@
 /* Medium screens */
 @media (max-width: 991px) and (min-width: 768px) {
   .display-text {
-      margin-top: 6% !important;
-      font-size: 25px;
-      color: #00ffdd;
+    margin-top: 6% !important;
+    font-size: 25px;
   }
 }
 
 /* Small screens */
 @media (max-width: 767px) and (min-width: 576px) {
   .display-text {
-      margin-top: 10% !important;
-      font-size: 16px;
-      color: #7b00ff;
+    margin-left: 3% !important;
+    margin-top: 5% !important;
+    font-size: 16px;
   }
 }
 
 /* Extra small screens */
 @media (max-width: 575px) and (min-width: 301px) {
   .display-text {
-      margin-left: -5% !important;
-      margin-top: 13% !important;
-      font-size: 16px;
-      color: #ff00b7;
+    margin-left: -5% !important;
+    margin-top: 13% !important;
+    font-size: 16px;
   }
 }
+
+/* Extra small screens */
+@media (max-width: 300px) {
+  .display-text {
+    margin-left: -5% !important;
+    margin-top: 20% !important;
+    font-size: 10px;
+  }
+}
+
 /* Media queries for responsive font sizes End */
