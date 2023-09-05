@@ -1,89 +1,16 @@
-/* Default */
-
-img.Frame {
-  object-fit: cover;
-}
-
-.logo {
-  width: 220px;
-  height: 60px;
-  margin-left: 4%;
-}
-
-.authentication {
-  margin-right: 4%;
-}
-
-.loginBtn {
-  background-color: #F79901;
-  border: none;
-  margin: 0 2vh;
-  border-radius: 7px;
-}
-
-.loginBtn:hover {
-  background-color: #ff9d00cf;
-}
-
-.registerBtn {
-  background-color: #F79901;
-  border: none;
-  border-radius: 7px;
-}
-
-.registerBtn:hover {
-  background-color: #ff9d00cf;
-}
-
-.navbar {
-  margin-bottom: 5vh;
-  margin-top: 2vh;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-item {
-  margin: 0 6vh;
-}
-
-.nav-link {
-  color: black !important;
-  font-weight: 500;
-  font-size: 17px;
-}
-
-.nav-link:hover {
-  color: rgb(6, 44, 184) !important;
-  background-color: rgb(245, 245, 245);
-  border-radius: 100px;
-}
-
-.sub-nav{
-  color: black !important;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.sub-nav:hover {
-  color: rgb(6, 44, 184) !important;
-  background-color: white;
-}
-
-/* Default End */
-
-
-
 .submitButton {
-  background-color: #F79901;
+  background-color: #F79901 !important;
+  border:none !important;
   border-radius: 8px;
   height: 45px;
   color: white;
   text-align: center;
   font-size: 16px;
   border: none;
+}
+
+.submitButton:hover {
+  background-color: #ff9d00cf !important;
 }
 
 .b-example-divider {

@@ -10,18 +10,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- W3 CSS -->
-  <link rel="stylesheet" href="../w3.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-  <link href="./styles/services.css" rel="stylesheet" />
+  <!-- CSS -->
+  <link href="../global/w3.css" rel="stylesheet" />
+  <link href="./styles/solutions.css" rel="stylesheet" />
+  <link href="../global/global.css" rel="stylesheet" />
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-  <!-- Custom styles for this template -->
-  <link href="./styles/solutions.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- Inline Styles-->
   <style>
@@ -231,14 +233,14 @@
             </div>
           </form>
 
-          <!-- Add the error message element here -->
-          <div id="error-message" style="color: red; display: none;">Please write more than 10 words, thank you! :)</div>
+          <div id="error-message" style="color: red; display: none;">Please write more than 10 words, thank you! :)
+          </div>
 
           <hr class="my-4">
           <button class="w-100 btn btn-lg btn-primary submitButton" type="submit"
-            style="border-radius: 5px; height: 40px;" onclick="submitModal()">THANK YOU!</button>
+            style="border-radius: 5px; height: 50px;" onclick="submitModal()">SUBMIT</button>
           <button class="w-100 btn btn-lg btn-primary submitButton"
-            style="margin-top: 10px; border-radius: 5px; height: 40px;" onclick="closeModal()">CANCEL</button>
+            style="margin-top: 10px; border-radius: 5px; height: 50px;" onclick="closeModal()">CANCEL</button>
 
           <br>
           <br>
@@ -363,7 +365,8 @@
 
   </main>
 
-  <script src="./scripts/bootstrap.bundle.min.js"></script>
+  <!-- Default-->
+  <script src="../global/bootstrap.bundle.min.js"></script>
 
   <!-- Send Feedback JS scripts -->
   <script>
@@ -384,6 +387,7 @@
         errorMessage.style.display = "block";
       } else {
         registerModal.style.display = "none";
+        alert("We appreciate for your feedback!");
         clearFormInputs();
       }
     }
