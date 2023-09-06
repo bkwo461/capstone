@@ -2,56 +2,224 @@
 <html lang="en">
 
 <head>
+
     <!-- Website title -->
     <title>Empowering Your Visions: Cloud Engine</title>
-
-    <!-- W3 CSS -->
-    <link rel="stylesheet" href="../w3.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="./styles/authentication.css" rel="stylesheet" />
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- CSS -->
+    <link href="../global/w3.css" rel="stylesheet" />
+    <link href="./styles/authentication.css" rel="stylesheet" />
+    <link href="../global/global.css" rel="stylesheet" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <style>
 
+    <style>
+        /* Media queries for responsive font sizes */
+        @media (min-width: 1601px) {
+            .responsive_box {
+                width: 450px !important;
+                margin-left: 10% !important;
+            }
+
+            .reponsive_char {
+                font-size: 16px !important;
+                margin-left: -3% !important;
+            }
+
+            .h1 {
+                font-size: 28px !important;
+                margin-left: 17% !important;
+            }
+
+            .continueButton {
+                margin-bottom: 10%;
+                margin-left: 16% !important;
+                width: 50% !important;
+            }
+        }
+
+
+        /* Large screens */
+        @media (max-width: 1600px) and (min-width: 1201px) {
+            .continueButton {
+                margin-bottom: 10%;
+                margin-left: 18% !important;
+                width: 50% !important;
+            }
+
+            .h1 {
+                font-size: 28px !important;
+                margin-left: 16% !important;
+            }
+
+        }
+
+        /* Medium screens */
+        @media (max-width: 1200px) and (min-width: 801px) {
+            img.img-fluid {
+                height: 100% !important;
+                width: 100%;
+            }
+
+            .responsive_box {
+                width: 350px !important;
+                margin-left: 10% !important;
+            }
+
+            .reponsive_char {
+                font-size: 10px !important;
+                margin-left: 2% !important;
+            }
+
+            .h1 {
+                font-size: 24px !important;
+                margin-left: 16% !important;
+            }
+
+            .continueButton {
+                margin-bottom: 10%;
+                margin-left: 21% !important;
+                width: 50% !important;
+            }
+        }
+
+        /* Small screens */
+        @media (max-width: 800px) and (min-width: 501px) {
+            img.img-fluid {
+                height: 100% !important;
+                width: 100%;
+            }
+
+            .responsive_box {
+                width: 300px !important;
+                margin-left: 25% !important;
+            }
+
+            .reponsive_char {
+                font-size: 10px !important;
+                margin-left: 16% !important;
+            }
+
+            .h1 {
+                font-size: 20px !important;
+                margin-left: 30% !important;
+            }
+
+            .continueButton {
+                margin-bottom: 10%;
+                margin-left: 36% !important;
+                width: 40% !important;
+            }
+        }
+
+        /* Phone screens */
+        @media (max-width: 500px) and (min-width: 351px) {
+            img.img-fluid {
+                height: 100% !important;
+                width: auto;
+            }
+
+            .responsive_box {
+                width: 260px !important;
+                margin-left: 20% !important;
+            }
+
+            .reponsive_char {
+                font-size: 10px !important;
+                margin-left: 5% !important;
+            }
+
+            .h1 {
+                font-size: 20px !important;
+                margin-left: 24% !important;
+            }
+
+            .continueButton {
+                margin-bottom: 10%;
+                margin-left: 28% !important;
+                width: 50% !important;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 350px) {
+            .responsive_box {
+                width: 200px !important;
+            }
+
+            .reponsive_char {
+                font-size: 8px !important;
+                margin-left: -4%;
+            }
+
+            .h1 {
+                font-size: 16px !important;
+                margin-left: 8% !important;
+            }
+
+            .continueButton {
+                margin-bottom: 10%;
+            }
+        }
+
+        /* Media queries for responsive font sizes End */
     </style>
 </head>
 
-<body>
-    <div class="w3-top">
-        <h1 class="display-1 d-none d-lg-block"
-            style="font-weight:500; font-size: 22px; margin-left: 67.5%; margin-top: 26%; color: #303468;">
-            Please Fill In Your Email Address</h1>
-        <form>
-            <div class="form-group" style="margin-left: 66.5%; margin-top: 3%;">
-                <input id="emailInput" type="email" class="form-control" aria-describedby="emailHelp"
-                    placeholder="  Your email address"
-                    style="width: 350px; height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
-                <small id="emailHelp" class="form-text text-muted" style="margin-left: 2%;">We'll never share your email
-                    with anyone else.</small>
-            </div>
-            <button id="route" type="button" class="submitButton" style="margin-left: 71.3%; margin-top: 3%;">Verify My
-                Email</button>
-        </form>
-        <h1 class="display-1 d-none d-lg-block"
-            style="font-size: 13px; font-weight: 300; margin-left: 65%; margin-top: 8.5%;">
-            Already have an account?
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-            style="font-size: 13px; font-weight: 500; margin-left: 80%; margin-top: -1.25%; color:blue">
-            Login to your account</h1>
-    </div>
 
-    <img src="images/register1.png" class="Frame">
+<!-- Body -->
+
+<body>
+
+    <!-- Form -->
+    <section class="vh-100">
+        <div>
+
+            <!-- Background image -->
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <img src="images/signup1.png" class="img-fluid" alt="Phone image">
+                </div>
+
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <h1 class="h1" style="margin-left: 0%; margin-bottom: 10%; margin-top: 5%; color: #303468;">Please
+                        Fill Your Email Below.</h1>
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="emailInput" class="form-control form-control-lg responsive_box"
+                                style="width: 400px; height:50px; border-radius: 8px; background: rgb(244, 244, 244); margin-left: 12%;"
+                                placeholder="Email Address" />
+                        </div>
+
+                        <div class="divider d-flex align-items-center my-4 responsive_box"
+                            style="width:400px; margin-left: 12%;">
+                            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                        </div>
+
+                        <div class="reponsive_char">
+                            <!-- Forgot Account -->
+                            <a style="margin-left: 12%;">Already have an account?</a>
+                            <a href="#!" style="margin-left: 15%;">Login to your account</a>
+                        </div>
+
+                        <!-- Sign in -->
+                        <button id="route" type="button" class="btn btn-primary btn-lg btn-block continueButton">Verify My Email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form Finish -->
 
 
     <!-- Optional JavaScript -->

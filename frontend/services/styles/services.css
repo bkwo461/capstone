@@ -1,131 +1,131 @@
-img.Frame {
-  object-fit: cover;
-}
-
-.logo {
-  width: 220px;
-  height: 60px;
-  margin-left: 3%;
-}
-
-.topnav {
+.centered1 {
+  position: relative;
+  top: 18vh;
+  left: 12%;
+  font-size: 60px;
+  color: rgba(222, 222, 222, 0.689);
+  font-weight: 600;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  background-color: #ffffff;
-  margin-top: 2%;
-  margin-left: 26%;
 }
 
-.topnav a {
+.centered2 {
+  position: relative;
+  top: 70vh;
+  left: 13%;
+  font-size: 60px;
+  color: rgba(222, 222, 222, 0.689);
+  font-weight: 600;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.centered3 {
+  position: relative;
+  top: 46vh;
+  left: 69%;
+  font-size: 60px;
+  color: rgba(222, 222, 222, 0.689);
+  font-weight: 600;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+#box1-image,
+#box2-image {
+  transition: transform 0.7s ease;
   float: left;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ffffff;
-  color: rgb(6, 44, 184);
-  text-decoration: none;
-}
-
-.login-button {
-  background-color: #f79901;
-  border-radius: 50px;
-  width: 8%;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: -4.5%;
-  margin-left: 64%;
-}
-
-.register-button {
-  background-color: #F79901;
-  border-radius: 50px;
-  width: 8%;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: -7%;
-  margin-left: 73%;
-}
-
-/* Color Boxes */
-.box1 {
   width: 50%;
   height: 50vh;
-  background: rgba(11, 39, 153, 0.5);
-  position: relative;
-  top: 0;
 }
 
-.box2 {
-  width: 50%;
-  height: 50vh;
-  background: rgba(255, 199, 86, 0.35);
-  position: relative;
-  bottom: 0;
-}
-
-.box3 {
+#box3-image {
+  transition: transform 0.7s ease;
+  float: right;
   width: 50%;
   height: 100vh;
-  background: rgba(47, 14, 152, 0.35);
-  position: absolute;
-  right: 0px;
 }
 
+#box1-image:hover {
+  transform: scale(0.97);
+}
 
-/* Footer */
+#box2-image:hover {
+  transform: scale(0.97);
+}
 
-.footer {
-  width: 100%;
-  height: 33vh;
-  background: #232120;
+#box3-image:hover {
+  transform: scale(0.97);
+}
+
+.imageContainer {
   position: relative;
-  display: flex;
-  padding: 38px 114px 38px 114px;
 }
 
-.footerContents,
-.footerContents2,
-.footerContents3 {
-  color: rgb(130, 130, 130);
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+.imageContainer:hover .centered1,
+.imageContainer:hover .centered2,
+.imageContainer:hover .centered3 {
+  box-shadow: 50px 50px 200px rgba(0, 0, 0);
+  transition: color .3s ease-in-out, box-shadow .7s ease-in-out;
 }
 
-.footerContents {
-  line-height: 3vh;
-  padding-left: 3vh;
-  margin-top: 3.5vh;
+.imageContainer:hover .centered1 {
+  color: rgb(0, 68, 255);
 }
 
-.footerContents2 {
-  line-height: 2vh;
-  margin-left: 42%;
+.imageContainer:hover .centered2 {
+  color: rgb(111, 255, 0);
 }
 
-.footerContents3 {
-  line-height: 2vh;
-  margin-left: 10%;
+.imageContainer:hover .centered3 {
+  color: rgb(255, 217, 0);
 }
 
-.logo-container {
-  margin-bottom: 3vh;
+
+/* Media queries for responsive font sizes */
+/* Medium screens */
+@media (max-width: 991px) and (min-width: 768px) {
+  .display-text {
+    margin-top: 6% !important;
+    font-size: 25px;
+  }
 }
 
-.line {
-  width: 155vh;
-  height: 1px;
-  margin-top: 13.2%;
-  background: rgb(130, 130, 130);
-  display: flex;
-  position: absolute;
+/* Small screens */
+@media (max-width: 767px) and (min-width: 576px) {
+  .display-text {
+    margin-left: 3% !important;
+    margin-top: 5% !important;
+    font-size: 16px;
+  }
 }
+
+/* Extra small screens */
+@media (max-width: 575px) and (min-width: 301px) {
+  .display-text {
+    margin-left: -5% !important;
+    margin-top: 13% !important;
+    font-size: 16px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 300px) {
+  .display-text {
+    margin-left: -5% !important;
+    margin-top: 20% !important;
+    font-size: 10px;
+  }
+}
+
+/* Media queries for responsive font sizes End */

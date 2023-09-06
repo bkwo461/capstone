@@ -2,70 +2,43 @@
 <html lang="en">
 
 <head>
-    <!-- Website title -->
-    <title>Empowering Your Visions: Cloud Engine</title>
 
-    <!-- W3 CSS -->
-    <link rel="stylesheet" href="../w3.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="./styles/services.css" rel="stylesheet" />
+    <!-- Title -->
+    <title>Empowering Your Visions: Cloud Engine</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="../global/w3.css" rel="stylesheet" />
+    <link href="./styles/services.css" rel="stylesheet" />
+    <link href="../global/global.css" rel="stylesheet" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-    <!-- Swiper Card -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
 
     <style>
-        #box1-image {
-            float: left;
-            width: 50%;
-            height: 50vh;
-            /* Adjust the height as needed */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
 
-        #box2-image {
-            float: left;
-            width: 50%;
-            height: 50vh;
-            /* Adjust the height as needed */
-        }
-
-        #box3-image {
-            float: right;
-            width: 50%;
-            height: 100vh;
-            /* Adjust the height as needed */
-        }
-
-
-        .frame-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .frame-overlay2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
         }
     </style>
 </head>
@@ -74,118 +47,206 @@
 
     <!-- Default -->
 
-    <!-- Organization logo -->
-    <div class="w3-left logo">
-        <a href="#" onclick="return false;">
-            <img src="images/logo.png" alt="Logo" class="w3-bar-item logo">
-        </a>
-    </div>
-
-
     <!-- Top Navigation Bar -->
-    <div class="topnav">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Tenth navbar example">
 
-                        </li>
-                    </ul>
-                </div>
+        <!-- Organization logo -->
+        <div class="w3-left logo">
+            <a href="#" onclick="return false;">
+                <img src="images/logo.png" alt="Logo" class="w3-bar-item logo">
+            </a>
+        </div>
 
-                <!--Authentication -->
-                <div class="d-flex flex-row-reverse">
-                    <!-- Log in -->
-                    <button class="btn btn-primary btn-lg d-none d-lg-block">Log in</button>
-                    <!-- Register -->
-                    <button class="btn btn-primary btn-lg d-none d-lg-block"">Register</button>
-                </div>
+        <div class="container-fluid">
+            <button class="navbar-toggler collapsed" style="background-color: rgb(59, 59, 190);" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08"
+                style="margin-left: -5%;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home/Home.html">Home </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown08" data-bs-toggle="dropdown"
+                            aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                            <li style="margin-top: 15px;"><a class="dropdown-item sub-nav"
+                                    href="../solutions/solutions.html">Solutions</a></li>
+                            <li style="margin-top: 10px;"><a class="dropdown-item sub-nav" href="#">Recommendation</a>
+                            </li>
+                            <li style="margin-top: 10px; margin-bottom: 15px;"><a class="dropdown-item sub-nav"
+                                    href="#">Get Free
+                                    Quotes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Account </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aboutus/aboutUs.html">About Us</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
+
+            <!--Authentication -->
+            <div class="d-flex flex-row-reverse authentication">
+                <!-- Log in -->
+                <a href="../authentication/login.html">
+                    <button class="btn btn-primary btn-lg d-none d-lg-block loginBtn">Log in</button>
+                </a>
+                <!-- Register -->
+                <a href="../authentication/register1.html">
+                    <button class="btn btn-primary btn-lg d-none d-lg-block registerBtn">Register</button>
+                </a>
+            </div>
+
+        </div>
+    </nav>
     <!-- Default End -->
 
-    
-                <!-- Services -->
-                <div style=" margin-top: 3%; margin-bottom: 7%;">
 
-                        <!-- Background IMG 3 -->
-                        <img id="box3-image" src="images/img3.jpg">
-                        <div class="box3"></div>
+    <!-- Services -->
+    <div>
 
-                        <!-- Background IMG 1 -->
-                        <img id="box1-image" src="images/img1.jpg">
-                        <div class="box1"></div>
+        <!-- Background IMG 3 -->
+        <div class="imageContainer">
+            <a href="../solutions/solutions.html">
+                <img id="box3-image" src="images/img3.jpg">
+                <div class="centered3 display-text">&nbsp;&nbsp;Solutions&nbsp;&nbsp;</div>
+            </a>
+        </div>
 
-                        <!-- Background IMG 2 -->
-                        <img id="box2-image" src="images/img2.jpg">
-                        <div class="box2"></div>
-                </div>
+        <!-- Background IMG 1 -->
+        <div class="imageContainer">
+            <img id="box1-image" src="images/img1.jpg">
+            <div class="centered1 display-text">&nbsp;&nbsp;Recommendation&nbsp;&nbsp;</div>
+        </div>
 
+        <!-- Background IMG 2 -->
+        <div class="imageContainer">
+            <img id="box2-image" src="images/img2.jpg">
+            <div class="centered2 display-text">&nbsp;&nbsp;Get Free Quotes&nbsp;&nbsp;</div>
+        </div>
+    </div>
 
-                <!-- Footer -->
-                <div class="footer" style="color:rgb(143, 143, 143)">
-                    <div class="logo-container">
-                        <img src="images/logo2.png" alt="Logo2" class="w3-bar-item logo">
-                        <div class="footerContents">
-                            <p>+64 9 373 7513</p>
-                            <p>The University of Auckland, 34 Princes Street, Auckland CBD, Auckland 1010 &nbsp;&nbsp;&nbsp;</p>
-                            <br>
-                            <p>Copyright © 2023 Could Engine All rights reserved</p>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #45526e; margin-top: 65%;">
+
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <section class="">
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                        <div class="shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                            style="width: 150px; height: 150px;">
+                            <img src="./images/logo2.png" height="70" alt="logo2" loading="lazy" />
                         </div>
                     </div>
 
-                    <div class="footerContents2">
-                        <p>Learn More</p>
-                        <p>How it work</p>
-                        <p>Who we are</p>
-                        <p>Careers</p>
-                        <p>Blog</p>
-                        <p>FAQs</p>
-                        <br>
-                        <p style="margin-left: -4%;">Term of use</p>
-                    </div>
-                    <div class="footerContents3">
-                        <p>Social</p>
-                        <p>Facebook</p>
-                        <p>Instagram</p>
-                        <p>Twitter</p>
-                        <p>Pinterest</p>
-                        <p>Linkedin</p>
-                        <br>
-                        <br>
-                        <p style="margin-left: -14%;">Privacy Policy</p>
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="mr-3"></i> The University of Auckland, 34 Princes Street, Auckland CBD,
+                            Auckland 1010</p>
+                        <p><i class="mr-3"></i> g.weber@auckland.ac.nz</p>
+                        <p><i class="mr-3"></i> +64 9 373 7513</p>
                     </div>
 
-                    <div class="line"></div>
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Learn More
+                        </h6>
+                        <p>
+                            <a class="text-white">How It Works</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Who We Are</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Careers</a>
+                        </p>
+                        <p>
+                            <a class="text-white">FAQs</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <p>
+                            <a class="text-white">Accessibility</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Terms of use</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Data Protection</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Sitemap</a>
+                        </p>
+                    </div>
 
                 </div>
+            </section>
 
+            <hr class="my-3">
+
+            <!-- Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <div class="p-3">
+                            Copyright © 2023 Could Engine All rights reserved
+                        </div>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-google"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Default-->
+    <script src="../global/bootstrap.bundle.min.js"></script>
 
 
 </body>
