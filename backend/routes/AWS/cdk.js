@@ -16,7 +16,8 @@ const collection = client.db("test").collection("useraws");
 AWS.config.update({
     "accessKeyId": "",
     "secretAccessKey": "",
-    "region": "ap-southeast-2"
+    "region": "ap-southeast-2",
+    // "sessionToken": "", // Only applicable when using university account 
 }); AWS.config.getCredentials(function (err) {
     if (err) console.log(err.stack); // credentials not loaded
     else {
@@ -262,6 +263,34 @@ function listAllUsers() {
 }
 
 
+// RDS Cluster Creation
+const rds = new AWS.RDS();
+
+const params = {
+    DBInstanceIdentifier: 'sdk-rds', // Set your RDS instance name
+    AllocatedStorage: 20, // Storage in GB
+    DBInstanceClass: 'db.t2.micro', // Free Tier eligible instance type
+    Engine: 'mysql', // Database engine (e.g., MySQL, PostgreSQL, etc.)
+    MasterUsername: 'admin', // Master username
+    MasterUserPassword: 'password123', // Master password
+    // VpcSecurityGroupIds: ['sg-0123456789abcdef0'], // Security group IDs
+    AvailabilityZone: 'ap-northeast-2a', // Availability zone
+    MultiAZ: false, // Disable Multi-AZ for Free Tier eligibility
+    StorageType: 'gp2', // Storage type (e.g., gp2, standard)
+    BackupRetentionPeriod: 7, // Backup retention period in days
+  };
+
+rds.createDBInstance(params, (err, data) => {
+  if (err) {
+    console.error('Error creating RDS instance:', err);
+  } else {
+    console.log('RDS instance created successfully:', data.DBInstance.DBInstanceIdentifier);
+  }
+});
+
+
+
+// Routes
 router.get('/getAllUsers', async (req, res) => {
     // #swagger.tags = ['CDK']
     try {
@@ -284,9 +313,6 @@ router.post('/getUserByEmail', async (req, res) => {
     }
 });
 
-
-
-// Requires username and rdsLink
 router.post('/create', async (req, res) => {
     // #swagger.tags = ['CDK']
     const { email, username, rdsLink } = req.body;

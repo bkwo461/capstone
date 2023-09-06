@@ -6,16 +6,20 @@ const userAwsSchema = mongoose.Schema({
         type: String,
         trim: true,
         unique: 1,
+        required: true,
     },
     username: {
         type: String,
         unique: 1,
+        required: true,
     },
     accesskey: {
         type: String,
+        required: true,
     },
     secretkey: {
         type: String,
+        required: true,
     },
 
 });
