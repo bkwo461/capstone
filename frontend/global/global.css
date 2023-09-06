@@ -1,0 +1,132 @@
+/* Default */
+img.Frame {
+    object-fit: cover;
+}
+
+.logo {
+    width: 220px;
+    height: 60px;
+    margin-left: 4%;
+}
+
+.authentication {
+    margin-right: 4%;
+}
+
+.loginBtn {
+    background-color: #F79901 !important;
+    border: none !important;
+    margin: 0 2vh;
+    border-radius: 7px;
+}
+
+.loginBtn:hover {
+    background-color: #ff9d00cf !important;
+}
+
+.registerBtn {
+    background-color: #F79901 !important;
+    border: none !important;
+    border-radius: 7px;
+}
+
+.registerBtn:hover {
+    background-color: #ff9d00cf !important;
+}
+
+.navbar {
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin: 0 6vh;
+}
+
+.nav-item a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 600 !important;
+    font-size: 17px;
+}
+
+.nav-link:hover {
+    color: rgb(6, 44, 184) !important;
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px;
+    font-weight: 600 !important
+}
+
+.sub-nav {
+    color: black !important;
+    font-weight: 400 !important;
+    font-size: 16px;
+}
+
+.sub-nav:hover {
+    color: rgb(6, 44, 184) !important;
+    background-color: white;
+}
+/* Default End */
+
+
+
+/* Media queries for responsive font sizes */
+
+/* Extra Extra Large screens */
+@media (min-width: 1601px) {
+    .display-text {
+        font-size: 50px;
+    }
+}
+
+/* Extra Large screens */
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .display-text {
+        margin-left: -2%;
+        font-size: 45px;
+    }
+}
+
+/* Large screens */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .display-text {
+        margin-left: -1%;
+        margin-top: 1%;
+        font-size: 34px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 991px) and (min-width: 768px) {
+    .display-text {
+        margin-left: 0%;
+        font-size: 25px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 767px) and (min-width: 576px) {
+    .display-text {
+        margin-left: 1%;
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 575px) and (min-width: 301px) {
+    .display-text {
+        margin-left: 2%;
+        font-size: 16px;
+    }
+}
+
+/* Media queries for responsive font sizes End */
