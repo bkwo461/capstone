@@ -280,13 +280,13 @@ const params = {
     BackupRetentionPeriod: 7, // Backup retention period in days
   };
 
-rds.createDBInstance(params, (err, data) => {
-  if (err) {
-    console.error('Error creating RDS instance:', err);
-  } else {
-    console.log('RDS instance created successfully:', data.DBInstance.DBInstanceIdentifier);
-  }
-});
+// rds.createDBInstance(params, (err, data) => {
+//   if (err) {
+//     console.error('Error creating RDS instance:', err);
+//   } else {
+//     console.log('RDS instance created successfully:', data.DBInstance.DBInstanceIdentifier);
+//   }
+// });
 
 
 
