@@ -1,44 +1,45 @@
-const express = require('express');
-const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
+const express = require("express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 
 const app = express();
 const port = process.env.PORT || 3000;
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const connectMongoDB = require("./config/db.js");
 
 require("dotenv").config();
 
-app.use(cors({
-    origin: "*",
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
-    credentials: true
-  }));
+app.use(
+    cors({
+        origin: "*",
+        methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+        credentials: true,
+    })
+);
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
 // Swagger Routes
 const swaggerFile = require('./middleware/swagger-output.json');
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile, { explorer: true }));
-
 /**
-* @swagger
-* /:
-*  get:
-*    description: Sample endpoint to test if the server is running
-*    responses:
-*      '200':
-*        description: A successful response
-*
-*/
-app.get('/', (req, res) => {
-    console.log('Hello World');
-    res.status(200).send('Hello World');
+ * @swagger
+ * /:
+ *  get:
+ *    description: Sample endpoint to test if the server is running
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ *
+ */
+app.get("/", (req, res) => {
+    console.log("Hello World");
+    res.status(200).send("Hello World");
     // res.status(200).json({"message": "Hello World"}); // Send in JSON format
 });
 
@@ -66,6 +67,5 @@ app.use('/api/validate_otp', validatedOtpRoutes);
 app.use('/api/service', serviceRoutes);
 
 app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`)
-})
-
+    console.log(`App listening at http://localhost:${port}`);
+});

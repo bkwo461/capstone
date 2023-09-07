@@ -2,289 +2,400 @@
 <html lang="en">
 
 <head>
-  <!-- Website title -->
-  <title>Empowering Your Visions: Cloud Engine</title>
 
-  <!-- W3 CSS -->
-  <link rel="stylesheet" href="../w3.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-  <link href="./styles/main.css" rel="stylesheet" />
-  <link href="../global/global.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Empowering Your Visions: Cloud Engine</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- 변경 -->
+  <link href="../global/w3.css" rel="stylesheet" />
+  <link href="./styles/main.css" rel="stylesheet" />
+  <link href="../global/global.css" rel="stylesheet" />
+  <script src="./scripts/home.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  <!-- Swiper Cards -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 
   <style>
-    #home-frame-image {
-      width: 100%;
-      height: auto;
-      margin-top: 3%;
-      position: relative;
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
     }
 
-    .frame-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .frame-overlay2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    h1 {
+      font-family: 'Raleway', sans-serif;
     }
   </style>
 </head>
 
 
 <!-- Body -->
+
 <body>
 
-  <!-- Organization logo -->
-  <div class="w3-left logo">
-    <a href="#" onclick="return false;">
-      <img src="./images/logo.png" alt="Logo" class="w3-bar-item logo">
-    </a>
-  </div>
-
+  <!-- Default -->
 
   <!-- Top Navigation Bar -->
-  <div class="topnav">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Tenth navbar example">
 
-            </li>
-          </ul>
-        </div>
+    <!-- Organization logo -->
+    <div class="w3-left logo">
+      <a href="#" onclick="return false;">
+        <img src="images/logo.png" alt="Logo" class="w3-bar-item logo">
+      </a>
+    </div>
 
-        <!--Authentication -->
-        <div class="d-flex flex-row-reverse">
-          <!-- Log in -->
-          <button class="btn btn-primary btn-lg d-none d-lg-block">Log in</button>
-          <!-- Register -->
-          <button class="btn btn-primary btn-lg d-none d-lg-block"">Register</button>
-        </div>
+    <div class="container-fluid">
+      <button class="navbar-toggler collapsed" style="background-color: rgb(59, 59, 190);" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08" style="margin-left: -5%;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../home/Home.html">Home </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown08" data-bs-toggle="dropdown"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown08">
+              <li style="margin-top: 15px;"><a class="dropdown-item sub-nav" href="../services/services.html">Our
+                  Services</a></li>
+              <li style="margin-top: 10px;"><a class="dropdown-item sub-nav"
+                  href="../solutions/solutions.html">Solutions</a></li>
+              <li style="margin-top: 10px;"><a class="dropdown-item sub-nav" href="#">Recommendation</a>
+              </li>
+              <li style="margin-top: 10px; margin-bottom: 15px;"><a class="dropdown-item sub-nav" href="#">Get Free
+                  Quotes</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Account </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutus/aboutUs.html">About Us </a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </div>
+
+      <!--Authentication -->
+      <div class="d-flex flex-row-reverse authentication">
+        <!-- Log in -->
+        <a href="../authentication/login.html">
+          <button class="btn btn-primary btn-lg d-none d-lg-block loginBtn">Log in</button>
+        </a>
+        <!-- Register -->
+        <a href="../authentication/register1.html">
+          <button class="btn btn-primary btn-lg d-none d-lg-block registerBtn">Register</button>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Default End -->
 
 
-s
+  <!-- Swiper Cards -->
+  <div style="margin-bottom: 10%;">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
 
-
-            <!-- Frame 1 -->
-            <div class="frame-overlay" style="margin-top: 5%;">
-              <h1 class="display-text">Empowering Visions in the Cloud</h1>
-              <h1 class="display-text">Backed by Impeccable Execution</h1>
-              <button class="w3-button areYouNew-button">Are you new?</button>
-            </div>
-
-            <!-- Frame 2 -->
-            <div class="frame-overlay" style="margin-top: 60%;">
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 0%;">
-                Who We Are?</h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 14px; margin-left: 30%; margin-top: 12%;">
-                We're Cloud Engine, architects of a simplified cloud experience. <br>
-                Our user-friendly meta-interface redefines how businesses engage with cloud tech. <br>
-                By understanding your needs, we recommend ideal solutions from top providers. <br>
-                With us, managing and switching clouds is seamless and hassle-free. <br>
-                Welcome to a future where cloud complexity is history.
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="imageContainerB">
+            <img src="images/card.jpeg" alt="card1" />
+            <div class="swiper-card-content imageContainer2">
+              <h1 class="display-text head" style="margin-left: 7%; margin-top: 2%;">Empowering Visions in the Cloud
               </h1>
-            </div>
-
-
-            <!-- Frame 3 -->
-            <div class="frame-overlay" style="margin-top: 120%;">
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px;">
-                Igniting Your Green Computing Success</h1>
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: normal; font-size: 20px; margin-top: 8%;">
-                What is Green Computing?
+              <h1 class="display-text head" style="margin-left: -30%; margin-top: 6%;">Backed by Impeccable Execution
               </h1>
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: normal; font-size: 20px; margin-top: 2%;">
-                Green computing, also known as green technology, is the use of computers and <br>
-                other computing devices and equipment in energy-efficient and eco-friendly ways. <br>
-                Organizations that use green computing methods often deploy energy-efficient central <br>
-                processing units (CPUs), servers, peripherals, power systems and other IT equipment. <br>
-                They also focus on reducing resource use and properly disposing of electronic waste.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: normal; font-size: 20px; margin-top: 9%;">
-                What are the benefits?
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: -52%; margin-top: 10%;">
-                Reduces waste<br>and emissions, <br>contributing to a<br>healthier planet.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: -32%; margin-top: -4.7%;">
-                Encourages use of <br>energy-efficient <br>technology that can <br>save money.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: -10%; margin-top: -4.7%;">
-                Enable compliance<br>with laws and <br>regulation.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: 10%; margin-top: -3.7%;">
-                Improves brand <br>perception with <br>customers and <br>partners.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: 31.5%; margin-top: -4.6%;">
-                Helps recruit and <br>retain employees.
-              </h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 16px; margin-left: 52%; margin-top: -2.5%;">
-                Spurs innovative <br>solutions to <br>environmental <br>problems.
-              </h1>
-            </div>
-
-
-            <!-- Frame 4 -->
-            <div class="frame-overlay" style="margin-top: 168%;">
-              <div>
-                <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px;">
-                  Dream big, Do right.</h1>
-
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 22.6%; margin-top: 16%;">
-                  Free Consultation
-                </h1>
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 19%; margin-top: 18%;">
-                  Unlock insights and clarity with <br>our complimentary expert consultations.
-                </h1>
-
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 46%; margin-top: 16.2%">
-                  Manage Efficiently
-                </h1>
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 43.5%; margin-top: 18%;">
-                  Effortlessly oversee and optimise <br>your services for peak efficiency.
-                </h1>
-
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 69%; margin-top: 16.5%;">
-                  Empower Success
-                </h1>
-                <h1 class="display-1 d-none d-lg-block frame-overlay2"
-                  style="font-weight: normal; font-size: 14px; margin-left: 66.5%; margin-top: 18%;">
-                  Fueling your journey to success,<br>one empowered choice at a time.
-                </h1>
+              <div class="description">
+                <p>Our mission is to empower businesses with streamlined cloud solutions.</p>
+                <p>We're committed to simplifying cloud technology selection and operation, ensuring a seamless
+                  experience for our clients.</p>
+                <a href="../aboutus/aboutUs.html"">
+                    <button class=" btn btn-primary btn-lg d-none d-lg-block readmoreBtn">Read More</button>
+                </a>
               </div>
             </div>
+          </div>
+        </div>
 
-
-            <!-- Frame 5 -->
-            <div class="frame-overlay2" style="margin-top: 214.4%;">
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 20%;">
-                Customer Service</h1>
-              <h1 class="display-1 d-none d-lg-block "
-                style="font-weight: normal; font-size: 16px; margin-left: 22%; margin-top: 2.2%;">
-                +64 9 373 7513
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="imageContainerG">
+            <img src="images/card2.jpeg" alt="card2" />
+            <div class="swiper-card-content imageContainer2">
+              <h1 class="display-text head" style="margin-left: 7%; margin-top: 2%;">Eco-Powered Tomorrow:
               </h1>
-              <h1 class="display-1 d-none d-lg-block "
-                style="font-weight: normal; font-size: 16px; margin-left: 22%; margin-top: 1.5%;">
-                g.weber@auckland.ac.nz
+              <h1 class="display-text head" style="margin-left: -25%; margin-top: 7%;">Cloud Engine's Green Computing
+                Vision
               </h1>
-              <h1 class="display-1 d-none d-lg-block "
-                style="font-weight: normal; font-size: 16px; margin-left: 22%; margin-top: 1.5%;">
-                The University of Auckland,<br>34 Princes Street, Auckland CBD,<br>Auckland 1010
-              </h1>
+              <div class="description">
+                <p>Discover how Cloud Engine pioneers eco-friendly computing solutions, driving sustainability in the
+                  digital age.</p>
+                <p>Join us in shaping a greener tomorrow through innovative cloud technology.</p>
+                <a href="../aboutus/aboutUs.html"">
+                    <button class=" btn btn-primary btn-lg d-none d-lg-block readmoreBtn">Read More</button>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
 
-
-            <!-- Frame 6 -->
-            <div class="frame-overlay2" style="margin-top: 250%;">
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 16%;">
-                Our Partners</h1>
-              <h1 class="display-1 d-none d-lg-block"
-                style="font-weight: normal; font-size: 14px; margin-left: 16%; margin-top: 2%;">
-                CloudEngine has established a broad spectrum of partnerships with prominent organisations in hardware,
-                software,
-                and various IT products. We are dedicated to cultivating collaborations with some of the most
-                cutting-edge
-                <br>
-                technology providers globally, irrespective of their size, to present tailored solutions for your
-                enterprise.
-                <br>
-                <br>
-                These strategic partnerships underscore our commitment to remain at the forefront of technological
-                advancements
-                and industry trends. We harness the benefits of comprehensive training and certification
-                initiatives,<br>
-                ensuring that we deliver nothing short of an exceptional customer experience.
-                <br>
-                <br>
-                In conjunction with our esteemed partners and vendors, we are dedicated to implementing world-class
-                technologies
-                that significantly elevate both customer and staff experiences.<br>
-                Discover more about each of our esteemed partners below and delve into our approach to synergising our
-                efforts
-                with partners, all in alignment with CloudEngine's unwavering values.
-                <br>
-                <br>
-                CloudEngine, Your steadfast and professional partner, originating from New Zealand.
-
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="imageContainerSB">
+            <img src="images/card3.jpeg" alt="card3" />
+            <div class="swiper-card-content imageContainer2">
+              <h1 class="display-text head" style="margin-left: 7%; margin-top: 2%;">Are you new to our platform?
               </h1>
+              <h1 class="display-text head" style="margin-left: -35%; margin-top: 7%;">Do not wory, We are here to
+                support
+                you.
+              </h1>
+              <div class="description">
+                <p>Explore our comprehensive PDF guide below, tailored for newcomers to our platform and cloud services.
+                </p>
+                <p> It offers step-by-step instructions for maximizing your experience, ensuring you make the most of
+                  what
+                  we offer.</p>
+                <a href="../aboutus/aboutUs.html"">
+                    <button class=" btn btn-primary btn-lg d-none d-lg-block readmoreBtn">Download</button>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
 
-
-            <!-- Frame 7 -->
-            <div class="frame-overlay2" style="margin-top: 294%;">
-              <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 44%;">
-                Get In Touch</h1>
-              <button class="w3-button sendNow-button">
-                Send Now
-              </button>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="imageContainerY">
+            <img src="images/card4.jpeg" alt="card4" />
+            <div class="swiper-card-content imageContainer2">
+              <h1 class="display-text head" style="margin-left: 7%; margin-top: 2%;">Empowering Excellence Through
+              </h1>
+              <h1 class="display-text head" style="margin-left: -30%; margin-top: 7%;">Our Strong Trusted Partnerships
+              </h1>
+              <div class="description">
+                <p>Explore our comprehensive PDF guide below, tailored for newcomers to our platform and cloud services.
+                </p>
+                <p> It offers step-by-step instructions for maximizing your experience, ensuring you make the most of
+                  what
+                  we offer.</p>
+                <a href="../aboutus/aboutUs.html"">
+                    <button class=" btn btn-primary btn-lg d-none d-lg-block readmoreBtn">Read More</button>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="swiper-pagination"
+        style="transform: scale(1); position: relative; display: flex; margin-left: 46.5%; margin-top: 75vh;"></div>
+      <div class="swiper-button-next " style="transform: scale(1);"></div>
+      <div class="swiper-button-prev " style="transform: scale(1);"></div>
+    </div>
+
+  </div>
+  <!-- Swiper Cards End -->
+
+
+  <!-- Frame -->
+  <div>
+
+    <h1 class="display-5 fw-bold" style="font-weight: 800; margin-left: 35%; margin-bottom: 3%;">What Is Green
+      Computing?</h1>
+    <div class="col-lg-6 mx-auto" style="margin-bottom: 7%;">
+      <p class="lead mb-4">Experience a diverse range of technology solutions tailored to streamline your
+        business's digital transformation.
+        Our services simplify cloud technology selection and operation through an intuitive meta-interface,
+        recommending ideal solutions from various
+        providers based on your specific needs. Our unified management platform abstracts complexities and
+        ensures seamless data portability,
+        all aimed at delivering a hassle-free experience. Partnering with the respected Green Computing project
+        in the School of Computer Science,
+        we leverage their expertise to ensure your digital journey is efficient and successful.</p>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <!-- Cards -->
+    <section style="margin-bottom: 5%;">
+      <div class="container reveal">
+        <h1 style="margin-left: 22%; color: black; font-weight: 700; margin-bottom: 3%;">So Why Green Computing?</h1>
+        <div class="text-container">
+          <div class="text-box">
+            <img src="images/g1.png" alt="g1" style="width: 110px; height: 100px; margin-left: 31%; margin-bottom: 5%;">
+            <p style="text-align: center;">
+              Reduces waste and emissions, contributing to a healthier planet.
+            </p>
+          </div>
+          <div class="text-box">
+            <img src="images/g2.png" alt="g2" style="width: 110px; height: 100px; margin-left: 30%; margin-bottom: 6%;">
+            <p style="text-align: center;">
+              Encourages use of energy-efficient technology that can save money.
+            </p>
+          </div>
+          <div class="text-box">
+            <img src="images/g3.png" alt="g3" style="width: 110px; height: 100px; margin-left: 29%; margin-bottom: 7%;">
+            <p style="text-align: center;">
+              Enable compliance with laws and regulation.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-container">
+          <div class="text-box">
+            <img src="images/g4.png" alt="g4" style="width: 110px; height: 100px; margin-left: 30%; margin-bottom: 5%;">
+            <p style="text-align: center;">
+              Improves brand perception with customers and partners.
+            </p>
+          </div>
+          <div class="text-box">
+            <img src="images/g5.png" alt="g5" style="width: 110px; height: 100px; margin-left: 28%; margin-bottom: 7%;">
+            <p style="text-align: center;">
+              Helps recruit and retain employees.
+            </p>
+          </div>
+          <div class="text-box">
+            <img src="images/g6.png" alt="g6" style="width: 110px; height: 100px; margin-left: 29%; margin-bottom: 7%;">
+            <p style="text-align: center;">
+              Spurs innovative solutions to environmental problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cards End -->
+
+
+
+    <!-- Services -->
+    <div class="album py-5" style="background-color: rgba(80, 80, 80, 0.719);">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <!-- Service 1 -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="400" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="400" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="400" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
+      </div>
+    </div>
+    <!-- Services Finish -->
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <!-- Default-->
+    <script src="../global/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000, // Adjust this value as needed
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    </script>
+
 
 </body>
 
