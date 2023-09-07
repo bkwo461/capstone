@@ -1,7 +1,7 @@
-const otpGenerator = require('otp-generator');
-const { OTP } = require('../models/otpModel');
-const mailer = require('./mailer');
-const { User } = require('../models/account');
+const otpGenerator = require("otp-generator");
+const { OTP } = require("../models/otpModel");
+const mailer = require("./mailer");
+const { User } = require("../models/account");
 
 exports.sendOtp = async (req, res) => {
     try {
@@ -10,33 +10,41 @@ exports.sendOtp = async (req, res) => {
         if (checkUser) {
             return res.status(401).json({
                 success: false,
-                message: "Email already exists"
-                });
+                message: "Email already exists",
+            });
         }
-        let otp = otpGenerator.generate(6, { upperCase: false, specialChars: false, alphabets: false });
-        let result = await OTP.findOne({ otp: otp }); 
+        let otp = otpGenerator.generate(6, {
+            upperCase: false,
+            specialChars: false,
+            alphabets: false,
+        });
+        let result = await OTP.findOne({ otp: otp });
         while (result) {
-            otp = otpGenerator.generate(6, { upperCase: false, specialChars: false, alphabets: false });
+            otp = otpGenerator.generate(6, {
+                upperCase: false,
+                specialChars: false,
+                alphabets: false,
+            });
             result = await OTP.findOne({ otp: otp });
         }
         const otpPayload = {
             email,
-            otp
-        }
-        
+            otp,
+        };
+
         const newOtp = new OTP(otpPayload);
         await newOtp.save();
 
         return res.status(200).json({
             success: true,
             message: "OTP sent successfully",
-            Sent: otp
+            Sent: otp,
         });
     } catch (err) {
         console.log("Error sending OTP", err);
         return res.status(500).json({
             success: false,
-            message: "Error sending OTP"
+            message: "Error sending OTP",
         });
     }
 };
