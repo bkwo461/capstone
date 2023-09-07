@@ -242,6 +242,7 @@
             axios.post('http://localhost:3000/api/login', { "email": String(email), "password": String(password) })
                 .then(function (response) {
                     window.location.href = "..//home/Home.html";
+                    console.log(response);
                 })
                 .catch(function (error) {
                     console.log(error);

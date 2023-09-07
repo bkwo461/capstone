@@ -2,54 +2,46 @@
 <html lang="en">
 
 <head>
-    <!-- Website title -->
-    <title>Empowering Your Visions: Cloud Engine</title>
 
-    <!-- W3 CSS -->
-    <link rel="stylesheet" href="../w3.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="./styles/aboutUs.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Empowering Your Visions: Cloud Engine</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS -->
+  <link href="../global/w3.css" rel="stylesheet" />
+  <link href="./styles/aboutUs.css" rel="stylesheet" />
+  <link href="../global/global.css" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Scroll -->
-    <style>
-        #aboutUs-frame-image {
-            width: 100%;
-            height: auto;
-            margin-top: 3%;
-            position: relative;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+  <!-- Scroll -->
+  <style>
+    main {
+      background-color: rgba(253, 250, 226, 0.312);
+    }
 
-        .overlay2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-    </style>
+    .btn-secondary {
+      background-color: rgba(208, 216, 254, 0);
+      border: 3;
+      border-radius: 10px;
+      color: black;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 253, 0.503)
+    }
+  </style>
 </head>
 
 
@@ -57,352 +49,356 @@
 
 <body>
 
+  <!-- Default -->
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Tenth navbar example">
+
     <!-- Organization logo -->
     <div class="w3-left logo">
-        <a href="#" onclick="return false;">
-            <img src="../home/images/logo.png" alt="Logo" class="w3-bar-item logo">
-        </a>
+      <a href="#" onclick="return false;">
+        <img src="images/logo.png" alt="Logo" class="w3-bar-item logo">
+      </a>
     </div>
 
+    <div class="container-fluid">
+      <button class="navbar-toggler collapsed" style="background-color: rgb(59, 59, 190);" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Top Navigation Bar -->
-    <div class="topnav">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../services/services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+      <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08" style="margin-left: -5%;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../home/Home.html">Home </a>
+          </li>
 
-                        </li>
-                    </ul>
-                </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown08" data-bs-toggle="dropdown"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown08">
+              <li style="margin-top: 15px;"><a class="dropdown-item sub-nav" href="../services/services.html">Our
+                  Services</a></li>
+              <li style="margin-top: 10px;"><a class="dropdown-item sub-nav" href="./solutions.html">Solutions</a></li>
+              <li style="margin-top: 10px;"><a class="dropdown-item sub-nav" href="#">Recommendation</a></li>
+              <li style="margin-top: 10px; margin-bottom: 15px;"><a class="dropdown-item sub-nav" href="#">Get Free
+                  Quotes</a>
+              </li>
+            </ul>
+          </li>
 
-                <!--Authentication -->
-                <div class="d-flex flex-row-reverse">
-                    <!-- Log in -->
-                    <button class="btn btn-primary btn-lg d-none d-lg-block">Log in</button>
-                    <!-- Register -->
-                    <button class="btn btn-primary btn-lg d-none d-lg-block"">Register</button>
-                </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Account </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutus/aboutUs.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Authentication -->
+      <div class="d-flex flex-row-reverse authentication">
+        <!-- Log in -->
+        <button class="btn btn-primary btn-lg d-none d-lg-block loginBtn">Log in</button>
+        <!-- Register -->
+        <button class="btn btn-primary btn-lg d-none d-lg-block registerBtn">Register</button>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Default End -->
+
+
+  <!-- Main -->
+  <main>
+
+    <!-- Top banner -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 8%;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Example headline.</h1>
+              <p>Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
             </div>
-        </nav>
-    </div>
-
-    <!-- Background IMG -->
-    <img id="aboutUs-frame-image" src="images/aboutUs.png" style="object-fit: cover;">
-
-    <!-- Frame 1 -->
-    <div class="overlay2" style=" margin-top: 20%;">
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 50px; margin-left: 12%;">
-            Your Strategy Is Only<br>As Good As<br>You Execute it</h1>
-
-          <h1 class="display-2 d-none d-md-block d-lg-none"
-            style="font-weight: bolder; font-size: 25px; margin-left: 12%;">
-            Your Strategy Is Only<br>As Good As<br>You Execute it</h1>
-
-          <h1 class="display-3 d-none d-sm-block d-md-none"
-            style="font-weight: bolder; font-size: 14px; margin-left: 12%;">
-            Your Strategy Is Only<br>As Good As<br>You Execute it</h1>
-
-          <h1 class="display-4 d-block d-sm-none" style="font-weight: bolder; font-size: 8px; margin-left: 12%;">
-            Your Strategy Is Only<br>As Good As<br>You Execute it</h1>
-    </div>
-
-
-    <!-- Frame 2 -->
-    <div class="overlay2" style="margin-top: 50%;">
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 40%;">
-          Dream Big Do Right.</h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 26.5%; margin-top: 11.4%;">
-          Are You New?
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 41%; margin-top: -1.2%;">
-          Contact Us
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 54.4%; margin-top: -1.2%;">
-          Meet Our Team
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 68.7%; margin-top: -1.2%;">
-          Our Partners
-        </h1>
-    </div>
-
-
-    <!-- Frame 3 -->
-    <div class="overlay2" style="margin-top: 88%;">
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 40%;">
-            Questions About Us</h1>
-
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 14px; margin-left: 26%; margin-top: 8%;">
-            How can I get started with Cloud Engine and explore its capabilities?</h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 26%; margin-top: 4.4%;">
-          We offer a comprehensive documentation that meticulously guides you through the nuances of our website and services. <br>
-          This invaluable resource is designed to expedite your onboarding process, ensuring you can quickly leverage the power of Cloud Engine.
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block""
-          style="font-weight: normal; font-size: 14px; margin-left: 26%; margin-top: 7.5%; font-weight: bolder;">
-          What is Cloud Engine, and what does it aim to achieve?
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 26%; margin-top: 4.4%;">
-          Cloud Engine aims to simplify cloud technology selection and management by intelligently recommending <br>
-          solutions based on user requirements. We offer a unified interface for seamless provider switching while ensuring data portability.
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 26%; margin-top: 7.5%; font-weight: bolder;">
-          Can you tell us more about the Green Computing project and its role in Cloud Engine's development?
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 26%; margin-top: 4.4%;">
-          The Green Computing project within the School of Computer Science is a key partner in Cloud Engine's development, <br>
-          providing expertise to enhance the eco-friendliness of our cloud services.
-        </h1>
-    </div>
-
-
-    <!-- Frame 4 -->
-    <div class="overlay2" style="margin-top: 152%;">
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 45%;">
-          Properties</h1>
-          
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 14px; margin-left: 55.7%; margin-top: 8.85%; ">
-          Innovation
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 55.7%; margin-top: 0.5%;">
-          We are dedicated to pioneering innovative solutions <br>in cloud technology to simplify the user experience.
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 14px; margin-left: 55.7%; margin-top: 2.85%;">
-          Sustainability
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 55.7%; margin-top: 0.5%;">
-          We prioritize eco-friendliness and sustainability, collaborating with <br>the Green Computing project to lessen our environmental footprint.
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-        style="font-weight: bolder; font-size: 14px; margin-left: 55.7%; margin-top: 2.76%;">
-        Intelligent Recommendations
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-            style="font-weight: normal; font-size: 14px; margin-left: 55.7%; margin-top: 0.5%;">
-            Our recommendation system uses advanced algorithms to offer <br>personalized cloud solutions that meet specific user needs.
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-        style="font-weight: bolder; font-size: 14px; margin-left: 55.7%; margin-top: 2.75%;">
-        Effortless Service Management
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-            style="font-weight: normal; font-size: 14px; margin-left: 55.7%; margin-top: 0.5%;">
-            We prioritize an intuitive platform that simplifies service management. <br>Our dashboard enables seamless oversight and control of your services.
-        </h1>
-    </div>
-
-
-     <!-- Frame 5 -->
-     <div class="overlay2" style="margin-top: 203%;">
-        <h1 class="display-1 d-none d-lg-block" style="font-weight: bolder; font-size: 40px; margin-left: 42%;">
-          Meet Our Team</h1>
-
-          <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 18px; margin-left: 23%; margin-top: 18%; ">
-          Shinbeom Kwon
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 23%; margin-top: 1%;">
-          - Frontend Developer<br>- Scrum Master
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 18px; margin-left: 47.3%; margin-top: -4.2%; ">
-          Tanvi Kher
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 46%; margin-top: 1%;">
-          - Full stack Developer<br>- Product Manager
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 18px; margin-left: 70.3%; margin-top: -4.3%; ">
-          Sangjun Min
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 68.7%; margin-top: 1%;">
-          Lead Frontend Developer
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 18px; margin-left: 24.3%; margin-top: 30%; ">
-          Minsu Kim
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 22.5%; margin-top: 1%;">
-          Lead Backend Developer
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 18px; margin-left: 46.5%; margin-top: -3.4%; ">
-          Junhee Han
-        </h1>
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: normal; font-size: 14px; margin-left: 45.6%; margin-top: 1%;">
-          - Backend Developer <br>- DevOps
-        </h1>
-
-        <h1 class="display-1 d-none d-lg-block"
-          style="font-weight: bolder; font-size: 15px; margin-left: 67.2%; margin-top: -4.4%; ">
-          Interested in working with us?
-        </h1>
-        <h1 class="display-1 d-none d-lg-block" onclick="openRegisterModal()"
-          style="font-weight: bold; font-size: 15px; margin-left: 71%; margin-top: 2%; color:blue">
-          Apply Now
-        </h1>
-     </div>
-
-
-     <!-- Modal that pops up when user clicks on 'Apply Now' -->
-     <div id="trigger-modal" class="w3-modal" style="z-index:4">
-        <div class="w3-modal-content w3-animate-zoom"
-            style="margin-top: -4%; background-color: #ffffff; width: 60%; border-radius: 20px 100px 20px 20px;">
-            <div class="w3-container w3-padding">
-                <h2 class="custom-font "
-                    style="font-size: 26px; text-align: center; margin-top: 5%; margin-bottom: 1%; font-weight: bold;">
-                    We Are Hiring! </h2>
-            </div>
-
-            <div>
-                <h2 class="custom-font"
-                    style="font-size:16px; text-align: left; margin-top: 10%; margin-left: 8%; font-weight: bold;">
-                    Thank you for your interest, and here's hoping<br>
-                    we're creating an excellent future together.<br>
-                    We will revert you shortly.
-                </h2>
-            </div>
-            
-            <div id="form-ct" class="w3-panel">
-                <form>
-                    <div id="userInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -8%; margin-right: 8%;"">
-                        <div style="margin-left: -85%;">
-                        <label class="custom-font">
-                                style="color:rgb(227, 0, 0);">*</a> Details</label></div>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text"
-                            placeholder="First name">
-                        <input class="w3-input w3-border w3-margin-bottom" type="text"
-                            placeholder="Surname">
-                    </div>
-
-                    <div id="addressInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -1%; margin-right: 8%;">
-                        <div style="margin-left: 142%;">
-                        <label class="custom-font" style="margin-left: -520px;"><br><a
-                                style="color:rgb(227, 0, 0)">*</a> Addresses</label> </div>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text"
-                            placeholder="Home Address">
-                        <input class="w3-input w3-border w3-margin-bottom" type="text"
-                            placeholder="Work Address">
-                    </div>
-
-                    <div id="contactInfo" style="display: flex; flex-direction: column; align-items: center; margin-left: 50%; margin-top: -1%; margin-right: 8%;">
-                        <div style="margin-left: 144%;">
-                        <label class="custom-font" style="margin-left: -530px;"><br><a
-                                style="color:rgb(227, 0, 0)">*</a> Contacts</label></div>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text"
-                            placeholder="Mobile Number">
-                        <input class="w3-input w3-border w3-margin-bottom" type="email"
-                            placeholder="Email Address">
-                    </div>
-
-                    <br>
-                    <div class="w3-section" style="display: flex; flex-direction: column; align-items: center;">
-                        <button id="custom-gradient-signup" class="w3-button"
-                            style="border-radius: 5px 5px 5px 5px; width: 500px; height:50px; margin-bottom: 10px; font-weight: bold;"
-                            onclick="submitRegisterForm()">SUBMIT</button>
-                        <button class="w3-button w3-light-grey"
-                            style="border-radius: 5px 5px 5px 5px; width: 500px; height:50px; margin-bottom: 70px; font-weight: bold;"
-                            onclick="closeRegisterModal()">CANCEL</button>
-                    </div>
-                </form>
-            </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>One more for good measure.</h1>
+              <p>Some representative placeholder content for the third slide of this carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
+
+    <!-- ================================================== -->
+
+    <h1 class="display-5 fw-bold" style="font-weight: 700; margin-bottom: 5%; margin-left: 42%;">Meet Our <a
+        style="color:rgb(0, 0, 214)">Team</a></h1>
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row" style="margin-bottom: 5%;">
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/shin.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Shinbeom Kwon</h2>
+          <p style="text-align: center;">Scrum Master</p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/tan.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Tanvi Kher</h2>
+          <p style="text-align: center;">Product Manager
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/min.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Sangjun Min</h2>
+          <p style="text-align: center;">Lead Front-end developer<br></p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+      </div>
+
+
+      <div class="row" style="margin-bottom: 10%;">
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/kim.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Minsu Kim</h2>
+          <p style="text-align: center;">Lead Back-end developer<br></p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/han.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Junhee Han</h2>
+          <p style="text-align: center;">DevOps / Documentation Manager
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="180" src="images/na.png" alt="Logo"
+            class="w3-bar-item logo">
+          <h2>Apply Now</h2>
+          <p style="text-align: center;">Are you interested in working with us?</p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+
+      </div>
+
+
+      <!-- Main Body -->
+
+      <hr class="featurette-divider">
+
+      <!-- Box -->
+      <div class="row featurette" style="margin-bottom: 25%; margin-left: 5%;">
+        <div class="col-md-7">
+          <div class="qa-box">
+            <div class="qa-description">
+              <span class="description-text">1. How can I get started with Cloud Engine and explore its capabilities?</span>
+              <div class="qa-icons">
+                <div class="icon"></div>
+                <div class="sub-icon"></div>
+              </div>
+            </div>
+            <div class="qa-process-steps">
+              <span class="step-text">We offer a comprehensive documentation that meticulously guides you through the nuances of our website and services. <br>
+                This invaluable resource is designed to expedite your onboarding process, ensuring you can quickly leverage the power of Cloud Engine.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box -->
+      <div class="row featurette" style="margin-bottom: 25%; margin-left: 5%;">
+        <div class="col-md-7">
+
+          <div class="qa-box">
+            <div class="qa-description">
+              <span class="description-text">2. What is Cloud Engine, and what does it aim to achieve?</span>
+              <div class="qa-icons">
+                <div class="icon"></div>
+                <div class="sub-icon"></div>
+              </div>
+            </div>
+            <div class="qa-process-steps">
+              <span class="step-text">Cloud Engine aims to simplify cloud technology selection and management by intelligently recommending <br>
+                solutions based on user requirements. We offer a unified interface for seamless provider switching while ensuring data portability.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box -->
+      <div class="row featurette" style="margin-bottom: 25%; margin-left: 5%;">
+        <div class="col-md-7">
+
+          <div class="qa-box">
+            <div class="qa-description">
+              <span class="description-text">3. Can you tell us more about the Green Computing project and its role in Cloud Engine's development?</span>
+              <div class="qa-icons">
+                <div class="icon"></a></div>
+                <div class="sub-icon"></div>
+              </div>
+            </div>
+            <div class="qa-process-steps">
+              <span class="step-text">The Green Computing project within the School of Computer Science is a key partner in Cloud Engine's development, <br>
+                providing expertise to enhance the eco-friendliness of our cloud services.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading"><span class="text-muted">Customer Service</h2>
+          <p class="lead">We are proud to cultivate robust partnerships with the following esteemed organizations. 
+            These collaborations reflect our commitment to delivering exceptional services and fostering enduring 
+            relationships in the business landscape. Together, we strive for innovation, excellence, and shared success.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="" alt="img" width="400" height="300">
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Get in Touch <span class="text-muted">with Us.</span></h2>
+          <p class="lead"></p>
+        </div>
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+          </svg>
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+  </main>
+
+
+
+
+
+
+
 
 </body>
 
 
+
+<!-- Default-->
+<script src="../global/bootstrap.bundle.min.js"></script>
 <!-- Registration JS scripts -->
 <script>
-    function openRegisterModal() {
-        var registerModal = document.getElementById("trigger-modal");
-        registerModal.style.display = "block";
-        clearFormInputs();
-    }
+  function openRegisterModal() {
+    var registerModal = document.getElementById("trigger-modal");
+    registerModal.style.display = "block";
+    clearFormInputs();
+  }
 
-    function closeRegisterModal() {
-        var registerModal = document.getElementById("trigger-modal");
-        registerModal.style.display = "none";
-        clearFormInputs();
-    }
+  function closeRegisterModal() {
+    var registerModal = document.getElementById("trigger-modal");
+    registerModal.style.display = "none";
+    clearFormInputs();
+  }
 
-    function submitRegisterForm() {
-        var registerModal = document.getElementById("trigger-modal");
-        registerModal.style.display = "none";
-        clearFormInputs();
-    }
+  function submitRegisterForm() {
+    var registerModal = document.getElementById("trigger-modal");
+    registerModal.style.display = "none";
+    clearFormInputs();
+  }
 
-    function clearFormInputs() {
-        var inputs = document.getElementsByTagName("input");
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].value = "";
-        }
+  function clearFormInputs() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
     }
+  }
 </script>
 
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

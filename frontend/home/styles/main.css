@@ -1,102 +1,204 @@
-.logo {
-  width: 220px;
-  height: 60px;
-  margin-left: 3%;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #ffffff;
-  margin-top: 2%;
-  margin-left: 26%;
-}
-
-.topnav a {
-  float: left;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ffffff;
-  color: rgb(6, 44, 184);
-  text-decoration: none;
-}
-
-.login-button {
-  background-color: #f79901;
-  border-radius: 50px;
-  width: 8%;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: -4.5%;
-  margin-left: 64%;
-}
-
-.register-button {
-  background-color: #F79901;
-  border-radius: 50px;
-  width: 8%;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: -7%;
-  margin-left:73%;
-}
-
-.areYouNew-button {
-  background-color: #F79901;
+.readmoreBtn {
+  background-color: #5a5a5a1b !important;
   border-radius: 5px;
-  width: 10%;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 8%;
-  margin-left:0px;
-}
-
-.sendNow-button {
-  background-color: #F79901;
-  border-radius: 50px;
-  width: 6%;
+  width: 20%;
   height: 50px;
   color: white;
   text-align: center;
   font-size: 16px;
-  margin-top: 4%;
-  margin-left:60%;
-  box-shadow: 0 2px 4px #c37800d4;
+  margin-left: 0px;
 }
 
 /* Swiper Cards */
 .swiper-container {
-  margin-top: 5%;
   position: relative;
   z-index: 0;
 }
 
-.swiper-slide {
-  width: 100%;
-  height: 20vh;
-}
-
-/* Adjust image sizing to fit within swiper container */
 .swiper-slide img {
-  width: 100%;
+  width: 100% !important;
+  height: 800px;
   object-fit: cover;
-} 
+}
 
 .swiper-card-content {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  display: flex;
+  bottom: 35%;
   color: white;
   font-size: 22px;
 }
+
+
+/* Swiper cards finished*/
+
+/* Blue */
+.imageContainerB {
+  position: absolute;
+}
+
+.imageContainerB:hover {
+  box-shadow: 10px 10px 30px rgb(0, 15, 100);
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+/* Green */
+.imageContainerG {
+  position: absolute;
+}
+
+.imageContainerG:hover {
+  box-shadow: 10px 10px 30px rgb(0, 100, 37);
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+/* Sky Blue */
+.imageContainerSB {
+  position: absolute;
+}
+
+.imageContainerSB:hover {
+  box-shadow: 10px 10px 30px rgb(0, 92, 100);
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+.imageContainerY {
+  position: absolute;
+}
+
+.imageContainerY:hover {
+  box-shadow: 10px 10px 30px rgb(100, 113, 0);
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+
+/* Transparent box */
+.imageContainer2 {
+  position: absolute;
+}
+
+.imageContainer2 {
+  background-color: rgba(117, 117, 117, 0.45);
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  box-shadow: 1px 10px 10px rgba(2, 38, 241, 0);
+  transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+  border-radius: 0 100px 0 0;
+}
+
+.swiper-card-content .description {
+  position: absolute;
+  bottom: 10%;
+  left: 7%;
+  ;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.frame1 {
+  display: flex;
+  height: 820px;
+  padding: 103px 318.934px 154.07px 347px;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 1.00) 0.01%, #FFF 0.02%, rgba(255, 184, 184, 0.724) 50.31%);
+}
+
+
+/* Scroll Effect */
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  color: #e0ffff;
+  }
+section:nth-child(2){
+  color: #42455a;
+  background: #e0ffff;
+} 
+section:nth-child(3){
+  color: #e0ffff;
+}
+section:nth-child(4){
+  color: #42455a;
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 1.00) 0.01%, #FFF 0.02%, rgba(82, 185, 23, 0.15) 80%);
+}
+section .container{
+  height: auto;
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container{
+   display: flex;
+}
+section .text-container .text-box{
+  margin: 40px;
+  padding: 20px;
+  width: 800px;
+  background: #266638e6;
+  border-radius: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+section .text-box:hover {
+  background: #164924e6;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0);
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transform: scale(0.97);
+  font-weight: bolder;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Scroll Effect Finish */

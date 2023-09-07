@@ -1,12 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { auth } = require('../middleware/auth');
-const { User } = require('../models/account');
-
+const { auth } = require("../middleware/auth");
+const { User } = require("../models/account");
 
 router.get("/", auth, (req, res) => {
     // #swagger.tags = ['Authentication']
-    // Sample Custom Parameter Definition 
+    // Sample Custom Parameter Definition
     // /*	#swagger.parameters['obj'] = {
     //         in: 'body',
     //         description: 'User information.',
@@ -14,11 +13,12 @@ router.get("/", auth, (req, res) => {
     //         schema: { $ref: "#/definitions/AddUser" }
     // } */
     res.status(200).json({
-      _id: req.user._id,
-      email: req.user.email,
-      name: req.user.name,
-      title: req.user.title,
-      isAuth: true,
+        _id: req.user._id,
+        email: req.user.email,
+        surname: req.user.surname,
+        lastname: req.user.lastname,
+        title: req.user.title,
+        isAuth: true,
     });
 });
 
