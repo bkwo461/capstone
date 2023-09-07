@@ -1,18 +1,29 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-// const { auth } = require("../middleware/auth");
-// const { User } = require("../models/account");
+const { auth } = require("../middleware/auth");
 
-// router.get("/", auth, async (req, res) => {
-//     // #swagger.tags = ['Authentication']
-//     try {
-//         const user = await User.findOneAndUpdate(
-//             { _id: req.user._id },
-//             { token: "" }
-//         );
-//         res.status(200).send({ success: true, message: "Logout success" });
-//     } catch (err) {
-//         res.json({ success: false, err });
-//     }
-// }
+router.get("/", auth, async (req, res) => {
+    // #swagger.tags = ['Authentication']
+    // #swagger.description = 'Endpoint to get user profile'
+    /* #swagger.security = [{
+                "createdToken": []
+        }] */
+
+    try {
+        const userProfile = req.user;
+        return res.status(200).json({
+            success: true,
+            surname: userProfile.surname,
+            lastname: userProfile.lastname,
+        });
+    } catch (error) {
+        console.error("Error fetching user profile", error);
+        return res.status(500).json({
+            success: false,
+            message: "Error fetching user profile",
+        });
+    }
+});
+
+module.exports = router;
