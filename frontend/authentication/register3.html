@@ -290,8 +290,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        /* var email = Cookies.get('email'); */
-        var email = "admin@gmail.com";
+        var email = Cookies.get('email');
 
         document.getElementById("route").addEventListener("click", function (event) {
 
@@ -301,6 +300,7 @@
 
             axios.post('http://localhost:3000/api/register', { "email": String(email), "surname": String(surname), "lastname": String(firstname), "password": String(password) })
                 .then(function (response) {
+                    console.log(response);
                     window.location.href = "register4.html";
                 })
                 .catch(function (error) {

@@ -17,7 +17,7 @@ router.post("/", [body('email').isEmail().withMessage('Must be a valid email add
       const user = await User.findOne({ email: req.body.email });
   
       if (!user) {
-        return res.json({
+        return res.status(403).json({
           loginsuccess: false,
           message: "User does not exist",
         });
@@ -26,7 +26,7 @@ router.post("/", [body('email').isEmail().withMessage('Must be a valid email add
       const isMatch = await user.comparePassword(req.body.password);
   
       if (!isMatch) {
-        return res.json({
+        return res.status(404).json({
           loginsuccess: false,
           message: "Wrong Password",
         });
