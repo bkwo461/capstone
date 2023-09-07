@@ -23,27 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Swagger Initialization
-const swaggerOptions = {
-    swaggerDefinition: {
-        info: {
-            title: "Cloud Engine API",
-            version: "0.0.1",
-            description: "Welcome to Cloud Engine Backend API",
-        },
-    },
-    apis: ["./server.js", "./routes/*.js", "./routes/AWS/*.js"],
-};
-
-swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 // Swagger Routes
-app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-app.get("/swagger.json", (req, res) => {
-    res.setHeader("Content-Type", "application/json");
-    res.send(swaggerDocs);
-});
-
+const swaggerFile = require('./middleware/swagger-output.json');
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile, { explorer: true }));
 /**
  * @swagger
  * /:
