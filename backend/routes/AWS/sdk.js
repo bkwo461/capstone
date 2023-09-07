@@ -37,6 +37,7 @@ const collection = client.db("test").collection("useraws");
 
 // Routes (RDS)
 router.get('/getAllRDSInstances', async (req, res) => {
+    // #swagger.tags = ['SDK - RDS']
     try {
         infoRDSInstance().then(data => {
             res.status(200).json(data);
@@ -51,7 +52,7 @@ router.get('/getAllRDSInstances', async (req, res) => {
 
 // Routes (IAM)
 router.get('/getAllUsers', async (req, res) => {
-    // #swagger.tags = ['CDK']
+    // #swagger.tags = ['SDK - IAM']
     try {
         const users = await UserAWS.find();
         res.status(200).json(users);
@@ -61,7 +62,7 @@ router.get('/getAllUsers', async (req, res) => {
 });
 
 router.post('/getUserByEmail', async (req, res) => {
-    // #swagger.tags = ['CDK']
+    // #swagger.tags = ['SDK - IAM']
     const { email } = req.body;
     try {
         let user = await UserAWS.find({ email: email });
@@ -73,7 +74,7 @@ router.post('/getUserByEmail', async (req, res) => {
 });
 
 router.post('/create', async (req, res) => {
-    // #swagger.tags = ['CDK']
+    // #swagger.tags = ['SDK - IAM']
     const { email, username, rdsLink } = req.body;
     createFullUser(username).then(async data => {
         if (data.isError) {
@@ -101,7 +102,7 @@ router.post('/create', async (req, res) => {
 });
 
 router.delete('/delete', getUser, async (req, res) => {
-    // #swagger.tags = ['CDK']
+    // #swagger.tags = ['SDK - IAM']
     const { username } = req.body;
 
     let user = res.user[0];
@@ -130,7 +131,7 @@ router.delete('/delete', getUser, async (req, res) => {
 });
 
 router.patch('/replace', getUser, async (req, res) => {
-    // #swagger.tags = ['CDK']
+    // #swagger.tags = ['SDK - IAM']
     const { username } = req.body;
 
     let user = res.user[0];

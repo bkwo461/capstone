@@ -21,8 +21,12 @@ const options = {
       description: 'These endpoints are used for user authentication.', 
     },
     {
-      name: 'CDK',      
-      description: 'These endpoints are in charge of interacting with AWS.', 
+      name: 'SDK - IAM',      
+      description: 'These endpoints are in charge of interacting with AWS IAM Service.', 
+    },
+    {
+      name: 'SDK - RDS',      
+      description: 'These endpoints are in charge of interacting with AWS RDS Service & Deployment .', 
     },
   ],
   definitions: {
