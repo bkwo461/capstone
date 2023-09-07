@@ -5,10 +5,10 @@ const debug = false;
 
 // AWS Config
 AWS.config.update({
-    "accessKeyId": "ASIA24SJFHH7X6YHWTTJ",
-    "secretAccessKey": "r60qeuN5iKx2p8qG5JDqzru01dYpTcGAFGXB4dRX",
+    "accessKeyId": "ASIA24SJFHH7TPXCTIEX",
+    "secretAccessKey": "SNY2mYh7beGdZMk502iGfQrpPhZrjS0a0q7aEFuH",
     "region": "ap-southeast-2",
-    "sessionToken": "IQoJb3JpZ2luX2VjELD//////////wEaDmFwLXNvdXRoZWFzdC0yIkYwRAIgYrpR+FRd+lSQ6yuKapngLQnPwUkU3Vmqa0W1Sbp2yWwCICD6KcUf8991pDL7aKOq9I54XnaNxhsAh8kBJaob7F3JKpsDCIn//////////wEQABoMNzQ4NTUxNDg1OTUxIgxGKYtNZIPs6miTSJAq7wJL4rBzOZBIyWBEKk75DYAA9I05lPnzRB1e3guPmncYWJgVyLruVnPdlRu/6q53POMS0LvbOVt2Cw4O94vus6qWDJfkTQhSels+Kk7HE8/dvki7y5dCQI0yDaxt896SqeC/tLjrTAJKCcjqyoLydOrKwriTG6PUevKpA7b4Bt7XFe0wXYiJDslEcIZotwdllEKYD6sZixt14qgPlO6r27ZpUiO4YqANTJkT8RCMNElSue0MEqC2f5q1Fs4yBK7WFdal0CStpzwFg3uuMkGnt8IHuusNs3N6WCmiJQbsaDRydwOA7MBQ9Nf48POOmQByN2sZUmt/grQA4+ZyIFkqoQ50jkHTaeXfoPtwDkqkCm9Qn0k7ltsKNGVy8Ukn1TQYwsmONkEp7RQ6+K0+W8Sxsz+nKyTIdFSrw1Yq8fMobaFFdKK3tnB8YHlncopdJHuJi/5hrSICCRqp1Y9jWxnXSEeLiNt57SHl7JjGBibMahxdMKaO5qcGOqcB/q9aKk2p/NlRwyaK/0sH1iEd7/91N3k+x4o1kakEDUmihfoPlvKI+P/jKw0zxz4GTazoDZ+Tck7bFGPo+Mnj2x+sJg/ei29sZoaNw7In1z/VeiavZg1Er82XMr8ovKRBy2poMZd6uvyHbdMg5QPCjmbikVFd/IGAyKdzAaab6IVd9mDjytEUmmasetClqg9Tugy1FDXIZv4Yo3e2yXSHxAp/Sx0zVVE=", // Only applicable when using university account 
+    "sessionToken": "IQoJb3JpZ2luX2VjELP//////////wEaDmFwLXNvdXRoZWFzdC0yIkYwRAIgBpMzeX6CSNzwAySU1+V0dFipxUEkYITypNmZOw1duj8CICuaXwrmqEOknEmvUHgrS/78wf1PKRx3hiVUvp5gnYQxKpsDCIz//////////wEQABoMNzQ4NTUxNDg1OTUxIgwknOY8P4oh+GNNNQgq7wIId7u/ydQyXpRqWXclWo5v0uEzNXE9RVyPl9Jf6gi9HmDNpvCZ53J/Vf66L4b7/rof6MhCYgvDJCb3lmE+wDUo+0hMjzJZRR+E+/dcaBveQubNFFV1GDfjA/lfsVtUpe9ZDjCE8qaFTeDaMMWmS87ERUOgcTtbQCBTYj7Wtnrc80r2onEDSXf3OSk7ij1Dj7BN/8CV8x+ID8CyWCYd8ZsmbcmCY2NB+RdjUocnmBqJRDNgII8XH32lejf7n5CzeYWkUdKsa0mNrfyn7cystM7UKvI6t1BlNKZZ/PKSXTj5IkrpQam1vgc+9hGuovTDq20x9FK7TfsyRoIINugB5CwUE0xBbDOzpYOfg4G5/KDH2EQXniQeUPb03SRfhIwAuQwzmSk0A8mc9pAtngJ9ovj7IEZdyvc2BD4K/OZZBR1+tvBHicZLu4pYaMOgg0fFRXb3wE4lZhzDb6JcoxYbd09er0tsOLq22tb9P6OUYShgMJ/Q5qcGOqcB3DVf4UKTLUJVfeE+AxLGXwl0vVsZMdm40EtZBy83Qb3vaAKvJHgr8hAUmfWSgF21OH9tLWAc8RXHL6L2Q9j8VjuFoIbyOYkA+/wx0w8DaemC8UTYMHNRlHb3UMl4xUEUZeWolumcF2zHXkM4ODYLiaji3hIL9a3zUQjRw+gpl6NR34oq5CNYnXg7j7+Z8HJeSwHTmBKfFRCkVq5PoA2gPJSS0zOSGaM=", // Only applicable when using university account 
 }); AWS.config.getCredentials(function (err) {
     if (err) console.log(err.stack); // credentials not loaded
     else {
@@ -60,7 +60,7 @@ function createRDSInstance(dbName, username, password) {
                     Engine: data.DBInstance.Engine,
                     EngineVersion: data.DBInstance.EngineVersion,
                 }]
-                console.log(data);
+                if (debug) console.log(data);
                 result.message = `RDS instance '${dbName}' has been succesfully created`;
                 resolve(result);
             }
@@ -102,7 +102,7 @@ function createRDSInstance(dbName, username, password) {
                     Engine: data.DBInstance.Engine,
                     EngineVersion: data.DBInstance.EngineVersion,
                 }]
-                console.log(data.DBInstance);
+                if (debug) console.log(data.DBInstance);
                 result.message = `RDS instance '${dbName}' has been succesfully deleted`;
                 resolve(result);
             }
@@ -111,28 +111,22 @@ function createRDSInstance(dbName, username, password) {
 } function infoRDSInstance(dbName) {
     let result = {
         name: dbName,
-        rdsinfo: [{
-            Identifier: null,
-            Status: null,
-            Arn: null,
-            Endpoint: null,
-            Engine: null,
-            EngineVersion: null,
-        }],
+        rdsinfo: [],
         isError: false,
         message: null,
     }; let DescribeParams;
-    if (dbName)  {DescribeParams = { DBInstanceIdentifier: dbName, }; }
+    if (dbName) { DescribeParams = { DBInstanceIdentifier: dbName, }; }
     else { DescribeParams = {}; }
 
     return new Promise((resolve, reject) => {
         rds.describeDBInstances(DescribeParams, async (err, data) => {
             if (err) {
-                result.isError = true; result.message = 'Error retrieving information from a RDS instance'; result.rawErr = err;
+                if (err.statusCode == 404) { result.isError = true; result.message = 'No such instance found'; result.rawErr = err; }
+                else { result.isError = true; result.message = 'Error retrieving information from a RDS instance'; result.rawErr = err; }
                 reject(result);
             }
             else {
-                console.log(data);
+                if (debug) console.log(data);
                 for (let i = 0; i < data.DBInstances.length; i++) {
                     result.rdsinfo[i] = {
                         Identifier: data.DBInstances[i].DBInstanceIdentifier,
@@ -144,9 +138,110 @@ function createRDSInstance(dbName, username, password) {
                     }
                 }
                 resolve(result);
-            } 
+            }
         });
     });
 } 
 
-module.exports = { createRDSInstance, deleteRDSInstance, infoRDSInstance };
+function shutdownRDSInstance(dbName) {
+    let result = {
+        name: dbName,
+        rdsinfo: [],
+        isError: false,
+        message: null,
+    }; const stopParams = {
+        DBInstanceIdentifier: dbName,
+    };
+
+    return new Promise((resolve, reject) => {
+        rds.stopDBInstance(stopParams, function (err, data) {
+            if (err) {
+                if (debug) console.error('Error stopping RDS instance:', err);
+                result.isError = true; result.message = 'Error stopping RDS instance'; result.rawErr = err;
+                reject(result);
+            }
+            else {
+                if (debug) console.log(data);
+                result.rdsinfo = [{
+                    Identifier: data.DBInstance.DBInstanceIdentifier,
+                    Status: data.DBInstance.DBInstanceStatus,
+                    Arn: data.DBInstance.DBInstanceArn,
+                    Endpoint: data.DBInstance.Endpoint,
+                    Engine: data.DBInstance.Engine,
+                    EngineVersion: data.DBInstance.EngineVersion,
+                }]
+                if (debug) console.log(data.DBInstance);
+                result.message = `RDS instance '${dbName}' has been succesfully stopped!`;
+                resolve(result);
+            }
+        });
+    });
+} function poweronRDSInstance(dbName) {
+    let result = {
+        name: dbName,
+        rdsinfo: [],
+        isError: false,
+        message: null,
+    }; const stopParams = {
+        DBInstanceIdentifier: dbName,
+    };
+
+    return new Promise((resolve, reject) => {
+        rds.startDBInstance(stopParams, function (err, data) {
+            if (err) {
+                if (debug) console.error('Error starting RDS instance up:', err);
+                result.isError = true; result.message = 'Error starting RDS instance up'; result.rawErr = err;
+                reject(result);
+            }
+            else {
+                if (debug) console.log(data);
+                result.rdsinfo = [{
+                    Identifier: data.DBInstance.DBInstanceIdentifier,
+                    Status: data.DBInstance.DBInstanceStatus,
+                    Arn: data.DBInstance.DBInstanceArn,
+                    Endpoint: data.DBInstance.Endpoint,
+                    Engine: data.DBInstance.Engine,
+                    EngineVersion: data.DBInstance.EngineVersion,
+                }]
+                if (debug) console.log(data.DBInstance);
+                result.message = `RDS instance '${dbName}' has been succesfully started!`;
+                resolve(result);
+            }
+        });
+    });
+} function rebootRDSInstance(dbName) {
+    let result = {
+        name: dbName,
+        rdsinfo: [],
+        isError: false,
+        message: null,
+    }; const stopParams = {
+        DBInstanceIdentifier: dbName,
+    };
+
+    return new Promise((resolve, reject) => {
+        rds.rebootDBInstance(stopParams, function (err, data) {
+            if (err) {
+                if (debug) console.error('Error while rebooting the RDS instance:', err);
+                result.isError = true; result.message = 'Error while rebooting the RDS instance'; result.rawErr = err;
+                reject(result);
+            }
+            else {
+                if (debug) console.log(data);
+                result.rdsinfo = [{
+                    Identifier: data.DBInstance.DBInstanceIdentifier,
+                    Status: data.DBInstance.DBInstanceStatus,
+                    Arn: data.DBInstance.DBInstanceArn,
+                    Endpoint: data.DBInstance.Endpoint,
+                    Engine: data.DBInstance.Engine,
+                    EngineVersion: data.DBInstance.EngineVersion,
+                }]
+                if (debug) console.log(data.DBInstance);
+                result.message = `RDS instance '${dbName}' has been succesfully rebooted!`;
+                resolve(result);
+            }
+        });
+    });
+}
+
+module.exports = { createRDSInstance, deleteRDSInstance, infoRDSInstance, shutdownRDSInstance, poweronRDSInstance, rebootRDSInstance };

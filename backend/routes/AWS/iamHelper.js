@@ -4,10 +4,10 @@ const debug = false;
 
 // AWS Config
 AWS.config.update({
-    "accessKeyId": "ASIA24SJFHH7X6YHWTTJ",
-    "secretAccessKey": "r60qeuN5iKx2p8qG5JDqzru01dYpTcGAFGXB4dRX",
+    "accessKeyId": "ASIA24SJFHH7X65ZAL5M",
+    "secretAccessKey": "wnsvsahETHcwedYfUwxRqT62u5UYy5s5Gru4Al7N",
     "region": "ap-southeast-2",
-    "sessionToken": "IQoJb3JpZ2luX2VjELD//////////wEaDmFwLXNvdXRoZWFzdC0yIkYwRAIgYrpR+FRd+lSQ6yuKapngLQnPwUkU3Vmqa0W1Sbp2yWwCICD6KcUf8991pDL7aKOq9I54XnaNxhsAh8kBJaob7F3JKpsDCIn//////////wEQABoMNzQ4NTUxNDg1OTUxIgxGKYtNZIPs6miTSJAq7wJL4rBzOZBIyWBEKk75DYAA9I05lPnzRB1e3guPmncYWJgVyLruVnPdlRu/6q53POMS0LvbOVt2Cw4O94vus6qWDJfkTQhSels+Kk7HE8/dvki7y5dCQI0yDaxt896SqeC/tLjrTAJKCcjqyoLydOrKwriTG6PUevKpA7b4Bt7XFe0wXYiJDslEcIZotwdllEKYD6sZixt14qgPlO6r27ZpUiO4YqANTJkT8RCMNElSue0MEqC2f5q1Fs4yBK7WFdal0CStpzwFg3uuMkGnt8IHuusNs3N6WCmiJQbsaDRydwOA7MBQ9Nf48POOmQByN2sZUmt/grQA4+ZyIFkqoQ50jkHTaeXfoPtwDkqkCm9Qn0k7ltsKNGVy8Ukn1TQYwsmONkEp7RQ6+K0+W8Sxsz+nKyTIdFSrw1Yq8fMobaFFdKK3tnB8YHlncopdJHuJi/5hrSICCRqp1Y9jWxnXSEeLiNt57SHl7JjGBibMahxdMKaO5qcGOqcB/q9aKk2p/NlRwyaK/0sH1iEd7/91N3k+x4o1kakEDUmihfoPlvKI+P/jKw0zxz4GTazoDZ+Tck7bFGPo+Mnj2x+sJg/ei29sZoaNw7In1z/VeiavZg1Er82XMr8ovKRBy2poMZd6uvyHbdMg5QPCjmbikVFd/IGAyKdzAaab6IVd9mDjytEUmmasetClqg9Tugy1FDXIZv4Yo3e2yXSHxAp/Sx0zVVE=", // Only applicable when using university account 
+    "sessionToken": "IQoJb3JpZ2luX2VjELL//////////wEaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAPowCg3VZsjqoIfv+VAN90pYClgo9WtISP2mfFLkfnDkAiAMDap0NdHaZpT3fwn43xSPQ0mBH1vmuiEgeXWTRqql+iqbAwiL//////////8BEAAaDDc0ODU1MTQ4NTk1MSIMyrKutwZZnvPCgPtEKu8CrvGjyb4e/3tDZqqWlxRO/riHO01wwETIjt61y1qjXevWemG2JiqoqKrjEtN8UFlFTRIaUme74dRx9dpuPekTiF40jPjBeGrofnMfCkSUpcKbQjD6pwI5vke6MNa78okDFGOk8iPO9ahNNqYcZ++YfgMBTo9FsLCv7RutX7hDNe2gV8Fp+Tips91TaukMUvBRCLmNBtKIDb8NoAgyI5xIlHOohhL7U0ypH5wmflWUvdd1W3I4yRSckCdJZGXoMNx0/EoZZUogT4DYbP1362taIcEgeV8KydJ28yASsC1D2lRKz84zSJtwHTPGBj3F6Nm+B1bp8hQNuFsvYLGxMYxEIc08q3VOTdZbY5a4M3P9i5GEFJG0by+d2rh1FzjwavQoZ8FNEf3vaCfNklBjeVnV0CWS4dz3XqovEAUovRb4wmN3zSxOb61afMaTEFiMXmhDlQ7fiocWcPkw2xtzUVCcs5LTnN/z9Dkmq6x1M9h/NjDns+anBjqmAUy3MoJR4ccpPPMzeGIhWEFm9J2lccyRIHgiudpgB25DDv4dpNG+BQcYdKdxE7qmDlndiF0pHIsBMsrPIArj3tmoZIKVgWnBsvaXi66W+izySzooNWgZupVI+t88To0O/3rBv/+RTyHQotAcqyumAPpvfxxFxAO5t4uhh2Xqud053ZX6nnrFr59pMhorEmDqqfEly9SlrurYn3ZW3stZtgGhW0UF9Lg=", // Only applicable when using university account 
 }); AWS.config.getCredentials(function (err) {
     if (err) console.log(err.stack); // credentials not loaded
     else {

@@ -2,52 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const { createFullUser, listAllUsers, deleteUser, issueNewAccessKey } = require('./iamHelper');
-const { createRDSInstance, infoRDSInstance, deleteRDSInstance } = require('./rdsHelper');
 const debug = false;
 
 const { UserAWS } = require('../../models/UserAWSModel');
 const MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(process.env.MONGODB_URI);
 const collection = client.db("test").collection("useraws");
-
-// function main() {
-//     // createRDSInstance('test5', 'test', 'testtest').then(data => {
-//     //     console.log(data);
-//     // }).catch(err => {
-//     //     console.log(err);
-//     // });
-
-//     infoRDSInstance().then(data => {
-//         console.log(data);
-//     }).catch(err => {
-//         console.log(err);
-//     });
-
-
-//     // deleteRDSInstance('test4').then(data => {
-//     //     console.log(data);
-//     // }).catch(err => {
-//     //     console.log(err);
-//     // });
-
-
-// }
-
-// main();
-
-// Routes (RDS)
-router.get('/getAllRDSInstances', async (req, res) => {
-    // #swagger.tags = ['SDK - RDS']
-    try {
-        infoRDSInstance().then(data => {
-            res.status(200).json(data);
-        }).catch(err => {
-            res.status(500).json({ isError: true, message: 'Error fetching RDS instances', rawErr: err });
-        });
-    } catch (err) {
-        res.status(500).json({ isError: true, message: 'Error fetching RDS instances', rawErr: err });
-    }
-});
 
 
 // Routes (IAM)
@@ -73,7 +33,7 @@ router.post('/getUserByEmail', async (req, res) => {
     }
 });
 
-router.post('/create', async (req, res) => {
+router.post('/createUser', async (req, res) => {
     // #swagger.tags = ['SDK - IAM']
     const { email, username, rdsLink } = req.body;
     createFullUser(username).then(async data => {
