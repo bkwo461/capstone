@@ -4,10 +4,10 @@ const debug = false;
 
 // AWS Config
 AWS.config.update({
-    "accessKeyId": "ASIA24SJFHH7X65ZAL5M",
-    "secretAccessKey": "wnsvsahETHcwedYfUwxRqT62u5UYy5s5Gru4Al7N",
+    "accessKeyId": "",
+    "secretAccessKey": "",
     "region": "ap-southeast-2",
-    "sessionToken": "IQoJb3JpZ2luX2VjELL//////////wEaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAPowCg3VZsjqoIfv+VAN90pYClgo9WtISP2mfFLkfnDkAiAMDap0NdHaZpT3fwn43xSPQ0mBH1vmuiEgeXWTRqql+iqbAwiL//////////8BEAAaDDc0ODU1MTQ4NTk1MSIMyrKutwZZnvPCgPtEKu8CrvGjyb4e/3tDZqqWlxRO/riHO01wwETIjt61y1qjXevWemG2JiqoqKrjEtN8UFlFTRIaUme74dRx9dpuPekTiF40jPjBeGrofnMfCkSUpcKbQjD6pwI5vke6MNa78okDFGOk8iPO9ahNNqYcZ++YfgMBTo9FsLCv7RutX7hDNe2gV8Fp+Tips91TaukMUvBRCLmNBtKIDb8NoAgyI5xIlHOohhL7U0ypH5wmflWUvdd1W3I4yRSckCdJZGXoMNx0/EoZZUogT4DYbP1362taIcEgeV8KydJ28yASsC1D2lRKz84zSJtwHTPGBj3F6Nm+B1bp8hQNuFsvYLGxMYxEIc08q3VOTdZbY5a4M3P9i5GEFJG0by+d2rh1FzjwavQoZ8FNEf3vaCfNklBjeVnV0CWS4dz3XqovEAUovRb4wmN3zSxOb61afMaTEFiMXmhDlQ7fiocWcPkw2xtzUVCcs5LTnN/z9Dkmq6x1M9h/NjDns+anBjqmAUy3MoJR4ccpPPMzeGIhWEFm9J2lccyRIHgiudpgB25DDv4dpNG+BQcYdKdxE7qmDlndiF0pHIsBMsrPIArj3tmoZIKVgWnBsvaXi66W+izySzooNWgZupVI+t88To0O/3rBv/+RTyHQotAcqyumAPpvfxxFxAO5t4uhh2Xqud053ZX6nnrFr59pMhorEmDqqfEly9SlrurYn3ZW3stZtgGhW0UF9Lg=", // Only applicable when using university account 
+    // "sessionToken": "", // Only applicable when using university account 
 }); AWS.config.getCredentials(function (err) {
     if (err) console.log(err.stack); // credentials not loaded
     else {
