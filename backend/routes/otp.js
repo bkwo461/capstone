@@ -1,7 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const otpSender = require('../middleware/otp-middleware');
-
+const otpSender = require("../middleware/otp-middleware");
 
 router.post("/", otpSender.sendOtp);
 
