@@ -27,35 +27,9 @@ const options = {
   ],
   definitions: {
     // These are sample model definitions.
-    Parents: {
-        father: "Simon Doe",
-        mother: "Marie Doe"
-    },
-    User: {
-        name: "Jhon Doe",
-        age: 29,
-        parents: {
-            $ref: '#/definitions/Parents'
-        },
-        diplomas: [
-            {
-                school: "XYZ University",
-                year: 2020,
-                completed: true,
-                internship: {
-                    hours: 290,
-                    location: "XYZ Company"
-                }
-            }
-        ]
-    },
-    AddUser: {
-        $name: "Jhon Doe",
-        $age: 29,
-        about: ""
-    }
 }
 };
 const outputFile = './swagger-output.json';
 const endpointsFiles = ['../server.js'];
+// const endpointsFiles = ['../routes/AWS/cdk.js'];
 swaggerAutogen(outputFile, endpointsFiles, options);

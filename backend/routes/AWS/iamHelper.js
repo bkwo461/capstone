@@ -1,23 +1,13 @@
-const express = require('express');
-const router = express.Router();
-const { create } = require('domain');
 const AWS = require('aws-sdk');
 require('aws-sdk/lib/maintenance_mode_message').suppress = true;
 const debug = false;
 
-const { BSON, EJSON, ObjectId } = require('bson');
-const { UserAWS } = require('../../models/UserAWSModel');
-const MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient(process.env.MONGODB_URI);
-const collection = client.db("test").collection("useraws");
-
-
 // AWS Config
 AWS.config.update({
-    "accessKeyId": "",
-    "secretAccessKey": "",
+    "accessKeyId": "ASIA24SJFHH7X6YHWTTJ",
+    "secretAccessKey": "r60qeuN5iKx2p8qG5JDqzru01dYpTcGAFGXB4dRX",
     "region": "ap-southeast-2",
-    // "sessionToken": "", // Only applicable when using university account 
+    "sessionToken": "IQoJb3JpZ2luX2VjELD//////////wEaDmFwLXNvdXRoZWFzdC0yIkYwRAIgYrpR+FRd+lSQ6yuKapngLQnPwUkU3Vmqa0W1Sbp2yWwCICD6KcUf8991pDL7aKOq9I54XnaNxhsAh8kBJaob7F3JKpsDCIn//////////wEQABoMNzQ4NTUxNDg1OTUxIgxGKYtNZIPs6miTSJAq7wJL4rBzOZBIyWBEKk75DYAA9I05lPnzRB1e3guPmncYWJgVyLruVnPdlRu/6q53POMS0LvbOVt2Cw4O94vus6qWDJfkTQhSels+Kk7HE8/dvki7y5dCQI0yDaxt896SqeC/tLjrTAJKCcjqyoLydOrKwriTG6PUevKpA7b4Bt7XFe0wXYiJDslEcIZotwdllEKYD6sZixt14qgPlO6r27ZpUiO4YqANTJkT8RCMNElSue0MEqC2f5q1Fs4yBK7WFdal0CStpzwFg3uuMkGnt8IHuusNs3N6WCmiJQbsaDRydwOA7MBQ9Nf48POOmQByN2sZUmt/grQA4+ZyIFkqoQ50jkHTaeXfoPtwDkqkCm9Qn0k7ltsKNGVy8Ukn1TQYwsmONkEp7RQ6+K0+W8Sxsz+nKyTIdFSrw1Yq8fMobaFFdKK3tnB8YHlncopdJHuJi/5hrSICCRqp1Y9jWxnXSEeLiNt57SHl7JjGBibMahxdMKaO5qcGOqcB/q9aKk2p/NlRwyaK/0sH1iEd7/91N3k+x4o1kakEDUmihfoPlvKI+P/jKw0zxz4GTazoDZ+Tck7bFGPo+Mnj2x+sJg/ei29sZoaNw7In1z/VeiavZg1Er82XMr8ovKRBy2poMZd6uvyHbdMg5QPCjmbikVFd/IGAyKdzAaab6IVd9mDjytEUmmasetClqg9Tugy1FDXIZv4Yo3e2yXSHxAp/Sx0zVVE=", // Only applicable when using university account 
 }); AWS.config.getCredentials(function (err) {
     if (err) console.log(err.stack); // credentials not loaded
     else {
@@ -263,161 +253,4 @@ function listAllUsers() {
 }
 
 
-// RDS Cluster Creation
-const rds = new AWS.RDS();
-
-const params = {
-    DBInstanceIdentifier: 'sdk-rds', // Set your RDS instance name
-    AllocatedStorage: 20, // Storage in GB
-    DBInstanceClass: 'db.t2.micro', // Free Tier eligible instance type
-    Engine: 'mysql', // Database engine (e.g., MySQL, PostgreSQL, etc.)
-    MasterUsername: 'admin', // Master username
-    MasterUserPassword: 'password123', // Master password
-    // VpcSecurityGroupIds: ['sg-0123456789abcdef0'], // Security group IDs
-    AvailabilityZone: 'ap-northeast-2a', // Availability zone
-    MultiAZ: false, // Disable Multi-AZ for Free Tier eligibility
-    StorageType: 'gp2', // Storage type (e.g., gp2, standard)
-    BackupRetentionPeriod: 7, // Backup retention period in days
-  };
-
-// rds.createDBInstance(params, (err, data) => {
-//   if (err) {
-//     console.error('Error creating RDS instance:', err);
-//   } else {
-//     console.log('RDS instance created successfully:', data.DBInstance.DBInstanceIdentifier);
-//   }
-// });
-
-
-
-// Routes
-router.get('/getAllUsers', async (req, res) => {
-    // #swagger.tags = ['CDK']
-    try {
-        const users = await UserAWS.find();
-        res.status(200).json(users);
-    } catch (err) {
-        res.status(500).json({ isError: true, message: 'Error fetching users', rawErr: err });
-    }
-});
-
-router.post('/getUserByEmail', async (req, res) => {
-    // #swagger.tags = ['CDK']
-    const { email } = req.body;
-    try {
-        let user = await UserAWS.find({ email: email });
-        if (user.length == 0) res.status(404).json({ isError: true, message: "User not found" });
-        else res.status(200).json(user);
-    } catch {
-        res.status(500).json({ isError: true, message: 'Error fetching user', rawErr: err });
-    }
-});
-
-router.post('/create', async (req, res) => {
-    // #swagger.tags = ['CDK']
-    const { email, username, rdsLink } = req.body;
-    createFullUser(username).then(async data => {
-        if (data.isError) {
-            res.status(400).json(data);
-        } else {
-            // Save to database
-            const userAWS = new UserAWS({
-                email: req.body.email,
-                username: req.body.username,
-                accesskey: data.accessKey,
-                secretkey: data.secretAccessKey,
-            });
-
-            try {
-                const userInfo = await userAWS.save();
-                res.status(201).json(data);
-            } catch (err) {
-                res.status(400).json({ isError: true, message: 'Failed to save to DB', rawErr: err });
-            }
-
-        }
-    }).catch(err => {
-        res.status(500).json({ isError: true, message: 'Error creating user', rawErr: err });
-    });
-});
-
-router.delete('/delete', getUser, async (req, res) => {
-    // #swagger.tags = ['CDK']
-    const { username } = req.body;
-
-    let user = res.user[0];
-    if (user == null) res.status(404).json({ isError: true, message: "User not found" });
-    else {
-        let accesskey = user.accesskey;
-        collection.deleteOne(user, (err, result) => {
-            if (err) {
-                console.error(err);
-                res.status(500).json({ isError: true, message: "Failed to delete User" });
-            }
-
-            if (result.deletedCount === 0) {
-                res.status(404).json({ isError: true, message: "User not found" });
-            }
-
-            deleteUser(username, accesskey).then(async data => {
-                res.status(200).json(data)
-            }).catch(err => {
-                res.status(500).json({ isError: true, message: 'Error deleting user', rawErr: err });
-            });
-
-        });
-    }
-
-});
-
-router.patch('/replace', getUser, async (req, res) => {
-    // #swagger.tags = ['CDK']
-    const { username } = req.body;
-
-    let user = res.user[0];
-    if (user == null) res.status(404).json({ isError: true, message: "User not found" });
-    else {
-        let accesskey = user.accesskey;
-
-        issueNewAccessKey(username, accesskey).then(async data => {
-            if (data.isError) {
-                res.status(400).json(data);
-            } else {
-
-                collection.updateOne(res.user[0], { $set: { accesskey: data.accessKey, secretkey: data.secretAccessKey } }, (err, result) => {
-                    if (err) {
-                        console.log(err);
-                        res.status(500).json({ error: "Failed to update DB" });
-                    } else res.status(200).json(data);
-                });
-
-            }
-        }).catch(err => {
-            res.status(500).json({ isError: true, message: 'Error replacing access key', rawErr: err });
-        });
-    }
-});
-
-
-
-// Middleware setup
-async function getUser(req, res, next) {
-    let user;
-    const { username } = req.body;
-    try {
-        user = await UserAWS.find({ username: username });
-        if (user === null) return res.status(404).json({ isError: true, message: "User not found" });
-    } catch {
-        return res.status(500).json({ isError: true, message: 'Error fetching user', rawErr: err });
-    }
-
-    res.user = user;
-    next();
-}
-
-
-
-
-
-
-module.exports = router;
+module.exports = { createFullUser, listAllUsers, deleteUser, issueNewAccessKey };

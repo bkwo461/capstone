@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 connectMongoDB();
 
 // Link Routes
-const cdkRoutes = require('./routes/AWS/cdk');
+// const cdkRoutes = require('./routes/AWS/cdk');
 const registerRoutes = require('./routes/register');
 const loginRoutes = require('./routes/login');
 const authRoutes = require('./routes/auth');
@@ -56,7 +56,7 @@ const validatedOtpRoutes = require('./routes/validate_otp');
 const serviceRoutes = require('./routes/services/service');
 
 // Route Definitions
-app.use('/api/cdk', cdkRoutes);
+// app.use('/api/cdk', cdkRoutes);
 app.use('/api/register', registerRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/auth', authRoutes);
