@@ -1,7 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const userAwsSchema = mongoose.Schema({
-
     email: {
         type: String,
         trim: true,
@@ -21,10 +20,8 @@ const userAwsSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-
 });
 
-
 const UserAWS = mongoose.model("UserAWS", userAwsSchema);
-  
+
 module.exports = { UserAWS };

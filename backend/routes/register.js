@@ -13,14 +13,9 @@ router.post(
             .withMessage("Surname is required.")
             .matches(/^[A-Za-z]+$/)
             .withMessage("Surname must contain only alphabets."),
-        body("lastname")
-            .trim()
-            .notEmpty()
-            .withMessage("Last name is required."),
+        body("firstName").trim().notEmpty().withMessage("Last name is required."),
         body("email").isEmail().withMessage("Must be a valid email address."),
-        body("password")
-            .isLength({ min: 5 })
-            .withMessage("Password must be at least 5 characters long."),
+        body("password").isLength({ min: 5 }).withMessage("Password must be at least 5 characters long."),
     ],
 
     async (req, res) => {
@@ -40,9 +35,7 @@ router.post(
         }
 
         if (existingUser) {
-            return res
-                .status(400)
-                .json({ errors: [{ msg: "User already exists" }] });
+            return res.status(400).json({ errors: [{ msg: "User already exists" }] });
         }
 
         const user = new User(req.body);

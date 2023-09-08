@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const serviceSchema = new mongoose.Schema({
     provider: {
@@ -14,34 +14,33 @@ const serviceSchema = new mongoose.Schema({
     pricingOptions: {
         type: String,
     },
-    description:{
+    description: {
         type: String,
         required: true,
     },
-    quantity:{
-       type:String,
-    }, 
-     compute:{
-         type:Boolean, 
-         default:false 
-     }, 
-     container:{
-         type:Boolean,
-         default:false 
-     }, 
-     database:{
-         type:Boolean,
-         default:false  
-     }, 
-     serverless:{
-         type:Boolean, 
-         default:false  
-     }, 
-      link:{  
-          type:String 
-      }
+    quantity: {
+        type: String,
+    },
+    compute: {
+        type: Boolean,
+        default: false,
+    },
+    container: {
+        type: Boolean,
+        default: false,
+    },
+    database: {
+        type: Boolean,
+        default: false,
+    },
+    serverless: {
+        type: Boolean,
+        default: false,
+    },
+    link: {
+        type: String,
+    },
 });
 
-const Service = mongoose.model('Service', serviceSchema);
+const Service = mongoose.model("Service", serviceSchema);
 module.exports = { Service };
-

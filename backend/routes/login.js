@@ -31,7 +31,7 @@ router.post(
 
             if (!isMatch) {
                 return res.status(404).json({
-                    loginsuccess: false,
+                    loginSuccess: false,
                     message: "Wrong Password",
                 });
             }
@@ -39,12 +39,12 @@ router.post(
             await user.generateToken();
 
             // res.cookie("createToken", user.token).status(200).json({ loginsuccess: true, userId: user._id });
-            res.status(200).json({ loginsuccess: true, userId: user._id, createToken: user.token });
+            res.status(200).json({ loginSuccess: true, userId: user._id, createToken: user.token });
         } catch (err) {
             // Handle errors appropriately
             console.error(err);
             res.status(500).json({
-                loginsuccess: false,
+                loginSuccess: false,
                 message: "Server Error",
             });
         }

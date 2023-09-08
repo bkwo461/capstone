@@ -5,9 +5,9 @@ dotenv.config();
 const sendMail = async (email, title, body, authNumber) => {
     try {
         let transporter = nodemailer.createTransport({
-            service: "Naver",
+            service: process.env.SERVICE,
             auth: {
-                user: "hanjun0818@naver.com",
+                user: process.env.EMAIL,
                 pass: "Han@132435",
             },
         });

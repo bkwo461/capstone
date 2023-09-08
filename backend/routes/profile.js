@@ -15,7 +15,7 @@ router.get("/", auth, async (req, res) => {
         return res.status(200).json({
             success: true,
             surname: userProfile.surname,
-            lastname: userProfile.lastname,
+            firstName: userProfile.lastname,
         });
     } catch (error) {
         console.error("Error fetching user profile", error);
