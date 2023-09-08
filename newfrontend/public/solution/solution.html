@@ -1,0 +1,197 @@
+{% extends 'template/index.html' %}
+
+{% block content %}
+
+<div class="b-example-divider"></div>
+
+<div class=" py-2 my-5 text-center container-lg">
+    <img class="img-fluid rounded-3 mb-4" src="../solution/images/companies.png" alt="companies" width="1500"
+        height="130">
+    <br>
+    <br>
+    <h1 class="display-5 fw-bold" style="font-weight: 700; margin-bottom: 2%;">Solutions We Provide</h1>
+    <p class="lead mb-4">
+        Experience a diverse range of technology solutions tailored to streamline your
+        business's digital transformation.
+        Our services simplify cloud technology selection and operation through an intuitive meta-interface,
+        recommending ideal solutions from various
+        providers based on your specific needs. Our unified management platform abstracts complexities and
+        ensures seamless data portability,
+        all aimed at delivering a hassle-free experience. Partnering with the respected Green Computing project
+        in the School of Computer Science,
+        we leverage their expertise to ensure your digital journey is efficient and successful.
+    </p>
+</div>
+
+<div class="b-example-divider"></div>
+
+<div class="px-2 py-2 my-5 text-center container-lg">
+    <h1 class="display-4 fw-bold;" style="font-weight: 700;  margin-bottom: 2%;">Amazon Relational Database Service
+        (RDS)</h1>
+    <p class="lead mb-4">Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier
+        to set up, operate, and scale a
+        relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an
+        industry-standard relational database and
+        manages common database administration tasks. Amazon RDS offers the choice of seven popular database
+        engines,
+        including Amazon Aurora MySQL-Compatible Edition, Amazon Aurora PostgreSQL-Compatible Edition, RDS for
+        MySQL, RDS for MariaDB,
+        RDS for PostgreSQL, RDS for Oracle, and RDS for SQL Server</p>
+    <div class="d-grid gap-5 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-5 ">&nbsp;&nbsp;Try Now&nbsp;</button>
+        <a class="btn btn-outline-secondary btn-lg px-5"
+            href="https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service">Read More</a>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+            <img src="../solution/images/rds.png" class="img-fluid rounded-3 mb-4" alt=" rdsImg" width="500"
+                height="500" loading="lazy">
+        </div>
+    </div>
+</div>
+
+<div class="b-example-divider"></div>
+
+<div class="px-2 py-2 my-5 text-center container-lg">
+    <h1 class="display-4 fw-bold;" style="font-weight: 700;  margin-bottom: 2%;">Subscribe for timely updates on our
+        newest services!</h1>
+    <p class="lead mb-4">Stay informed and connected with our cutting-edge professional services by
+        subscribing to our newsletter.
+        By registering, you'll gain exclusive access to the latest industry insights, innovative solutions, and
+        expert advice delivered
+        right to your inbox. Our newsletters provide a valuable resource for staying ahead in today's dynamic
+        business landscape, ensuring
+        you're well-equipped to leverage our new incoming services for achieving your goals and maintaining a
+        competitive edge.
+        Don't miss out on the opportunity to be at the forefront of industry trends. Subscribe today and join
+        our community of forward-thinking professionals.</p>
+    <div class="mx-auto">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address"
+                    style="height:50px; border-radius: 8px; background: rgb(244, 244, 244);">
+            </div>
+            <button class="w-100 btn btn-lg btn-primary sol-submitButton" type="submit">Subscribe</button>
+            <hr class="my-4">
+            <p class="text-muted">Sign up with your email address to receive news and updates on our newest services.</p>
+        </form>
+    </div>
+</div>
+
+
+<div class="b-example-divider"></div>
+
+<div class="container my-5">
+    <div class="row align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1" style="font-weight: 700;">Suggest Your Service Needs</h1>
+            <p class="lead">Share Your Service Ideas: Have a service in mind that you'd like us to offer? We're all
+                ears!
+                Drop us a quick email with your suggestions, and we'll explore new service possibilities together.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" onclick="openModal()">Send
+                    Feedback</button>
+            </div>
+        </div>
+        <div class="col-lg-5 p-0 overflow-hidden">
+            <div class="mx-auto" style="width: 310px; height:auto;">
+                <img class="rounded-lg-3" style="width: 310px; height:auto;" src="../solution/images/feedback.jpg" alt="feedbackImg">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="b-example-divider"></div>
+
+<!-- Send Feedback -->
+<div id="trigger-modal" class="w3-modal" style="z-index:4">
+    <div class="w3-modal-content w3-animate-zoom"
+        style="background-color: #ffffff; width: 60%; height: auto; border-radius: 20px 100px 20px 20px;">
+
+        <div class="w3-container w3-padding">
+            <h2 class="custom-font "
+                style="font-size: 26px; text-align: center; margin-top: 5vh; margin-bottom: 5vh; font-weight: bold;">
+                Please Share Your Valuable Feedback! </h2>
+        </div>
+
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form style="display: flex; justify-content: center; align-items: center;">
+                <div>
+                    <textarea id="feedbackTextarea" type="text" class="form-control"
+                        placeholder="Thank You For Your Time..."
+                        style="height: 400px; width: 800px; border-radius: 8px; background: rgb(255, 255, 235); border:none;"></textarea>
+                </div>
+            </form>
+
+            <div id="error-message" style="color: red; display: none;">Please write more than 10 words, thank you! :)
+            </div>
+
+            <hr class="my-4">
+            <button class="w-100 btn btn-lg btn-primary sol-submitButton" type="submit"
+                style="border-radius: 5px; height: 50px;" onclick="submitModal()">SUBMIT</button>
+            <button class="w-100 btn btn-lg btn-primary sol-submitButton"
+                style="margin-top: 10px; border-radius: 5px; height: 50px;" onclick="closeModal()">CANCEL</button>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Send Feedback JS scripts -->
+<script>
+    var registerModal = document.getElementById("trigger-modal");
+    var errorMessage = document.getElementById("error-message");
+
+    function openModal() {
+        errorMessage.style.display = "none";
+        registerModal.style.display = "block";
+    }
+
+    function submitModal() {
+        var textarea = document.getElementById("feedbackTextarea");
+        var inputText = textarea.value.trim();
+        var wordCount = inputText.split(/\s+/).filter(Boolean).length;
+
+        if (wordCount <= 10) {
+            errorMessage.style.display = "block";
+        } else {
+            registerModal.style.display = "none";
+            alert("We appreciate for your feedback!");
+            clearFormInputs();
+        }
+    }
+
+    function closeModal() {
+        registerModal.style.display = "none";
+        clearFormInputs();
+    }
+
+    function clearFormInputs() {
+        var inputs = document.getElementsByTagName("textarea");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = "";
+        }
+    }
+
+    // Prevent form submission on Enter key press
+    var feedbackForm = document.querySelector("form");
+    feedbackForm.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+</script>
+
+{% endblock %}
