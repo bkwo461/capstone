@@ -5,12 +5,13 @@ let auth = (req, res, next) => {
     // let token = req.cookies.createToken;
     // if cookie does not work send the request with the token in the body (payload)
     let token = req.body.createToken;
-
+    let userId = req.body.userId;
     // If no token is provided, return an error response
-    if (!token) {
+
+    if (!token || !userId) {
         return res.status(401).json({
             code: "Unauthorized",
-            message: "No authentication token provided.",
+            message: "No authentication token or user ID provided.",
             isAuth: false,
         });
     }
@@ -18,8 +19,13 @@ let auth = (req, res, next) => {
     // decode token and find user
     User.findByToken(token)
         .then((user) => {
-            if (!user) return res.json({ isAuth: false, error: true });
-
+            if (!user || user._id.toString() !== userId)
+                return res.status(400).json({
+                    code: "Bad Request",
+                    message: "Invalid approach",
+                    isAuth: false,
+                    error: true,
+                });
             req.token = token;
             req.user = user;
             next();

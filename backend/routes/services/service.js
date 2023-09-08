@@ -13,9 +13,7 @@ router.get("/", async (req, res) => {
         try {
             filter = JSON.parse(decodeURIComponent(req.query.filter));
         } catch (err) {
-            return res
-                .status(400)
-                .json({ message: "Invalid 'filter' query parameter" });
+            return res.status(400).json({ message: "Invalid 'filter' query parameter" });
         }
     }
 

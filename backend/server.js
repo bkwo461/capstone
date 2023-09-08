@@ -40,6 +40,7 @@ const logoutRoutes = require("./routes/logout");
 const otpRoutes = require("./routes/otp");
 const validatedOtpRoutes = require("./routes/validate_otp");
 const serviceRoutes = require("./routes/services/service");
+const profileRoutes = require("./routes/profile");
 
 // Route Definitions
 app.use("/api/sdk/iam", iamRoutes);
@@ -51,6 +52,7 @@ app.use("/api/logout", logoutRoutes);
 app.use("/api/otp", otpRoutes);
 app.use("/api/validate_otp", validatedOtpRoutes);
 app.use("/api/service", serviceRoutes);
+app.use("/api/profile", profileRoutes);
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
