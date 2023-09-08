@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 const mailer = require("../middleware/mailer");
+const validator = require("validator");
 
 const otpSchema = mongoose.Schema({
     email: {
         type: String,
         trim: true,
         required: true,
+        validate: [validator.isEmail, "Please provide a valid email"],
     },
     otp: {
         type: String,

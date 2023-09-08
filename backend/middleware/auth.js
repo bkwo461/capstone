@@ -9,8 +9,9 @@ let auth = (req, res, next) => {
     // If no token is provided, return an error response
     if (!token) {
         return res.status(401).json({
+            code: "Unauthorized",
+            message: "No authentication token provided.",
             isAuth: false,
-            error: "No authentication token provided.",
         });
     }
 
@@ -25,7 +26,11 @@ let auth = (req, res, next) => {
         })
         .catch((err) => {
             console.error(err);
-            return res.status(500).json({ error: "An error occurred" });
+            return res.status(500).json({
+                code: "Internal Server Error",
+                message: "An error occurred while authenticating.",
+                isAuth: false,
+            });
         });
 };
 
