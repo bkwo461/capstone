@@ -2,16 +2,16 @@ const { User } = require("../models/account");
 
 let auth = (req, res, next) => {
     // get token from client cookie
-    let token = req.cookies.createToken;
+    // let token = req.cookies.createToken;
+    // if cookie does not work send the request with the token in the body (payload)
+    let token = req.body.createToken;
 
     // If no token is provided, return an error response
     if (!token) {
-        return res
-            .status(401)
-            .json({
-                isAuth: false,
-                error: "No authentication token provided.",
-            });
+        return res.status(401).json({
+            isAuth: false,
+            error: "No authentication token provided.",
+        });
     }
 
     // decode token and find user
