@@ -13,15 +13,17 @@ router.get("/", auth, async (req, res) => {
     try {
         const userProfile = req.user;
         return res.status(200).json({
-            success: true,
+            code: "OK",
+            message: "User profile fetched successfully",
             surname: userProfile.surname,
-            firstName: userProfile.lastname,
+            firstName: userProfile.firstName,
         });
     } catch (error) {
-        console.error("Error fetching user profile", error);
+        // console.error("Error fetching user profile", error);
         return res.status(500).json({
+            code: "Internal Server Error",
+            message: "An error occurred while fetching user profile",
             success: false,
-            message: "Error fetching user profile",
         });
     }
 });

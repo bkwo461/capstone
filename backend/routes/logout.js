@@ -6,13 +6,19 @@ const { User } = require("../models/account");
 router.get("/", auth, async (req, res) => {
     // #swagger.tags = ['Authentication']
     try {
-        const user = await User.findOneAndUpdate(
-            { _id: req.user._id },
-            { token: "" }
-        );
-        res.status(200).send({ success: true, message: "Logout success" });
+        const user = await User.findOneAndUpdate({ _id: req.user._id }, { token: "" });
+        res.status(200).send({
+            code: "OK",
+            message: "User logged out successfully",
+            logOutSuccess: true,
+        });
     } catch (err) {
-        res.json({ success: false, err });
+        res.status(500).json({
+            code: "Internal Server Error",
+            message: "An error occurred while logging out the user.",
+            success: false,
+            log: err,
+        });
     }
 });
 

@@ -13,11 +13,13 @@ router.get("/", auth, (req, res) => {
     //         schema: { $ref: "#/definitions/AddUser" }
     // } */
     res.status(200).json({
-        _id: req.user._id,
-        email: req.user.email,
-        surname: req.user.surname,
-        lastname: req.user.lastname,
-        title: req.user.title,
+        code: "OK",
+        message: "User authenticated successfully",
+        // _id: req.user._id,
+        // email: req.user.email,
+        // surname: req.user.surname,
+        // firstName: req.user.firstName,
+        // title: req.user.title,
         isAuth: true,
     });
 });

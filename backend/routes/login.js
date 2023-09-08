@@ -14,38 +14,53 @@ router.post(
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             // If there are errors, send them back to the client.
-            return res.status(400).json({ errors: errors.array() });
+            return res.status(400).json({
+                code: "Bad request",
+                message: "Invalid email or password",
+                errors: errors.array(),
+            });
         }
 
         try {
             const user = await User.findOne({ email: req.body.email });
 
             if (!user) {
-                return res.status(403).json({
+                return res.status(400).json({
+                    code: "Bad request",
+                    message: "Invalid email or password",
                     loginsuccess: false,
-                    message: "User does not exist",
+                    // message: "User does not exist",
                 });
             }
 
             const isMatch = await user.comparePassword(req.body.password);
 
             if (!isMatch) {
-                return res.status(404).json({
+                return res.status(400).json({
+                    code: "Bad request",
+                    message: "Invalid email or password",
                     loginSuccess: false,
-                    message: "Wrong Password",
+                    // message: "Wrong Password",
                 });
             }
 
             await user.generateToken();
 
             // res.cookie("createToken", user.token).status(200).json({ loginsuccess: true, userId: user._id });
-            res.status(200).json({ loginSuccess: true, userId: user._id, createToken: user.token });
+            res.status(200).json({
+                code: "OK",
+                message: "User authenticated successfully",
+                loginSuccess: true,
+                // userId: user._id,
+                createToken: user.token,
+            });
         } catch (err) {
             // Handle errors appropriately
             console.error(err);
             res.status(500).json({
+                code: "Internal Server Error",
+                message: "An error occurred while logging in",
                 loginSuccess: false,
-                message: "Server Error",
             });
         }
     }
