@@ -72,7 +72,7 @@ body{
 
 /* Authentication Page styles */
 .login-container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 30px;
   border: 1px solid #dcdcdc;
@@ -100,14 +100,32 @@ body{
 }
 
 .auth-sso-btn {
-  border: solid 1px #ffbd72;
+  border: solid 1px #000000;
 } .auth-sso-btn:hover {
   background-color: #ff9d002c !important;
 }
 
 
-
-
+.image-container {
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.text-on-image {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #6469B2;
+  padding: 10px;
+  width:max-content;
+} .auth-subheading {
+  color: #303468;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 
 @media (min-width: 992px) {
