@@ -1,0 +1,88 @@
+{% extends 'template/index_blank.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row  align-items-center justify-content-center">
+        <div class="col-lg-5 auth-banner">
+
+        </div>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-md-10 login-container my-3">
+
+                    <div class="d-grid gap-3 d-flex justify-content-end">
+                        <a class="btn " type="button"><img
+                                src="../auth/images/icon-x.svg" style="width:30px; height:30px;"
+                                alt="X"></a>
+                    </div>
+
+                    <div class="d-grid gap-3 d-flex justify-content-center">
+                        <div class="image-container">
+                            <img src="../auth/images/text-bg.png" alt="Image" class="image">
+                            <div class="text-on-image">
+                                <h2>LOG IN</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="d-grid gap-3 d-flex justify-content-center">
+                        <p class="auth-subheading">Welcome Back!</p>
+                    </div>
+
+
+
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput"
+                                placeholder="username@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                            <span id="passwordHelpInline" class="form-text">
+                                Must be 8-20 characters long.
+                            </span>
+                            <div class="d-grid d-md-flex justify-content-end">
+                                <a class="text-muted" href="#"><br>Forgot your password?</a>
+                            </div>
+
+                        </div>
+
+                        <div class="d-grid py-4">
+                            <button class="btn btn-warning orange-button" type="submit">Login</button>
+                        </div>
+
+
+                        <div class="divider-container py-4">
+                            <div class="divider-line"></div>
+                            <div class="divider-text">OR</div>
+                            <div class="divider-line"></div>
+                        </div>
+
+                        <div class="d-grid gap-3 d-flex justify-content-center">
+                            <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                    src="../auth/images/icon-google.png" style="width:30px; height:30px;"
+                                    alt="Google"></a>
+                            <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                    src="../auth/images/icon-apple.png" style="width:30px; height:30px;"
+                                    alt="Apple"></a>
+                        </div>
+
+                        
+                        <div class="d-grid gap-3 d-flex justify-content-center pt-5">
+                            <p>OR Sign Up using</p>
+                            <a href="#"> Sign Up</a>
+                          </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
