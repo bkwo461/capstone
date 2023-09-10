@@ -3,7 +3,7 @@ const router = express.Router();
 const { auth } = require("../middleware/auth");
 const { User } = require("../models/account");
 
-router.get("/", auth, async (req, res) => {
+router.post("/", auth, async (req, res) => {
     // #swagger.tags = ['Authentication']
     try {
         const user = await User.findOneAndUpdate({ _id: req.user._id }, { token: "" });

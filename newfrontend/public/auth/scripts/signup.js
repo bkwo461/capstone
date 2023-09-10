@@ -119,6 +119,10 @@ signupForm.addEventListener('submit', async event => {
             password: password,
         }
 
+        localStorage.removeItem('firstName');
+        localStorage.removeItem('lastName');
+        localStorage.removeItem('email');
+
         const response = await fetch(`${apiUrl}/api/register`, {
             method: 'POST',
             headers: {

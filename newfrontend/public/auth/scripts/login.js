@@ -34,6 +34,7 @@ loginForm.addEventListener('submit', async event => {
         if ((data.code != undefined || data.code != null) && (data.code == 'OK')) {
             changeMsg('Login Successful! Redirecting to home page');
             localStorage.setItem('token', data.createToken);
+            localStorage.setItem('id', data.userId);
             // console.log( data.createToken);
             // console.log(localStorage.getItem('token'));
             window.location.href = '../';
