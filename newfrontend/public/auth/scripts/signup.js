@@ -15,7 +15,7 @@ const signupForm = document.getElementById('signup-mainForm');
 
 initialsetup();
 
-// Signup first step
+// Signup first step (otp)
 signupOtpForm.addEventListener('submit', async event => {
     event.preventDefault();
     changeMsg('Please wait while we verify your email');
@@ -98,6 +98,7 @@ signupEvForm.addEventListener('submit', async event => {
 
 });
 
+// Signup third step (main signup)
 signupForm.addEventListener('submit', async event => {
     event.preventDefault();
     const data = new FormData(signupForm);
@@ -150,9 +151,7 @@ function initialsetup() {
     signupView.classList.add('d-none');
     msgBtnView.classList.add('d-none');
 
-}
-
-function showErrPopup(msg) {
+} function showErrPopup(msg) {
     errPopup.classList.remove('d-none');
     generalmsg.classList.add('d-none');
 

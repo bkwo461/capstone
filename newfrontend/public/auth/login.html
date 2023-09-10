@@ -27,36 +27,34 @@
                     </div>
 
                     <!-- Welcome message -->
-                    <div class="d-grid gap-3 d-flex justify-content-center auth-sub-normal d-none">
-                        <p class="auth-subheading">Welcome Back!</p>
+                    <div class="d-grid gap-3 d-flex justify-content-center auth-sub-normal">
+                        <p class="auth-subheading" id="login-msg">Initialising...</p>
                     </div>
 
                     <!-- Error Popup -->
-                    <div class="d-grid d-flex justify-content-center auth-sub-warning ">
+                    <div class="d-grid d-flex justify-content-center auth-sub-warning" id="login-err-popup">
                         <div class="d-grid gap-3 d-flex justify-content-center auth-sub-warning bg-danger-subtle m-3 p-3 rounded-4">
-                            <!-- <div class="d-grid d-flex justify-content-center"> -->
                                 <img src="../auth/images/icon-minus.png" alt="ERROR"class="my-auto auth-warning-icon">
-                            <!-- </div> -->
-                            <p class="auth-warning-text my-auto text-center">Sorry, we couldn't find an account with that username.</p>
+                            <p class="auth-warning-text my-auto text-center" id="login-err-msg">Initialising...</p>
                         </div>
                     </div>
 
 
 
-                    <form>
+                    <form id="loginForm">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput"
-                                placeholder="username@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input type="email" class="form-control" id="login-email"
+                                placeholder="username@example.com" name="email">
+                            <label for="login-email">Email address</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Password" name="password">
+                            <label for="login-password">Password</label>
                             <span id="passwordHelpInline" class="form-text">
                                 Must be 8-20 characters long.
                             </span>
                             <div class="d-grid d-md-flex justify-content-end">
-                                <a class="text-muted" href="#"><br>Forgot your password?</a>
+                                <a class="text-muted" href="forgot"><br>Forgot your password?</a>
                             </div>
 
                         </div>
@@ -84,7 +82,7 @@
                         
                         <div class="d-grid gap-3 d-flex justify-content-center pt-5">
                             <p>OR Sign Up using</p>
-                            <a href="#"> Sign Up</a>
+                            <a href="signup"> Sign Up</a>
                           </div>
 
                     </form>
@@ -94,5 +92,7 @@
         </div>
     </div>
 </div>
+
+<script src="../auth/scripts/login.js" defer="true"></script>
 
 {% endblock %}
