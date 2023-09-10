@@ -1,44 +1,56 @@
-<nav class="navbar navbar-expand-md bg-body-secondary">
+<nav class="navbar navbar-expand-lg bg-body-secondary">
     <div class="container-xl">
         <!-- Logo Image -->
-        <a class="navbar-brand" href="#"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine" ></a>
+        <a class="navbar-brand" href="#"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></a>
         <!-- Toggle Btn -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Navbar Items -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <!-- Sidebar -->
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+
+            <!-- Sidebar Header -->
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- Sidebar Body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../">Home</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../service">Our Services</a></li>
+                            <li><a class="dropdown-item" href="../service/solution">Solutions</a></li>
+                            <li><a class="dropdown-item" href="#">Recommendation</a></li>
+                            <li><a class="dropdown-item" href="#">Get Free Quotes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">My Account</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+                <!-- Login / Sign up -->
+                <div class="d-flex justify-content-center align-items-center gap-3 fs-7">
+                <!-- <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"> Column Arrangement-->
+                    
+                        <a class="text-decoration-none px-3 py-1 rounded-4" style="background-color: #F79901;" href="../auth/signup">Register</a>
+                        <a class="text-decoration-none px-3 py-1 rounded-4" style="background-color: #F79901;" href="../auth/login">Login</a>
+                </div>
+            </div>
         </div>
     </div>
-  </nav>
+</nav>

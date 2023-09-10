@@ -68,7 +68,7 @@ body, html{
   background-image: url('../auth/images/banner.png');
   background-size: cover;
   background-repeat: repeat;
-  height: 115vh;
+  height: 100vh;
   min-height: 100vh;
   background-position: center;
   display: block;
@@ -102,12 +102,10 @@ body, html{
 } .image-container {
   position: relative;
   width:fit-content;
-}
-.image {
+} .image {
   width: auto;
   height: 250px;
-}
-.text-on-image {
+} .text-on-image {
   position: absolute;
   top: 55%;
   left: 40%;
@@ -119,14 +117,7 @@ body, html{
   color: #303468;
   font-size: 16px;
   font-weight: 600;
-} 
-
-/* .auth-sub-normal {
-  display: none !important;
-} .auth-sub-warning {
-  display: block;
-}  */
-.auth-warning-icon {
+} .auth-warning-icon {
   height: 30px; 
   width: 30px; 
   /* margin-left: 20px; */
@@ -147,6 +138,8 @@ body, html{
   .auth-banner {
     height: auto;
     min-height: 200px;
-    /* display: none; */
+  }
+  .sidebar {
+    backdrop-filter: blur(10px);
   }
 }

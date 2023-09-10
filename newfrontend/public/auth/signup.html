@@ -41,31 +41,77 @@
                         </div>
                     </div>
 
-                    <!-- Signup Information Entry Form -->
-                    <div class="signup-form">
+                    <!-- Sign up first step (name, email) Form -->
+                    <div class="signup-otp-form d-none">
                         <form>
-                            <div class="d-grid d-flex justify-content-start mb-4">
-
-                                <div class="form-floating" style="width: 45%;">
-                                    <input type="text" class="form-control w-100" id="floatingFirstNameInput"
-                                        placeholder="First Name">
-                                    <label for="floatingFirstNameInput">First Name</label>
-                                </div>
-                                <div class="form-floating ms-auto" style="width: 45%;">
-                                    <input type="text" class="form-control w-100" id="floatingLastNameInput"
-                                        placeholder="Last Name">
-                                    <label for="floatingLastNameInput">Last Name</label>
-                                </div>
-
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="floatingFirstNameInput"
+                                    placeholder="First Name">
+                                <label for="floatingFirstNameInput">First Name</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="text" class="form-control" id="floatingIDInput" placeholder="username">
-                                <label for="floatingIDInput">ID</label>
+                                <input type="text" class="form-control" id="floatingLastNameInput"
+                                    placeholder="Last Name">
+                                <label for="floatingLastNameInput">Last Name</label>
                             </div>
                             <div class="form-floating mb-4">
                                 <input type="email" class="form-control" id="floatingEmailInput"
                                     placeholder="username@example.com">
                                 <label for="floatingEmailInput">Email</label>
+                            </div>
+
+                            <div class="d-grid py-4">
+                                <button class="btn btn-warning orange-button" type="submit">Next</button>
+                            </div>
+
+
+                            <div class="divider-container py-4">
+                                <div class="divider-line"></div>
+                                <div class="divider-text">OR</div>
+                                <div class="divider-line"></div>
+                            </div>
+
+                            <div class="d-grid gap-3 d-flex justify-content-center">
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-google.png" style="width:30px; height:30px;"
+                                        alt="Google"></a>
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-apple.png" style="width:30px; height:30px;"
+                                        alt="Apple"></a>
+                            </div>
+
+
+                            <div class="d-grid gap-3 d-flex justify-content-center pt-5">
+                                <p>OR Login using</p>
+                                <a href="#"> Log In</a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Email Verification Code Form -->
+                    <div class="emailVerif-form d-none">
+
+                        <form>
+                            <div class="form-floating my-5">
+                                <input type="text" class="form-control" id="floatingVerifInput" placeholder="XXXXXX">
+                                <label for="floatingVerifInput">Verification Code</label>
+                            </div>
+
+                            <div class="d-grid py-4">
+                                <button class="btn btn-warning orange-button" type="submit">Next</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    <!-- Signup Information Entry Form -->
+                    <div class="signup-form d-none">
+                        <form>
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="floatingIDInput" placeholder="username">
+                                <label for="floatingIDInput">ID</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="password" class="form-control" id="floatingPassword"
@@ -111,28 +157,12 @@
                         </form>
                     </div>
 
-                    <!-- Email Verification Code Form -->
-                    <div class="emailVerif-form d-none">
-
-                        <form>
-                            <div class="form-floating my-5">
-                                <input type="text" class="form-control" id="floatingVerifInput" placeholder="XXXXXX">
-                                <label for="floatingVerifInput">Verification Code</label>
-                            </div>
-
-                            <div class="d-grid py-4">
-                                <button class="btn btn-warning orange-button" type="submit">Next</button>
-                            </div>
-                        </form>
-
-
-                    </div>
 
                     <!-- Message Button -->
-                    <div class="message-btn d-none">
+                    <div class="message-btn">
 
                             <div class="d-grid py-4 my-5">
-                                <a class="btn btn-warning orange-button">Continue</a>
+                                <a class="btn btn-warning orange-button">Complete</a>
                             </div>
 
 
