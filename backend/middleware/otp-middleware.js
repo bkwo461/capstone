@@ -22,6 +22,9 @@ exports.sendOtp = async (req, res) => {
             });
         }
 
+        // delete all previous otps for the entered email
+        await OTP.deleteMany({ email });
+
         let otp = otpGenerator.generate(6, {
             upperCase: false,
             specialChars: false,
