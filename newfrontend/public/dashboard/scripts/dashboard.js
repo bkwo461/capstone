@@ -1,9 +1,5 @@
 const apiUrl = 'http://localhost:5501';
 
-const guestOptions = document.getElementById('GuestOption');
-const userOptions = document.getElementById('UserOption');
-initialsetup();
-
 async function logout() {
 
     console.log('logging out...');
@@ -13,7 +9,7 @@ async function logout() {
         userId: localStorage.getItem('id')
     }
 
-    console.log(logoutData);
+    // console.log(logoutData);
 
     const response = await fetch(`${apiUrl}/api/logout`, {
         method: 'POST',
@@ -28,21 +24,10 @@ async function logout() {
         if ((data.code != undefined || data.code != null) && (data.code == 'OK')) {
             localStorage.removeItem('token');
             localStorage.removeItem('id');
-            initialsetup();
         } else {
             console.log(data);
         }
     }).catch(err => { console.log('error?', err);
     localStorage.removeItem('token');
     localStorage.removeItem('id'); });
-}
-
-function initialsetup() {
-    if (localStorage.getItem('token') != null) {
-        userOptions.classList.remove('d-none');
-        guestOptions.classList.add('d-none');
-    } else {
-        userOptions.classList.add('d-none');
-        guestOptions.classList.remove('d-none');
-    }
 }

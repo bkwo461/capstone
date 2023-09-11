@@ -21,11 +21,13 @@ nunjucks.configure(['public/'], {
 const serviceRouter = require('./routes/service');
 const homeRouter = require('./routes/home');
 const authRouter = require('./routes/auth');
+const dashboardRouter = require('./routes/dashboard');
 
 
 app.use('/', homeRouter);
 app.use('/auth', authRouter);
 app.use('/service', serviceRouter);
+app.use('/dashboard', dashboardRouter);
 
 
 module.exports = app;

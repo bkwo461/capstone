@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-secondary">
     <div class="container-xl">
         <!-- Logo Image -->
-        <a class="navbar-brand" href="#"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></a>
+        <a class="navbar-brand" href="/"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></a>
         <!-- Toggle Btn -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
 
             <!-- Sidebar Header -->
             <div class="offcanvas-header border-bottom">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></h5>
+                <a class="offcanvas-title" id="offcanvasNavbarLabel" href="/"><img class="logoImg" src="../../images/logo.png" alt="Cloud Engine"></a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
@@ -21,7 +21,10 @@
             <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
                 <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                     <!-- Dropdown -->
                     <li class="nav-item dropdown mx-2">
@@ -30,17 +33,14 @@
                             Services
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../service">Our Services</a></li>
-                            <li><a class="dropdown-item" href="../service/solution">Solutions</a></li>
+                            <li><a class="dropdown-item" href="/service">Our Services</a></li>
+                            <li><a class="dropdown-item" href="/service/solution">Solutions</a></li>
                             <li><a class="dropdown-item" href="#">Recommendation</a></li>
                             <li><a class="dropdown-item" href="#">Get Free Quotes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">My Account</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="/dashboard">My Account</a>
                     </li>
                 </ul>
                 <!-- Login / Sign up -->

@@ -476,7 +476,7 @@
       }
     },
     "/api/logout/": {
-      "get": {
+      "post": {
         "tags": [
           "Authentication"
         ],
@@ -493,6 +493,23 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "createToken": {
+                    "example": "any"
+                  },
+                  "userId": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }
