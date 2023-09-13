@@ -143,3 +143,27 @@ body, html{
     backdrop-filter: blur(10px);
   }
 }
+
+/* selection page styles */
+.image-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(2, 2, 2);
+}
+.image-container2 {
+  position: relative;
+  width: 100%;
+}
+.carousel-caption h1 {
+  font-weight: 300;
+  font-size: auto;
+  color: #000000;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  color: #000000;
+}
+.carousel-caption a {
+  color: white;
+}

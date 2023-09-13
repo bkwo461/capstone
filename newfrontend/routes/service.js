@@ -12,5 +12,9 @@ router.get('/solution', function(req, res, next) {
   res.render('solution/solution.html');
 });
 
+/* GET Selection page. */
+router.get('/selection', function(req, res, next) {
+  res.render('selection/selection.html');
+});
 module.exports = router;
 
