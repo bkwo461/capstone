@@ -1,9 +1,65 @@
 {% extends 'template/index.html' %}
 
 {% block content %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="keywords"
+    content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
 
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
 
-    <p>HOME PAGE</p>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+<link href="carousel.css" rel="stylesheet">
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img myimage" width="100%" height="100%" src="../selection/images/background2.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <p class="main-text">Your Strategy Is Only As Good As</br>Your Execute It</p>
+            <h1 style="font-weight: lighter; font-size: larger;">Example headline.</h1> 
+            <h1 class="opacity-75" style="color: #000; font-weight: lighter; font-size: larger;">Some representative placeholder content for the first slide of the carousel.</h1></br>
+            <p><a class="btn btn-lg btn-warning mybutton" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="../selection/images/background.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)">
+        <div class="container">
+          <div class="carousel-caption" >
+            <h1 style="font-weight:lighter; font-size: larger;">Another example headline.</br>
+            Some representative placeholder content for the second slide of the carousel.</h1></br>
+            <p><a class="btn btn-lg btn-warning mybutton" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="../selection/images/background3.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 style="font-weight: lighter; font-size: larger;">One more for good measure.</br>
+            Some representative placeholder content for the third slide of this carousel.</h1></br>
+            <p><a class="btn btn-lg btn-warning mybutton" href="#">Browse Services</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
 {% endblock %}
